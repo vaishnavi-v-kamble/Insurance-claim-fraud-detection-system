@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insurance Fraud Detection - Login</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+body {
+    margin: 0;
+    font-family: 'Inter', Arial, sans-serif;
+    background: radial-gradient(circle at top left, rgba(59, 130, 246, 0.18), transparent 24%),
+                radial-gradient(circle at bottom right, rgba(16, 185, 129, 0.18), transparent 20%),
+                linear-gradient(135deg, #eef2ff 0%, #dbeafe 100%);
+    color: #0f172a;
+    overflow-x: hidden;
+}
+
+.main {
+    display: flex;
+    min-height: 100vh;
+    align-items: stretch;
+}
+
+.left {
+    width: 42%;
+    position: relative;
+    background: url('https://images.unsplash.com/photo-1493238792000-8113da705763?auto=format&fit=crop&w=1200&q=80') no-repeat center;
+    background-size: cover;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 32px 24px 24px;
+}
+
+.hero-caption {
+    max-width: 360px;
+    padding: 24px 28px;
+    border-radius: 28px;
+    background: rgba(15, 23, 42, 0.75);
+    color: #f8fafc;
+    font-size: 30px;
+    font-weight: 800;
+    text-align: center;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    backdrop-filter: blur(10px);
+    margin-top: 8px;
+}
+
+.right {
+    width: 58%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(229,246,255,0.98));
+    box-sizing: border-box;
+}
+
+.container {
+    width: 420px;
+    background: rgba(255,255,255,0.96);
+    margin: auto;
+    padding: 36px;
+    border-radius: 32px;
+    box-shadow: 0 24px 80px rgba(15, 23, 42, 0.1);
+    border: 1px solid rgba(59, 130, 246, 0.16);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container::before {
+    content: '';
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    background: rgba(59, 130, 246, 0.12);
+    top: -60px;
+    right: -60px;
+    pointer-events: none;
+}
+
+.container:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 32px 90px rgba(15, 23, 42, 0.18);
+}
+
+h2 {
+    margin: 0 0 6px;
+    font-size: 28px;
+    letter-spacing: 0.02em;
+}
+
+/* ROLE BUTTONS */
+.role-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 6px;
+}
+
+.role-buttons button {
+    flex: 1;
+    padding: 12px 14px;
+    border: 2px solid transparent;
+    border-radius: 14px;
+    cursor: pointer;
+    background: rgba(59, 130, 246, 0.12);
+    color: #0f172a;
+    font-weight: 700;
+    font-size: 14px;
+    transition: all 0.25s ease;
+}
+
+.role-buttons button.active,
+.role-buttons button:hover {
+    background: #2563eb;
+    color: white;
+    border-color: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+/* ROLE WARNING */
+.role-warning {
+    font-size: 12px;
+    color: #ef4444;
+    font-weight: 600;
+    margin: 2px 0 8px 4px;
+    min-height: 16px;
+    display: none;
+}
+.role-warning.show { display: block; }
+
+/* INPUT */
+.input-group {
+    position: relative;
+    margin: 10px 0 2px;
+}
+
+.input-group i.icon {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #2563eb;
+    pointer-events: none;
+}
+
+.input-group i.status-icon {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 14px;
+    pointer-events: none;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 13px 38px 13px 42px;
+    border-radius: 14px;
+    border: 1.5px solid rgba(15, 23, 42, 0.15);
+    box-sizing: border-box;
+    font-size: 15px;
+    background: #f8fafc;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease, background 0.2s;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #2563eb;
+    background: #fff;
+    box-shadow: 0 0 0 5px rgba(59, 130, 246, 0.12);
+}
+
+.input-group input.error {
+    border-color: #ef4444 !important;
+    background: #fff5f5;
+    box-shadow: 0 0 0 5px rgba(239, 68, 68, 0.1) !important;
+}
+
+.input-group input.success {
+    border-color: #10b981 !important;
+    background: #f0fdf4;
+    box-shadow: 0 0 0 5px rgba(16, 185, 129, 0.1) !important;
+}
+
+/* INLINE FIELD MESSAGE */
+.field-msg {
+    font-size: 12px;
+    margin: 4px 0 6px 14px;
+    min-height: 15px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    transition: all 0.2s ease;
+}
+.field-msg.error { color: #ef4444; }
+.field-msg.success { color: #10b981; }
+
+/* TOAST (inline banner, no popup) */
+.toast {
+    padding: 10px 14px;
+    border-radius: 12px;
+    font-size: 13px;
+    font-weight: 700;
+    margin: 10px 0 4px;
+    display: none;
+    align-items: center;
+    gap: 8px;
+    animation: fadeIn 0.25s ease;
+}
+.toast.error-toast { background: #fef2f2; color: #b91c1c; border: 1px solid #fecaca; display: flex; }
+.toast.success-toast { background: #f0fdf4; color: #065f46; border: 1px solid #6ee7b7; display: flex; }
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-6px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* PRIMARY BUTTON */
+button.primary {
+    width: 100%;
+    padding: 14px;
+    margin-top: 8px;
+    background: linear-gradient(135deg, #2563eb, #0ea5e9);
+    color: white;
+    border: none;
+    border-radius: 16px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button.primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 18px 30px rgba(37, 99, 235, 0.24);
+}
+
+.link {
+    margin-top: 12px;
+    cursor: pointer;
+    color: #2563eb;
+    font-weight: 700;
+    font-size: 14px;
+    text-align: center;
+}
+
+/* FEATURE CARDS */
+.feature-row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    margin-top: 18px;
+}
+
+.feature-card {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 14px;
+    border-radius: 16px;
+    background: rgba(59, 130, 246, 0.08);
+    border: 1px solid rgba(37, 99, 235, 0.12);
+    cursor: pointer;
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 24px rgba(37, 99, 235, 0.14);
+    border-color: rgba(37, 99, 235, 0.25);
+}
+
+.feature-card span { font-size: 20px; }
+.feature-card div { text-align: left; font-weight: 700; color: #0f172a; font-size: 13px; }
+
+/* POPUP (kept for feature cards only) */
+.popup {
+    position: fixed; top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(15, 23, 42, 0.62);
+    display: none;
+    justify-content: center; align-items: center;
+    z-index: 9999; padding: 24px; box-sizing: border-box;
+}
+
+.popup-content {
+    background: #ffffff; padding: 28px; border-radius: 24px;
+    text-align: center; min-width: 280px;
+    box-shadow: 0 24px 80px rgba(15, 23, 42, 0.16);
+    animation: pop 0.25s ease-out;
+}
+
+.popup-content h3 { margin: 0 0 16px; font-size: 20px; color: #111827; }
+.popup-content button {
+    width: 100%; padding: 12px 16px; border-radius: 14px;
+    border: none; background: #2563eb; color: white; font-weight: 700; cursor: pointer;
+}
+
+@keyframes pop {
+    0%   { opacity: 0; transform: scale(0.92); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+@media (max-width: 1050px) {
+    .main { flex-direction: column; }
+    .left, .right { width: 100%; }
+    .left { min-height: 220px; }
+    .container { width: calc(100% - 48px); margin: 24px auto; }
+}
+</style>
+</head>
+<body>
+
+<div class="main">
+
+    <!-- LEFT -->
+    <div class="left">
+        <div class="hero-caption">Insurance Claim Fraud Detection</div>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="right">
+
+        <!-- LOGIN BOX -->
+        <div class="container" id="loginBox">
+            <h2><i class="fa fa-car"></i> Secure Login</h2>
+            <p style="margin:0 0 14px; color:#475569; font-size:14px; line-height:1.6;">Choose your role and unlock the claims dashboard.</p>
+
+            <div class="role-buttons">
+                <button onclick="selectRole('admin', this)">Admin</button>
+                <button onclick="selectRole('user', this)">User</button>
+            </div>
+            <div class="role-warning" id="roleWarning">⚠ Please select a role first.</div>
+
+            <!-- Username -->
+            <div class="input-group">
+                <i class="fa fa-user icon"></i>
+                <input type="text" id="username" placeholder="Username *" required
+                    oninput="liveValidate('username', 'usernameMsg', 'login')"
+                    onblur="liveValidate('username', 'usernameMsg', 'login')">
+                <i class="status-icon" id="usernameIcon"></i>
+            </div>
+            <div class="field-msg" id="usernameMsg"></div>
+
+            <!-- Password -->
+            <div class="input-group">
+                <i class="fa fa-lock icon"></i>
+                <input type="password" id="password" placeholder="Password *" required
+                    oninput="liveValidate('password', 'passwordMsg', 'login')"
+                    onblur="liveValidate('password', 'passwordMsg', 'login')">
+                <i class="status-icon" id="passwordIcon"></i>
+            </div>
+            <div class="field-msg" id="passwordMsg"></div>
+
+            <!-- Inline toast for login result -->
+            <div class="toast" id="loginToast"></div>
+
+            <button class="primary" onclick="login()">Login</button>
+
+            <div class="feature-row">
+                <button class="feature-card" onclick="showPopup('Smart AI risk scanning activated ⚡')">
+                    <span>⚡</span><div>Smart Risk Scan</div>
+                </button>
+                <button class="feature-card" onclick="showPopup('Fast claim validation with live feedback ✅')">
+                    <span>✅</span><div>Fast Validation</div>
+                </button>
+                <button class="feature-card" onclick="showPopup('Emoji-powered user experience 💫')">
+                    <span>💫</span><div>Interactive UI</div>
+                </button>
+                <button class="feature-card" onclick="showPopup('Secure session and data protection 🔐')">
+                    <span>🔐</span><div>Secure Login</div>
+                </button>
+            </div>
+
+            <p class="link" onclick="showRegister()">New user? Register</p>
+        </div>
+
+        <!-- REGISTER BOX -->
+        <div class="container" id="registerBox" style="display:none;">
+            <h2><i class="fa fa-user-plus"></i> Join Now</h2>
+            <p style="margin:0 0 14px; color:#475569; font-size:14px; line-height:1.6;">Create your secure account and start monitoring claims.</p>
+
+            <!-- Reg Username -->
+            <div class="input-group">
+                <i class="fa fa-user icon"></i>
+                <input type="text" id="regUser" placeholder="Username *" required
+                    oninput="liveValidate('regUser', 'regUserMsg', 'register')"
+                    onblur="liveValidate('regUser', 'regUserMsg', 'register')">
+                <i class="status-icon" id="regUserIcon"></i>
+            </div>
+            <div class="field-msg" id="regUserMsg"></div>
+
+            <!-- Reg Password -->
+            <div class="input-group">
+                <i class="fa fa-lock icon"></i>
+                <input type="password" id="regPass" placeholder="Password *" required
+                    oninput="liveValidate('regPass', 'regPassMsg', 'register')"
+                    onblur="liveValidate('regPass', 'regPassMsg', 'register')">
+                <i class="status-icon" id="regPassIcon"></i>
+            </div>
+            <div class="field-msg" id="regPassMsg"></div>
+
+            <!-- Inline toast for register result -->
+            <div class="toast" id="registerToast"></div>
+
+            <button class="primary" onclick="register()">Register</button>
+            <p class="link" onclick="showLogin()">Back to Login</p>
+        </div>
+
+    </div>
+</div>
+
+<!-- POPUP (feature cards only) -->
+<div class="popup" id="popup">
+    <div class="popup-content">
+        <h3 id="popupMessage"></h3>
+        <button onclick="closePopup()">OK</button>
+    </div>
+</div>
+
+<script>
+    let selectedRole = "";
+
+    /* ── Role select ── */
+    function selectRole(role, el) {
+        selectedRole = role;
+        document.querySelectorAll('.role-buttons button').forEach(b => b.classList.remove('active'));
+        el.classList.add('active');
+        document.getElementById('roleWarning').classList.remove('show');
+    }
+
+    /* ── Shared validation rules ── */
+    function validateUsername(val) {
+        val = val.trim();
+        if (val === '')            return "⚠ Username is required.";
+        if (/[0-9]/.test(val))    return "⚠ Username must not contain digits.";
+        if (!/^[A-Za-z]+$/.test(val)) return "⚠ Username must contain letters only.";
+        if (val.length < 4)       return "⚠ Username must be at least 4 characters.";
+        return "";
+    }
+
+    function validatePasswordField(val) {
+        if (val === '')  return "⚠ Password is required.";
+        if (val.length < 6) return "⚠ Must be at least 6 characters.";
+        if (!/[A-Za-z]/.test(val)) return "⚠ Must include at least one letter.";
+        if (!/[0-9]/.test(val))    return "⚠ Must include at least one number.";
+        var specials = /[!@#$%^&*()\-_=+\[\]{};':",.<>?\/\\|`~]/;
+        if (!specials.test(val))   return "⚠ Must include at least one special character (e.g. @#$!).";
+        return "";
+    }
+
+    /* ── Live field validation (oninput + onblur) ── */
+    function liveValidate(fieldId, msgId, context) {
+        var input  = document.getElementById(fieldId);
+        var msgEl  = document.getElementById(msgId);
+        var iconEl = document.getElementById(fieldId + 'Icon');
+        var val    = input.value;
+        var error  = "";
+
+        if (context === 'login') {
+            if (fieldId === 'username') error = validateUsername(val);
+            if (fieldId === 'password') error = validatePasswordField(val);
+        }
+        if (context === 'register') {
+            if (fieldId === 'regUser') error = validateUsername(val);
+            if (fieldId === 'regPass') error = validatePasswordField(val);
+        }
+
+        if (error) {
+            setFieldState(input, msgEl, iconEl, 'error', error);
+        } else if (val !== '') {
+            setFieldState(input, msgEl, iconEl, 'success', '✓ Looks good!');
+        } else {
+            setFieldState(input, msgEl, iconEl, 'idle', '');
+        }
+    }
+
+    function setFieldState(input, msgEl, iconEl, state, msg) {
+        input.classList.remove('error', 'success');
+        msgEl.className = 'field-msg';
+        if (iconEl) iconEl.className = 'status-icon';
+
+        if (state === 'error') {
+            input.classList.add('error');
+            msgEl.classList.add('error');
+            msgEl.innerHTML = msg;
+            if (iconEl) { iconEl.className = 'status-icon fa fa-times-circle'; iconEl.style.color = '#ef4444'; }
+        } else if (state === 'success') {
+            input.classList.add('success');
+            msgEl.classList.add('success');
+            msgEl.innerHTML = msg;
+            if (iconEl) { iconEl.className = 'status-icon fa fa-check-circle'; iconEl.style.color = '#10b981'; }
+        } else {
+            msgEl.innerHTML = '';
+            if (iconEl) { iconEl.innerHTML = ''; }
+        }
+    }
+
+    /* ── Inline toast ── */
+    function showToast(toastId, msg, type) {
+        var el = document.getElementById(toastId);
+        el.className = 'toast ' + (type === 'success' ? 'success-toast' : 'error-toast');
+        el.innerHTML = (type === 'success' ? '✅ ' : '❌ ') + msg;
+        clearTimeout(el._timer);
+        el._timer = setTimeout(function() { el.style.display = 'none'; }, 4000);
+    }
+
+    /* ── Register ── */
+    function register() {
+        var u = document.getElementById("regUser").value.trim();
+        var p = document.getElementById("regPass").value;
+
+        liveValidate('regUser', 'regUserMsg', 'register');
+        liveValidate('regPass', 'regPassMsg', 'register');
+
+        var uErr = validateUsername(u);
+        var pErr = validatePasswordField(p);
+
+        if (uErr) { showToast('registerToast', uErr.replace('⚠ ',''), 'error'); return; }
+        if (pErr) { showToast('registerToast', pErr.replace('⚠ ',''), 'error'); return; }
+
+        localStorage.setItem(u, p);
+        showToast('registerToast', 'Registered successfully! Redirecting to login…', 'success');
+        document.getElementById("regUser").value = "";
+        document.getElementById("regPass").value = "";
+        ['regUser','regPass'].forEach(function(id) {
+            var el = document.getElementById(id);
+            el.classList.remove('success','error');
+        });
+        ['regUserMsg','regPassMsg'].forEach(function(id) { document.getElementById(id).innerHTML = ''; });
+        setTimeout(showLogin, 1800);
+    }
+
+    /* ── Login ── */
+    function login() {
+        var u = document.getElementById("username").value.trim();
+        var p = document.getElementById("password").value;
+
+        liveValidate('username', 'usernameMsg', 'login');
+        liveValidate('password', 'passwordMsg', 'login');
+
+        if (selectedRole === '') {
+            document.getElementById('roleWarning').classList.add('show');
+            return;
+        }
+
+        var uErr = validateUsername(u);
+        var pErr = validatePasswordField(p);
+        if (uErr) { showToast('loginToast', uErr.replace('⚠ ',''), 'error'); return; }
+        if (pErr) { showToast('loginToast', pErr.replace('⚠ ',''), 'error'); return; }
+
+        if (selectedRole === 'admin' && u === 'admin' && p === 'admin123') {
+            showToast('loginToast', 'Admin login successful! Redirecting…', 'success');
+            setTimeout(function() { window.location = "admin_dashboard.html"; }, 1600);
+        } else if (selectedRole === 'user' && localStorage.getItem(u) === p) {
+            showToast('loginToast', 'Login successful! Redirecting…', 'success');
+            localStorage.setItem("currentUser", u);
+            setTimeout(function() { window.location = "user-dashboard.html"; }, 1600);
+        } else {
+            showToast('loginToast', 'Invalid credentials. Please try again.', 'error');
+        }
+    }
+
+    /* ── Switch views ── */
+    function showRegister() {
+        document.getElementById("loginBox").style.display = "none";
+        document.getElementById("registerBox").style.display = "block";
+    }
+
+    function showLogin() {
+        document.getElementById("loginBox").style.display = "block";
+        document.getElementById("registerBox").style.display = "none";
+    }
+
+    /* ── Feature card popup ── */
+    function showPopup(msg) {
+        document.getElementById("popupMessage").innerText = msg;
+        document.getElementById("popup").style.display = "flex";
+    }
+
+    function closePopup() {
+        document.getElementById("popup").style.display = "none";
+    }
+</script>
+
+</body>
+</html>

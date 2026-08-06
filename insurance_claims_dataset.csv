@@ -1,0 +1,2501 @@
+claim_id,age,vehicle_age,claim_amount,accident_type,previous_claims,police_report,witness_present,garage_type,days_to_claim,fraud
+CLM1000,41,14,179725,Fire,4,0,1,Local,54,0
+CLM1001,58,13,336738,Natural Disaster,4,1,0,Authorized,46,1
+CLM1002,65,13,114476,Collision,0,0,1,Local,35,0
+CLM1003,26,1,50833,Collision,0,0,0,Local,25,1
+CLM1004,68,9,212820,Theft,1,1,0,Authorized,21,0
+CLM1005,49,5,82717,Fire,0,1,1,Local,36,0
+CLM1006,60,5,43412,Natural Disaster,2,1,1,Authorized,40,1
+CLM1007,66,8,202970,Fire,5,0,1,Local,23,0
+CLM1008,34,4,126131,Theft,5,1,1,Local,26,0
+CLM1009,45,11,291088,Fire,0,0,1,Authorized,51,0
+CLM1010,65,9,66990,Natural Disaster,2,1,1,Authorized,30,1
+CLM1011,23,11,458705,Natural Disaster,1,1,1,Local,26,1
+CLM1012,68,1,150775,Theft,0,1,1,Local,15,0
+CLM1013,57,7,291435,Collision,2,0,0,Local,58,0
+CLM1014,39,1,452559,Collision,5,0,1,Authorized,10,1
+CLM1015,40,10,63586,Theft,1,0,1,Local,42,1
+CLM1016,33,10,277567,Fire,4,1,1,Local,60,0
+CLM1017,49,6,232180,Theft,0,0,0,Local,38,1
+CLM1018,54,8,417688,Collision,3,0,0,Local,44,1
+CLM1019,36,15,64888,Theft,1,0,1,Authorized,42,1
+CLM1020,55,12,126402,Collision,5,0,0,Local,32,0
+CLM1021,49,6,91322,Theft,0,1,0,Local,31,1
+CLM1022,18,8,210642,Fire,4,1,0,Authorized,4,1
+CLM1023,22,5,255241,Theft,5,1,0,Local,42,0
+CLM1024,28,15,491185,Theft,0,0,1,Local,20,1
+CLM1025,23,2,492842,Theft,4,1,0,Local,26,1
+CLM1026,39,10,50251,Natural Disaster,1,1,1,Authorized,36,1
+CLM1027,34,10,141655,Theft,3,1,1,Local,12,1
+CLM1028,27,6,323493,Collision,4,1,1,Authorized,12,0
+CLM1029,61,0,481053,Natural Disaster,4,0,1,Local,32,0
+CLM1030,28,14,430288,Fire,1,0,0,Local,27,1
+CLM1031,44,6,306737,Natural Disaster,4,0,0,Local,29,0
+CLM1032,25,8,264131,Collision,2,0,0,Authorized,28,1
+CLM1033,26,9,479121,Fire,3,0,0,Local,36,0
+CLM1034,59,3,242521,Theft,4,0,1,Authorized,24,1
+CLM1035,20,3,444211,Fire,5,1,1,Local,12,1
+CLM1036,63,7,441596,Collision,5,1,1,Local,36,0
+CLM1037,56,4,264932,Collision,1,0,0,Local,40,0
+CLM1038,65,10,241664,Fire,3,0,1,Authorized,54,0
+CLM1039,39,1,223013,Collision,3,0,0,Authorized,51,1
+CLM1040,53,0,405500,Fire,4,0,1,Authorized,18,0
+CLM1041,22,7,38441,Theft,0,0,0,Authorized,12,1
+CLM1042,68,10,34018,Natural Disaster,3,0,1,Local,21,0
+CLM1043,25,3,196686,Natural Disaster,5,1,0,Local,48,1
+CLM1044,24,7,188892,Theft,3,0,0,Authorized,46,1
+CLM1045,30,15,248779,Natural Disaster,2,0,1,Authorized,59,1
+CLM1046,27,3,494882,Collision,3,0,0,Authorized,42,1
+CLM1047,47,8,410876,Fire,4,0,0,Authorized,40,1
+CLM1048,55,4,235860,Theft,4,1,1,Authorized,60,0
+CLM1049,60,13,267206,Theft,4,0,0,Local,20,1
+CLM1050,55,15,457914,Collision,2,1,0,Local,2,0
+CLM1051,40,9,436593,Natural Disaster,1,1,0,Authorized,27,0
+CLM1052,33,11,397549,Fire,0,0,1,Authorized,37,1
+CLM1053,64,11,14958,Fire,1,1,0,Authorized,16,0
+CLM1054,61,6,282874,Fire,4,1,1,Authorized,42,0
+CLM1055,56,0,354189,Natural Disaster,4,0,0,Local,49,0
+CLM1056,64,3,319331,Fire,3,1,1,Local,26,0
+CLM1057,56,6,94936,Collision,3,1,0,Local,36,0
+CLM1058,30,4,402278,Theft,3,1,1,Local,34,0
+CLM1059,59,10,295894,Collision,0,0,0,Authorized,38,0
+CLM1060,46,5,195598,Natural Disaster,2,0,0,Authorized,43,1
+CLM1061,31,9,57649,Theft,0,1,0,Authorized,32,1
+CLM1062,41,11,188376,Collision,2,1,0,Authorized,48,1
+CLM1063,47,0,375307,Theft,4,1,1,Authorized,40,1
+CLM1064,42,12,441121,Fire,2,0,1,Local,39,0
+CLM1065,26,6,71960,Collision,2,1,0,Local,44,1
+CLM1066,24,14,35043,Fire,3,1,1,Local,47,1
+CLM1067,48,7,178293,Theft,0,1,1,Local,22,0
+CLM1068,44,8,64476,Theft,2,0,1,Local,6,1
+CLM1069,43,7,109599,Theft,1,0,1,Local,22,0
+CLM1070,27,5,239503,Collision,0,1,0,Local,59,1
+CLM1071,29,1,327502,Theft,2,1,1,Authorized,6,1
+CLM1072,46,9,499319,Theft,2,1,0,Authorized,40,1
+CLM1073,37,1,187550,Fire,5,1,0,Local,8,0
+CLM1074,43,12,272893,Theft,3,1,0,Authorized,44,0
+CLM1075,46,5,47665,Natural Disaster,3,0,1,Authorized,56,1
+CLM1076,24,12,262467,Natural Disaster,2,1,0,Authorized,11,1
+CLM1077,70,0,90037,Fire,2,1,0,Authorized,28,1
+CLM1078,57,4,112376,Fire,4,1,0,Authorized,30,0
+CLM1079,67,13,394993,Fire,3,0,1,Authorized,41,1
+CLM1080,50,14,116734,Natural Disaster,4,0,0,Authorized,25,0
+CLM1081,30,6,407817,Natural Disaster,5,1,0,Authorized,56,0
+CLM1082,65,10,334810,Theft,0,1,0,Local,54,0
+CLM1083,31,13,125359,Theft,2,1,0,Authorized,46,0
+CLM1084,43,6,40682,Collision,5,0,1,Local,8,0
+CLM1085,42,15,399972,Collision,0,1,1,Local,51,1
+CLM1086,68,13,364675,Theft,5,0,1,Authorized,24,0
+CLM1087,43,5,105005,Fire,1,0,0,Authorized,23,0
+CLM1088,23,15,88754,Natural Disaster,2,0,1,Local,39,0
+CLM1089,61,12,261663,Collision,4,1,1,Local,43,0
+CLM1090,45,1,327069,Collision,1,0,0,Local,27,0
+CLM1091,22,4,322951,Collision,0,0,0,Local,10,1
+CLM1092,38,5,375662,Fire,2,0,1,Local,28,1
+CLM1093,53,11,219131,Fire,4,0,0,Authorized,6,1
+CLM1094,33,0,102542,Theft,0,1,0,Local,50,0
+CLM1095,65,13,437243,Natural Disaster,3,0,0,Authorized,39,0
+CLM1096,68,10,165117,Collision,1,1,0,Authorized,59,0
+CLM1097,19,4,209554,Theft,1,0,0,Authorized,15,1
+CLM1098,24,13,52388,Fire,0,0,0,Local,17,1
+CLM1099,56,13,40617,Fire,4,1,0,Authorized,41,0
+CLM1100,20,2,49559,Theft,3,0,0,Authorized,15,1
+CLM1101,56,7,159884,Fire,5,0,0,Authorized,8,1
+CLM1102,29,8,464806,Collision,4,1,1,Authorized,4,1
+CLM1103,54,15,183744,Natural Disaster,0,0,1,Local,18,1
+CLM1104,29,9,6668,Theft,4,0,0,Local,50,0
+CLM1105,68,15,402216,Collision,3,0,0,Local,15,0
+CLM1106,67,14,418042,Collision,1,0,0,Authorized,45,0
+CLM1107,30,15,396535,Collision,5,1,0,Authorized,21,0
+CLM1108,36,15,431947,Natural Disaster,0,0,0,Local,50,1
+CLM1109,23,1,420741,Theft,1,1,1,Local,40,0
+CLM1110,26,2,498520,Theft,1,0,1,Local,22,0
+CLM1111,69,3,379096,Fire,4,0,1,Local,50,1
+CLM1112,68,15,222644,Collision,3,0,1,Local,51,0
+CLM1113,30,2,133169,Collision,5,0,0,Local,9,1
+CLM1114,21,10,459309,Natural Disaster,5,1,0,Authorized,15,0
+CLM1115,61,6,21986,Theft,2,0,1,Local,52,1
+CLM1116,44,1,440792,Natural Disaster,2,0,1,Local,18,1
+CLM1117,18,12,203775,Theft,1,1,0,Local,36,1
+CLM1118,36,11,231728,Theft,1,0,0,Local,49,0
+CLM1119,62,2,162972,Fire,3,0,1,Authorized,57,1
+CLM1120,29,13,278565,Natural Disaster,1,1,1,Local,19,0
+CLM1121,40,13,63753,Natural Disaster,4,0,1,Authorized,22,0
+CLM1122,68,9,81239,Collision,1,1,1,Authorized,3,1
+CLM1123,41,9,250392,Collision,4,0,0,Authorized,47,1
+CLM1124,44,6,158947,Natural Disaster,1,0,0,Local,26,1
+CLM1125,37,1,380173,Fire,3,1,0,Local,52,1
+CLM1126,60,3,14191,Theft,0,1,1,Authorized,4,0
+CLM1127,64,12,189314,Collision,1,0,0,Local,8,0
+CLM1128,69,3,245597,Natural Disaster,4,1,1,Local,60,0
+CLM1129,21,5,248242,Theft,4,1,1,Authorized,51,0
+CLM1130,57,3,362603,Fire,3,0,0,Local,38,1
+CLM1131,55,4,467306,Theft,5,0,1,Authorized,39,0
+CLM1132,43,10,492613,Theft,3,0,1,Local,24,0
+CLM1133,69,7,433961,Natural Disaster,1,0,1,Authorized,11,1
+CLM1134,40,13,45137,Collision,0,1,0,Authorized,48,1
+CLM1135,63,9,6895,Natural Disaster,5,1,1,Local,41,1
+CLM1136,28,1,95630,Collision,0,0,1,Local,15,1
+CLM1137,39,1,209586,Natural Disaster,5,1,1,Local,14,0
+CLM1138,34,3,464397,Natural Disaster,2,1,0,Local,47,1
+CLM1139,27,7,405861,Theft,1,0,0,Authorized,56,1
+CLM1140,68,9,77153,Collision,1,1,0,Authorized,33,0
+CLM1141,31,2,106038,Theft,2,1,1,Authorized,40,1
+CLM1142,28,13,482076,Collision,3,0,1,Authorized,24,0
+CLM1143,33,7,354946,Fire,0,0,0,Local,22,0
+CLM1144,25,4,306432,Theft,5,0,1,Local,25,0
+CLM1145,33,13,253034,Collision,0,0,1,Authorized,8,0
+CLM1146,54,14,292667,Fire,2,0,1,Authorized,10,0
+CLM1147,24,14,390874,Theft,1,1,0,Local,50,1
+CLM1148,65,7,36927,Theft,1,1,0,Local,11,0
+CLM1149,70,14,145390,Fire,2,1,1,Authorized,10,0
+CLM1150,31,6,140948,Fire,4,1,1,Local,6,1
+CLM1151,42,10,490473,Fire,4,0,0,Authorized,6,0
+CLM1152,68,14,388869,Theft,4,1,1,Local,39,1
+CLM1153,26,0,203682,Collision,2,1,1,Authorized,36,0
+CLM1154,65,6,498772,Fire,2,0,0,Local,24,1
+CLM1155,25,5,373317,Collision,3,0,0,Local,9,0
+CLM1156,21,0,180739,Fire,4,1,1,Authorized,38,1
+CLM1157,24,10,376246,Theft,3,0,0,Local,8,0
+CLM1158,44,7,125336,Collision,3,1,0,Authorized,56,1
+CLM1159,52,3,103311,Theft,4,1,0,Local,18,1
+CLM1160,66,2,168001,Theft,5,1,0,Authorized,20,1
+CLM1161,52,13,323891,Natural Disaster,5,1,1,Authorized,25,0
+CLM1162,51,3,277471,Collision,5,1,1,Local,46,1
+CLM1163,39,9,325934,Fire,5,0,0,Local,43,0
+CLM1164,60,5,80609,Collision,5,0,0,Local,56,1
+CLM1165,35,13,283676,Collision,0,0,1,Authorized,50,0
+CLM1166,41,15,157104,Collision,5,1,1,Authorized,51,0
+CLM1167,39,11,144082,Theft,4,0,1,Local,31,1
+CLM1168,38,8,495863,Fire,5,0,0,Authorized,15,0
+CLM1169,32,7,401383,Theft,5,1,1,Local,16,0
+CLM1170,29,7,434828,Theft,0,0,0,Local,56,0
+CLM1171,53,7,207474,Fire,1,0,1,Local,47,0
+CLM1172,24,4,113400,Theft,3,1,1,Authorized,4,0
+CLM1173,39,0,302114,Fire,4,0,0,Authorized,55,1
+CLM1174,29,3,433743,Collision,2,1,1,Authorized,52,1
+CLM1175,20,13,349678,Natural Disaster,0,1,1,Local,27,1
+CLM1176,53,9,372857,Theft,2,0,0,Local,20,1
+CLM1177,63,13,42547,Fire,4,0,0,Local,42,1
+CLM1178,40,13,72050,Collision,4,0,0,Authorized,26,0
+CLM1179,66,9,115789,Natural Disaster,1,1,0,Authorized,34,1
+CLM1180,48,6,214005,Collision,1,1,1,Authorized,37,1
+CLM1181,22,5,302070,Theft,1,1,0,Local,54,1
+CLM1182,34,9,243497,Collision,1,0,1,Authorized,46,1
+CLM1183,22,8,140134,Natural Disaster,2,1,1,Authorized,44,1
+CLM1184,58,10,60621,Collision,2,1,0,Authorized,5,1
+CLM1185,64,1,166993,Collision,3,0,1,Authorized,8,0
+CLM1186,46,7,86704,Collision,3,1,1,Authorized,19,1
+CLM1187,56,1,337488,Fire,5,0,0,Local,11,0
+CLM1188,24,11,104248,Collision,2,1,0,Authorized,17,1
+CLM1189,36,13,154581,Fire,0,0,0,Authorized,11,1
+CLM1190,64,1,36626,Natural Disaster,4,0,1,Local,0,1
+CLM1191,61,5,267145,Natural Disaster,1,0,0,Local,19,0
+CLM1192,25,0,152592,Collision,2,1,0,Local,41,0
+CLM1193,31,2,191975,Fire,2,1,1,Local,48,1
+CLM1194,55,6,367321,Theft,3,0,0,Local,41,0
+CLM1195,61,1,389433,Collision,0,1,1,Authorized,2,1
+CLM1196,27,4,461651,Theft,4,1,1,Local,23,1
+CLM1197,21,12,372112,Collision,1,0,0,Authorized,32,1
+CLM1198,37,5,213282,Collision,1,0,0,Local,33,1
+CLM1199,66,11,187689,Collision,5,1,0,Authorized,25,0
+CLM1200,24,11,100170,Natural Disaster,3,0,0,Authorized,51,0
+CLM1201,21,0,374461,Collision,2,0,0,Local,56,0
+CLM1202,70,8,138924,Collision,1,1,0,Authorized,26,1
+CLM1203,65,13,180402,Collision,0,1,0,Authorized,0,0
+CLM1204,42,9,441507,Natural Disaster,3,0,0,Authorized,4,0
+CLM1205,46,0,499936,Theft,1,1,1,Authorized,59,1
+CLM1206,70,15,394060,Theft,0,0,1,Local,53,1
+CLM1207,28,4,432021,Natural Disaster,5,1,1,Local,23,0
+CLM1208,28,4,346261,Natural Disaster,3,0,1,Authorized,40,1
+CLM1209,51,2,288468,Collision,2,1,0,Local,46,1
+CLM1210,18,2,395731,Fire,1,1,1,Authorized,15,0
+CLM1211,52,5,5808,Collision,1,0,0,Authorized,19,0
+CLM1212,21,2,435466,Collision,4,1,0,Local,15,1
+CLM1213,52,6,253556,Natural Disaster,4,1,1,Authorized,50,0
+CLM1214,42,5,405378,Fire,5,1,1,Local,34,1
+CLM1215,22,5,32256,Fire,1,0,0,Authorized,29,1
+CLM1216,62,5,432677,Collision,3,0,1,Authorized,12,1
+CLM1217,55,10,336300,Fire,1,1,1,Authorized,17,0
+CLM1218,19,15,495345,Theft,0,1,0,Local,38,0
+CLM1219,69,11,109403,Collision,2,1,1,Local,58,0
+CLM1220,69,10,286048,Theft,1,1,0,Authorized,25,0
+CLM1221,67,9,419372,Natural Disaster,0,1,1,Authorized,19,0
+CLM1222,68,6,238082,Natural Disaster,5,1,0,Local,5,0
+CLM1223,30,11,402107,Collision,5,1,0,Authorized,31,0
+CLM1224,28,9,178436,Natural Disaster,2,0,0,Authorized,60,1
+CLM1225,23,11,55434,Collision,4,1,1,Authorized,22,1
+CLM1226,37,13,343435,Natural Disaster,5,1,1,Authorized,38,1
+CLM1227,24,6,353631,Collision,2,1,0,Local,48,1
+CLM1228,39,8,185824,Natural Disaster,1,1,1,Authorized,5,0
+CLM1229,61,4,290946,Collision,1,1,1,Local,46,1
+CLM1230,58,8,364641,Natural Disaster,3,1,1,Local,55,1
+CLM1231,54,2,2758,Fire,5,1,0,Authorized,33,1
+CLM1232,44,1,452905,Natural Disaster,5,0,1,Authorized,3,1
+CLM1233,21,13,185914,Fire,5,0,0,Local,3,1
+CLM1234,50,1,98516,Fire,1,1,0,Local,54,1
+CLM1235,29,8,38804,Collision,4,1,0,Local,19,0
+CLM1236,29,1,32470,Collision,2,1,1,Authorized,24,0
+CLM1237,64,1,278772,Fire,1,0,0,Authorized,51,0
+CLM1238,63,8,217590,Natural Disaster,5,0,0,Authorized,35,1
+CLM1239,34,13,283458,Theft,5,0,1,Local,27,0
+CLM1240,64,11,200348,Theft,0,1,0,Authorized,35,1
+CLM1241,65,13,382836,Collision,5,0,1,Local,28,0
+CLM1242,35,10,92625,Natural Disaster,5,0,0,Local,29,0
+CLM1243,59,15,453054,Collision,5,0,0,Local,32,0
+CLM1244,37,5,372801,Natural Disaster,2,1,1,Authorized,14,1
+CLM1245,41,0,280301,Collision,5,0,0,Local,8,1
+CLM1246,37,7,175992,Natural Disaster,3,1,1,Authorized,18,1
+CLM1247,32,11,275939,Theft,4,1,0,Authorized,24,1
+CLM1248,42,3,484606,Natural Disaster,0,0,1,Authorized,13,0
+CLM1249,57,14,217967,Fire,1,1,1,Authorized,15,1
+CLM1250,18,14,269751,Collision,2,1,0,Local,18,0
+CLM1251,59,12,443229,Natural Disaster,1,0,0,Authorized,40,0
+CLM1252,55,4,404474,Collision,3,0,0,Authorized,20,0
+CLM1253,21,6,212763,Theft,0,1,1,Authorized,49,0
+CLM1254,34,15,156619,Fire,3,1,1,Local,57,0
+CLM1255,21,7,167203,Theft,0,0,1,Local,55,1
+CLM1256,33,6,202785,Fire,3,0,1,Authorized,49,0
+CLM1257,60,3,298995,Natural Disaster,2,0,1,Local,38,0
+CLM1258,63,15,211396,Collision,5,1,0,Local,21,0
+CLM1259,54,5,61178,Natural Disaster,3,0,1,Local,47,1
+CLM1260,29,8,251601,Fire,4,1,1,Local,17,1
+CLM1261,60,7,335613,Theft,5,1,0,Authorized,27,0
+CLM1262,45,13,220184,Natural Disaster,4,0,1,Local,14,1
+CLM1263,36,5,239129,Theft,0,0,0,Local,53,0
+CLM1264,27,13,220871,Theft,1,1,0,Authorized,50,1
+CLM1265,27,15,456508,Collision,4,0,0,Authorized,3,0
+CLM1266,33,2,183491,Theft,1,1,1,Authorized,49,0
+CLM1267,43,9,110679,Collision,4,1,0,Authorized,8,0
+CLM1268,61,4,67100,Collision,4,0,0,Local,35,0
+CLM1269,66,1,168870,Natural Disaster,5,1,1,Local,44,0
+CLM1270,47,4,436185,Collision,0,0,1,Local,42,0
+CLM1271,30,4,176388,Fire,4,1,0,Local,25,0
+CLM1272,45,15,410580,Fire,5,1,0,Authorized,29,0
+CLM1273,46,11,383301,Theft,1,0,1,Authorized,33,1
+CLM1274,30,10,71144,Collision,4,0,0,Local,42,0
+CLM1275,42,2,8903,Fire,2,0,0,Local,56,1
+CLM1276,19,4,215727,Fire,3,1,1,Local,12,1
+CLM1277,64,2,390627,Collision,0,1,0,Local,25,1
+CLM1278,42,10,389095,Natural Disaster,4,0,1,Authorized,17,1
+CLM1279,64,11,483634,Collision,0,0,0,Local,56,0
+CLM1280,68,14,69571,Collision,0,1,1,Local,13,1
+CLM1281,38,9,222246,Fire,3,0,0,Authorized,32,0
+CLM1282,41,6,362190,Fire,0,1,1,Authorized,50,0
+CLM1283,26,14,91092,Theft,1,1,1,Authorized,56,0
+CLM1284,57,13,205321,Natural Disaster,3,0,0,Local,28,1
+CLM1285,53,3,17382,Fire,5,0,1,Authorized,30,0
+CLM1286,52,4,76549,Natural Disaster,1,0,1,Local,18,0
+CLM1287,39,3,433158,Fire,0,1,1,Authorized,55,0
+CLM1288,54,10,117498,Theft,4,1,0,Authorized,50,1
+CLM1289,64,15,6113,Natural Disaster,3,0,1,Local,22,0
+CLM1290,37,8,11215,Collision,3,0,1,Authorized,40,1
+CLM1291,63,15,198239,Fire,1,1,0,Authorized,37,0
+CLM1292,25,13,401234,Natural Disaster,0,0,1,Local,46,0
+CLM1293,23,3,393682,Theft,2,1,0,Local,19,1
+CLM1294,54,11,169190,Natural Disaster,2,0,1,Local,25,1
+CLM1295,20,6,135432,Natural Disaster,1,1,1,Local,17,0
+CLM1296,22,9,166208,Fire,4,0,0,Authorized,42,1
+CLM1297,32,8,382706,Theft,3,1,1,Local,18,0
+CLM1298,69,1,483238,Fire,3,1,0,Authorized,51,0
+CLM1299,24,6,450451,Fire,4,1,1,Local,35,0
+CLM1300,30,15,422084,Theft,1,1,0,Authorized,53,1
+CLM1301,39,5,383763,Collision,4,0,0,Authorized,37,1
+CLM1302,67,10,119542,Fire,1,1,0,Authorized,60,0
+CLM1303,47,8,393477,Collision,2,1,1,Local,19,1
+CLM1304,26,11,255137,Natural Disaster,3,0,1,Authorized,18,1
+CLM1305,70,0,401805,Theft,3,1,1,Local,40,0
+CLM1306,30,12,305278,Fire,0,1,0,Local,57,1
+CLM1307,30,12,349463,Collision,4,0,1,Authorized,43,0
+CLM1308,22,15,396115,Fire,2,0,1,Authorized,5,1
+CLM1309,27,6,430650,Fire,3,1,0,Authorized,58,1
+CLM1310,58,11,102451,Theft,1,1,1,Local,13,1
+CLM1311,64,1,447967,Fire,1,1,0,Authorized,36,0
+CLM1312,60,10,329373,Natural Disaster,4,1,1,Authorized,54,0
+CLM1313,48,8,299793,Collision,3,1,1,Local,45,1
+CLM1314,37,15,127319,Fire,0,0,0,Local,28,0
+CLM1315,68,6,149438,Natural Disaster,3,1,1,Authorized,49,1
+CLM1316,70,0,100386,Fire,2,1,0,Authorized,16,0
+CLM1317,27,11,198188,Fire,1,0,1,Local,7,0
+CLM1318,63,0,409222,Theft,5,0,0,Local,21,1
+CLM1319,59,15,61754,Collision,1,0,1,Authorized,5,1
+CLM1320,30,1,179736,Collision,2,1,1,Local,33,1
+CLM1321,39,0,11966,Collision,0,1,0,Authorized,7,0
+CLM1322,22,12,138235,Collision,2,1,0,Authorized,18,1
+CLM1323,53,11,249043,Natural Disaster,2,1,0,Local,58,0
+CLM1324,26,11,436400,Collision,0,1,0,Local,12,0
+CLM1325,38,13,396338,Collision,2,0,1,Local,45,0
+CLM1326,40,14,481135,Natural Disaster,4,0,0,Authorized,24,1
+CLM1327,52,6,217892,Collision,3,1,1,Local,57,0
+CLM1328,21,1,173693,Fire,3,0,0,Local,44,1
+CLM1329,35,2,335667,Natural Disaster,3,0,1,Authorized,33,0
+CLM1330,23,15,177974,Collision,3,1,1,Authorized,28,0
+CLM1331,48,7,421517,Collision,3,0,0,Authorized,22,1
+CLM1332,34,14,322393,Natural Disaster,2,0,1,Authorized,8,0
+CLM1333,25,14,41511,Collision,4,1,0,Authorized,40,0
+CLM1334,22,2,80118,Collision,1,1,0,Local,4,1
+CLM1335,54,6,187681,Theft,3,0,1,Authorized,28,0
+CLM1336,34,3,321772,Fire,5,0,1,Local,43,0
+CLM1337,32,11,356031,Theft,1,1,0,Local,44,0
+CLM1338,22,2,332570,Fire,0,1,0,Local,24,1
+CLM1339,46,11,387682,Fire,3,1,1,Authorized,7,0
+CLM1340,51,10,340070,Natural Disaster,0,0,1,Local,12,0
+CLM1341,33,13,300125,Fire,3,0,1,Local,46,1
+CLM1342,20,7,374748,Collision,4,0,0,Local,1,0
+CLM1343,68,7,331603,Natural Disaster,4,1,1,Local,34,0
+CLM1344,27,15,280673,Natural Disaster,1,1,0,Local,33,1
+CLM1345,50,10,438330,Fire,5,1,0,Authorized,9,0
+CLM1346,32,5,447167,Natural Disaster,5,0,1,Local,46,1
+CLM1347,58,9,468440,Natural Disaster,3,1,0,Authorized,33,0
+CLM1348,37,5,347165,Collision,2,0,1,Local,45,1
+CLM1349,21,2,434953,Fire,0,1,0,Local,26,0
+CLM1350,43,8,175236,Theft,2,0,0,Local,32,1
+CLM1351,53,8,30086,Theft,5,1,0,Local,41,1
+CLM1352,61,12,258556,Natural Disaster,2,0,1,Authorized,56,1
+CLM1353,27,2,284826,Collision,2,1,0,Local,17,0
+CLM1354,38,10,403153,Theft,2,1,0,Local,39,0
+CLM1355,70,8,2340,Fire,1,1,0,Local,7,1
+CLM1356,52,14,231689,Fire,4,0,0,Local,19,0
+CLM1357,42,13,72573,Theft,1,1,0,Authorized,25,1
+CLM1358,41,2,451623,Collision,4,1,1,Local,59,1
+CLM1359,34,15,206819,Fire,0,0,1,Local,52,1
+CLM1360,50,11,28748,Natural Disaster,1,1,1,Local,53,1
+CLM1361,21,6,387304,Natural Disaster,3,0,1,Authorized,16,0
+CLM1362,61,4,276001,Collision,0,0,1,Local,51,1
+CLM1363,54,4,231588,Theft,1,0,1,Authorized,40,1
+CLM1364,38,0,471217,Collision,0,1,0,Authorized,2,0
+CLM1365,30,2,104479,Theft,2,1,0,Local,42,1
+CLM1366,40,11,105338,Fire,4,0,0,Authorized,43,0
+CLM1367,21,5,496045,Collision,2,1,0,Local,45,1
+CLM1368,28,4,159089,Fire,4,0,0,Authorized,1,0
+CLM1369,41,7,498335,Theft,5,0,1,Authorized,38,0
+CLM1370,53,8,116537,Collision,3,0,1,Authorized,53,1
+CLM1371,67,13,23958,Natural Disaster,1,1,1,Local,30,1
+CLM1372,44,15,264475,Fire,3,1,0,Local,18,0
+CLM1373,53,6,118287,Theft,3,0,0,Local,13,0
+CLM1374,66,0,17296,Fire,2,0,1,Authorized,58,1
+CLM1375,45,15,176156,Fire,2,0,1,Authorized,51,0
+CLM1376,31,7,386420,Theft,3,1,0,Authorized,44,0
+CLM1377,22,2,474554,Natural Disaster,2,0,1,Authorized,36,1
+CLM1378,40,10,172996,Natural Disaster,3,0,0,Local,26,1
+CLM1379,55,4,432919,Natural Disaster,2,1,0,Authorized,6,0
+CLM1380,53,6,203938,Collision,1,0,1,Local,48,1
+CLM1381,42,8,302515,Collision,2,0,1,Authorized,31,1
+CLM1382,22,9,491218,Collision,0,1,0,Authorized,36,0
+CLM1383,68,10,206241,Theft,4,1,1,Local,33,0
+CLM1384,60,13,240560,Natural Disaster,2,1,1,Local,42,0
+CLM1385,26,7,22325,Natural Disaster,3,0,0,Local,1,0
+CLM1386,60,4,438635,Theft,0,0,0,Local,44,0
+CLM1387,60,10,55315,Fire,5,0,0,Local,24,1
+CLM1388,56,13,484485,Fire,1,0,0,Local,23,0
+CLM1389,32,9,21591,Fire,4,0,0,Local,3,0
+CLM1390,23,4,327232,Fire,5,1,1,Local,49,1
+CLM1391,51,14,243954,Theft,1,0,1,Authorized,27,0
+CLM1392,34,11,330557,Fire,0,1,0,Local,15,1
+CLM1393,25,4,288708,Natural Disaster,1,0,1,Authorized,34,0
+CLM1394,29,8,483352,Fire,3,0,1,Authorized,2,1
+CLM1395,23,1,150572,Natural Disaster,1,0,0,Local,15,0
+CLM1396,18,1,99227,Theft,2,1,0,Authorized,55,1
+CLM1397,61,11,203175,Collision,4,0,1,Local,32,0
+CLM1398,27,4,282223,Collision,4,0,0,Local,21,1
+CLM1399,32,13,442576,Fire,5,1,0,Local,8,0
+CLM1400,53,12,173297,Collision,5,0,0,Local,6,1
+CLM1401,62,7,338314,Collision,3,0,1,Local,15,1
+CLM1402,22,10,384860,Fire,5,0,0,Authorized,45,1
+CLM1403,28,8,313794,Theft,1,1,1,Local,28,0
+CLM1404,46,11,415867,Collision,5,0,0,Local,59,0
+CLM1405,45,15,368264,Fire,1,1,0,Local,4,1
+CLM1406,39,11,237387,Theft,1,0,1,Authorized,32,0
+CLM1407,41,1,329647,Collision,4,0,1,Authorized,42,1
+CLM1408,52,15,450577,Collision,4,0,1,Local,19,0
+CLM1409,35,6,445947,Collision,0,1,0,Authorized,35,0
+CLM1410,48,5,236369,Natural Disaster,2,0,0,Authorized,30,1
+CLM1411,63,9,299285,Collision,4,0,1,Authorized,9,1
+CLM1412,27,12,88026,Theft,4,0,0,Authorized,1,0
+CLM1413,45,14,404401,Natural Disaster,2,1,1,Authorized,2,0
+CLM1414,37,13,395518,Natural Disaster,1,1,0,Local,43,0
+CLM1415,31,11,84353,Natural Disaster,1,1,0,Local,48,0
+CLM1416,27,3,353871,Collision,2,0,1,Local,53,0
+CLM1417,57,12,271905,Fire,1,0,0,Local,2,0
+CLM1418,64,8,383749,Fire,1,0,1,Authorized,8,1
+CLM1419,48,1,388423,Collision,5,1,1,Local,34,0
+CLM1420,64,11,233283,Natural Disaster,4,1,1,Authorized,6,0
+CLM1421,32,10,101728,Natural Disaster,1,1,0,Local,25,0
+CLM1422,21,14,42742,Theft,0,1,0,Authorized,51,0
+CLM1423,52,0,412152,Natural Disaster,2,0,0,Local,40,1
+CLM1424,27,11,29469,Collision,5,1,1,Authorized,37,0
+CLM1425,57,0,294140,Theft,3,0,0,Authorized,1,0
+CLM1426,67,5,376530,Collision,4,0,1,Authorized,15,1
+CLM1427,56,14,252505,Fire,4,0,1,Authorized,46,0
+CLM1428,54,12,234662,Natural Disaster,1,0,1,Local,46,1
+CLM1429,70,9,359746,Collision,4,0,0,Local,19,0
+CLM1430,58,14,199815,Collision,0,1,0,Local,47,0
+CLM1431,24,10,319688,Natural Disaster,2,1,0,Authorized,20,1
+CLM1432,29,9,133680,Fire,1,1,1,Authorized,42,1
+CLM1433,34,10,320495,Collision,3,1,0,Local,16,0
+CLM1434,54,1,26709,Theft,1,0,0,Authorized,26,0
+CLM1435,65,1,32096,Natural Disaster,1,0,0,Local,53,1
+CLM1436,22,6,289263,Fire,1,1,1,Authorized,29,0
+CLM1437,23,15,143369,Natural Disaster,1,1,0,Authorized,24,0
+CLM1438,61,3,209240,Fire,1,0,1,Authorized,25,0
+CLM1439,30,3,51808,Collision,0,1,0,Local,22,0
+CLM1440,60,8,435676,Theft,1,1,1,Authorized,60,0
+CLM1441,19,0,250538,Fire,2,0,1,Authorized,28,0
+CLM1442,38,14,142558,Fire,3,0,0,Local,50,1
+CLM1443,43,5,176495,Natural Disaster,1,0,1,Local,34,0
+CLM1444,49,1,452614,Collision,5,1,0,Authorized,41,0
+CLM1445,63,14,126371,Fire,2,0,0,Local,8,0
+CLM1446,29,6,150055,Fire,3,0,1,Local,60,0
+CLM1447,50,14,296068,Fire,3,1,1,Local,41,1
+CLM1448,28,5,37040,Theft,3,0,1,Local,19,0
+CLM1449,61,5,266292,Collision,5,1,1,Local,36,1
+CLM1450,48,0,18988,Theft,2,1,1,Authorized,2,0
+CLM1451,25,6,482400,Fire,5,1,1,Authorized,49,0
+CLM1452,47,15,432785,Collision,2,1,1,Local,22,1
+CLM1453,46,9,103410,Fire,4,0,0,Local,31,1
+CLM1454,44,2,436603,Theft,0,1,1,Authorized,11,0
+CLM1455,47,14,434499,Natural Disaster,4,1,0,Local,43,0
+CLM1456,58,11,198643,Fire,3,1,1,Authorized,51,1
+CLM1457,38,1,1865,Theft,5,0,0,Local,15,1
+CLM1458,18,5,153954,Natural Disaster,4,0,0,Local,12,1
+CLM1459,43,1,325594,Collision,4,0,1,Authorized,54,1
+CLM1460,49,1,494380,Fire,2,0,1,Local,7,1
+CLM1461,65,10,193045,Natural Disaster,4,1,0,Local,38,1
+CLM1462,67,4,423426,Theft,1,1,0,Local,53,1
+CLM1463,52,9,429435,Theft,4,1,0,Authorized,5,1
+CLM1464,54,13,218087,Collision,5,1,1,Authorized,3,1
+CLM1465,23,3,396848,Fire,5,0,0,Authorized,25,0
+CLM1466,66,11,227843,Natural Disaster,0,1,1,Authorized,41,1
+CLM1467,20,10,30734,Theft,3,0,0,Authorized,19,0
+CLM1468,57,9,79489,Theft,4,0,1,Local,14,0
+CLM1469,18,12,409545,Theft,2,0,1,Local,28,0
+CLM1470,26,8,462665,Natural Disaster,2,0,1,Local,0,0
+CLM1471,36,0,26793,Natural Disaster,4,0,0,Local,16,1
+CLM1472,64,12,147529,Theft,3,1,1,Local,38,1
+CLM1473,50,13,94731,Collision,5,1,1,Local,33,1
+CLM1474,66,0,457837,Fire,2,0,1,Local,47,1
+CLM1475,51,11,53618,Collision,1,0,1,Local,10,1
+CLM1476,41,14,147103,Theft,2,1,0,Local,36,1
+CLM1477,37,5,344638,Collision,2,0,0,Local,21,1
+CLM1478,56,4,470225,Fire,5,1,0,Local,13,1
+CLM1479,29,14,113987,Natural Disaster,1,1,1,Authorized,30,1
+CLM1480,26,1,437542,Theft,4,0,1,Authorized,56,1
+CLM1481,57,0,464206,Natural Disaster,4,1,1,Local,25,1
+CLM1482,53,12,174596,Theft,2,1,0,Local,30,1
+CLM1483,32,1,52060,Fire,1,0,0,Authorized,17,1
+CLM1484,66,7,442505,Collision,5,0,1,Authorized,8,0
+CLM1485,43,12,15634,Theft,2,0,0,Authorized,38,1
+CLM1486,30,8,182131,Theft,0,1,0,Authorized,22,1
+CLM1487,62,14,91147,Theft,2,1,0,Authorized,6,0
+CLM1488,23,13,350337,Fire,1,1,0,Authorized,1,1
+CLM1489,68,9,330529,Natural Disaster,2,1,0,Local,37,0
+CLM1490,60,15,164996,Collision,2,0,1,Authorized,49,1
+CLM1491,48,5,154418,Collision,5,1,1,Authorized,22,1
+CLM1492,44,5,477170,Theft,5,0,0,Local,49,1
+CLM1493,39,15,217876,Collision,3,1,0,Authorized,9,1
+CLM1494,59,10,267609,Fire,0,0,1,Local,4,0
+CLM1495,28,13,165612,Collision,4,0,0,Local,46,1
+CLM1496,67,6,24049,Theft,1,1,1,Local,20,0
+CLM1497,63,12,270843,Collision,1,0,0,Authorized,11,1
+CLM1498,47,10,301153,Collision,0,0,0,Authorized,21,1
+CLM1499,41,13,221669,Fire,4,1,1,Authorized,34,0
+CLM1500,26,4,6482,Natural Disaster,4,1,0,Authorized,59,1
+CLM1501,34,7,32797,Natural Disaster,4,1,0,Authorized,31,1
+CLM1502,52,0,396064,Natural Disaster,5,0,0,Authorized,18,0
+CLM1503,29,11,403905,Theft,4,0,0,Local,30,0
+CLM1504,68,15,102398,Theft,2,1,1,Local,57,0
+CLM1505,45,10,40151,Fire,3,0,0,Local,6,1
+CLM1506,65,12,307501,Collision,2,0,0,Local,36,0
+CLM1507,49,3,433866,Fire,0,1,1,Local,20,1
+CLM1508,69,3,324892,Collision,1,1,0,Local,33,1
+CLM1509,61,0,51347,Fire,2,0,1,Local,33,0
+CLM1510,39,13,366479,Natural Disaster,3,1,1,Authorized,11,0
+CLM1511,33,11,334619,Theft,3,1,1,Local,37,1
+CLM1512,63,9,153758,Theft,5,1,1,Local,52,1
+CLM1513,63,11,466400,Natural Disaster,5,0,1,Authorized,20,1
+CLM1514,60,3,106015,Collision,5,1,1,Local,53,1
+CLM1515,43,2,214325,Fire,0,1,1,Authorized,27,1
+CLM1516,59,2,35838,Theft,3,0,1,Local,42,1
+CLM1517,45,4,100486,Theft,0,1,0,Authorized,0,0
+CLM1518,66,12,495174,Natural Disaster,2,1,1,Authorized,18,0
+CLM1519,59,10,487175,Collision,5,0,1,Local,17,0
+CLM1520,27,12,286026,Fire,2,0,1,Local,20,0
+CLM1521,54,0,246547,Natural Disaster,5,1,0,Authorized,13,0
+CLM1522,30,13,350928,Theft,5,1,0,Authorized,47,0
+CLM1523,68,10,348515,Collision,2,0,1,Authorized,41,0
+CLM1524,39,3,211641,Natural Disaster,1,1,1,Local,20,0
+CLM1525,49,1,116851,Fire,3,0,0,Local,24,0
+CLM1526,51,3,397604,Fire,3,1,0,Local,37,1
+CLM1527,55,6,480964,Natural Disaster,3,1,0,Authorized,29,0
+CLM1528,46,15,31242,Theft,0,1,1,Local,2,0
+CLM1529,32,3,235387,Collision,4,0,1,Authorized,56,0
+CLM1530,27,7,70985,Collision,3,1,1,Local,40,1
+CLM1531,41,14,495577,Theft,5,0,0,Authorized,5,1
+CLM1532,48,2,98450,Fire,0,0,1,Authorized,2,1
+CLM1533,65,10,130008,Fire,2,1,0,Authorized,55,1
+CLM1534,56,12,30876,Fire,5,1,0,Local,10,1
+CLM1535,41,8,324482,Theft,5,0,0,Local,13,0
+CLM1536,69,14,254744,Collision,0,0,0,Authorized,15,0
+CLM1537,42,10,152397,Natural Disaster,3,1,1,Authorized,37,1
+CLM1538,58,2,365124,Fire,2,0,0,Authorized,47,0
+CLM1539,24,1,156881,Collision,1,1,1,Authorized,50,0
+CLM1540,37,3,218517,Theft,0,0,0,Local,1,0
+CLM1541,48,9,144570,Natural Disaster,1,1,1,Authorized,17,1
+CLM1542,61,7,467166,Natural Disaster,5,0,1,Local,28,0
+CLM1543,25,7,173207,Theft,5,1,1,Local,30,0
+CLM1544,19,3,471329,Theft,5,1,1,Local,38,1
+CLM1545,54,12,165683,Theft,2,0,0,Authorized,35,1
+CLM1546,22,7,460308,Theft,4,1,1,Authorized,13,0
+CLM1547,40,7,45682,Fire,5,1,1,Authorized,52,1
+CLM1548,37,4,211791,Fire,2,0,0,Authorized,53,0
+CLM1549,67,9,100181,Natural Disaster,4,1,1,Authorized,16,1
+CLM1550,35,11,158211,Theft,0,0,0,Local,56,1
+CLM1551,39,0,284013,Fire,5,0,0,Authorized,19,0
+CLM1552,52,15,354204,Natural Disaster,2,1,0,Authorized,2,1
+CLM1553,28,10,236947,Collision,1,0,1,Local,54,1
+CLM1554,32,0,352308,Fire,1,1,0,Local,41,1
+CLM1555,18,11,90099,Natural Disaster,5,1,0,Local,42,0
+CLM1556,69,15,293010,Natural Disaster,1,0,0,Local,9,0
+CLM1557,29,1,290074,Fire,3,1,1,Authorized,16,0
+CLM1558,48,15,493480,Natural Disaster,1,0,0,Authorized,5,0
+CLM1559,62,13,220809,Theft,4,1,1,Local,9,0
+CLM1560,41,8,3259,Natural Disaster,3,1,0,Authorized,25,1
+CLM1561,21,15,253001,Collision,4,1,1,Authorized,28,1
+CLM1562,55,6,170097,Collision,3,1,1,Local,6,1
+CLM1563,50,5,117976,Natural Disaster,2,1,1,Authorized,23,0
+CLM1564,29,3,206080,Theft,1,0,0,Authorized,8,1
+CLM1565,19,7,11241,Collision,0,0,0,Authorized,11,0
+CLM1566,28,5,5465,Natural Disaster,4,0,0,Local,10,1
+CLM1567,52,9,352365,Theft,4,1,1,Local,48,0
+CLM1568,24,9,432473,Fire,2,1,0,Authorized,6,0
+CLM1569,56,1,287600,Collision,4,1,1,Authorized,48,0
+CLM1570,27,3,42363,Theft,5,1,1,Authorized,59,0
+CLM1571,27,4,177187,Collision,2,0,0,Authorized,51,0
+CLM1572,37,1,465725,Natural Disaster,5,0,0,Local,15,0
+CLM1573,31,5,246238,Theft,4,1,0,Local,31,1
+CLM1574,67,3,315940,Fire,5,0,0,Authorized,20,1
+CLM1575,35,13,349371,Natural Disaster,3,0,1,Local,5,0
+CLM1576,70,2,64708,Theft,5,1,1,Local,47,0
+CLM1577,22,10,308751,Natural Disaster,0,1,1,Local,26,0
+CLM1578,48,10,3720,Natural Disaster,5,0,1,Local,37,1
+CLM1579,59,6,400779,Theft,1,0,1,Authorized,24,0
+CLM1580,20,15,92358,Theft,0,0,0,Authorized,18,0
+CLM1581,43,10,299453,Theft,3,1,0,Authorized,39,0
+CLM1582,64,15,218211,Natural Disaster,1,1,1,Authorized,25,0
+CLM1583,60,13,158995,Theft,0,1,0,Authorized,45,1
+CLM1584,33,9,353922,Collision,2,0,1,Authorized,0,1
+CLM1585,21,8,298486,Natural Disaster,5,1,1,Authorized,17,1
+CLM1586,52,11,175155,Collision,2,0,0,Local,6,0
+CLM1587,18,11,11959,Natural Disaster,5,0,1,Authorized,51,1
+CLM1588,19,1,213046,Theft,4,1,0,Local,37,1
+CLM1589,23,6,184028,Fire,5,0,1,Authorized,42,0
+CLM1590,70,12,475786,Theft,0,0,1,Local,2,0
+CLM1591,20,13,353908,Natural Disaster,1,0,0,Local,18,0
+CLM1592,26,11,299018,Natural Disaster,3,1,1,Authorized,16,0
+CLM1593,47,7,26141,Fire,1,0,1,Local,13,0
+CLM1594,32,5,235150,Collision,5,0,0,Authorized,37,1
+CLM1595,53,8,345881,Theft,0,1,1,Authorized,9,0
+CLM1596,38,5,449840,Theft,5,0,1,Authorized,10,0
+CLM1597,28,3,400175,Theft,5,0,0,Local,57,0
+CLM1598,42,15,411262,Theft,1,0,1,Local,50,0
+CLM1599,40,8,134991,Collision,0,1,1,Local,38,0
+CLM1600,50,9,299762,Fire,4,0,0,Local,8,1
+CLM1601,34,1,98108,Natural Disaster,5,1,1,Local,22,0
+CLM1602,32,7,435324,Collision,3,0,0,Local,33,1
+CLM1603,36,6,131094,Natural Disaster,2,1,1,Local,6,1
+CLM1604,50,2,32692,Natural Disaster,4,0,0,Local,13,0
+CLM1605,32,11,482531,Natural Disaster,3,0,1,Local,52,0
+CLM1606,26,4,46231,Theft,0,1,0,Local,34,0
+CLM1607,31,11,252898,Collision,4,1,0,Local,13,0
+CLM1608,61,4,469055,Fire,4,0,1,Local,51,0
+CLM1609,43,5,141298,Collision,3,0,0,Authorized,55,0
+CLM1610,22,15,168304,Fire,0,1,0,Local,1,1
+CLM1611,53,11,246521,Natural Disaster,4,0,0,Local,55,0
+CLM1612,52,12,182957,Theft,5,1,1,Authorized,0,0
+CLM1613,27,13,336360,Collision,0,0,1,Local,54,0
+CLM1614,32,7,107902,Collision,3,0,0,Local,58,0
+CLM1615,29,10,309401,Theft,3,1,0,Local,18,0
+CLM1616,18,12,439248,Collision,5,1,1,Local,41,0
+CLM1617,44,13,359089,Theft,1,0,1,Authorized,15,0
+CLM1618,19,15,439970,Natural Disaster,2,1,0,Local,36,0
+CLM1619,52,14,177753,Fire,2,0,0,Authorized,56,0
+CLM1620,69,2,166869,Fire,1,0,1,Authorized,49,1
+CLM1621,25,12,303225,Natural Disaster,2,0,0,Local,45,0
+CLM1622,28,3,494081,Collision,1,0,0,Authorized,52,1
+CLM1623,69,8,40895,Natural Disaster,3,0,0,Local,23,1
+CLM1624,18,13,94506,Natural Disaster,0,0,0,Local,13,1
+CLM1625,63,15,230404,Natural Disaster,4,1,0,Local,8,1
+CLM1626,47,3,216411,Collision,3,1,0,Local,27,0
+CLM1627,39,4,168624,Natural Disaster,1,0,0,Local,46,1
+CLM1628,34,14,481417,Collision,2,0,0,Local,46,0
+CLM1629,38,7,49590,Theft,3,1,1,Local,13,1
+CLM1630,48,11,325799,Natural Disaster,1,1,1,Local,24,0
+CLM1631,53,15,144373,Natural Disaster,0,0,1,Local,22,1
+CLM1632,27,5,192529,Theft,4,0,0,Local,36,0
+CLM1633,29,13,378130,Natural Disaster,1,1,0,Authorized,49,0
+CLM1634,30,1,66131,Theft,3,1,1,Authorized,47,1
+CLM1635,44,3,494636,Natural Disaster,0,0,0,Authorized,30,1
+CLM1636,18,13,197449,Natural Disaster,0,1,0,Local,13,1
+CLM1637,41,9,352059,Fire,5,0,1,Authorized,43,0
+CLM1638,30,1,179831,Collision,0,1,0,Local,0,0
+CLM1639,61,4,456869,Collision,4,0,1,Local,56,1
+CLM1640,54,1,102951,Theft,3,0,0,Authorized,10,0
+CLM1641,59,14,203475,Collision,2,0,0,Local,3,0
+CLM1642,66,2,44128,Collision,3,1,1,Authorized,45,1
+CLM1643,67,0,107124,Theft,1,1,0,Authorized,56,0
+CLM1644,70,10,172842,Fire,2,0,0,Authorized,50,1
+CLM1645,61,9,223860,Natural Disaster,2,0,0,Local,0,0
+CLM1646,60,11,446263,Fire,5,0,0,Authorized,21,0
+CLM1647,52,15,347723,Theft,5,0,0,Authorized,31,0
+CLM1648,50,0,284716,Theft,2,0,0,Authorized,26,1
+CLM1649,63,12,180405,Collision,0,0,0,Local,37,0
+CLM1650,51,11,269677,Fire,5,0,0,Authorized,37,1
+CLM1651,67,0,361220,Theft,2,0,0,Authorized,37,0
+CLM1652,42,11,302267,Fire,0,0,1,Authorized,31,1
+CLM1653,68,0,96146,Natural Disaster,3,0,0,Local,21,1
+CLM1654,48,15,302708,Fire,4,0,0,Local,30,0
+CLM1655,19,8,417788,Theft,3,1,1,Local,9,1
+CLM1656,68,11,64752,Collision,3,0,0,Authorized,21,1
+CLM1657,25,7,100173,Fire,0,0,1,Authorized,44,0
+CLM1658,57,15,125221,Natural Disaster,1,1,1,Local,44,1
+CLM1659,30,6,212207,Fire,2,1,0,Local,34,1
+CLM1660,25,5,456227,Collision,1,1,1,Local,5,0
+CLM1661,67,4,485975,Natural Disaster,3,1,1,Local,42,1
+CLM1662,55,15,263248,Theft,3,1,1,Authorized,5,1
+CLM1663,61,5,341259,Collision,2,1,0,Authorized,20,0
+CLM1664,21,2,60542,Fire,4,0,0,Authorized,16,1
+CLM1665,53,3,450566,Collision,5,1,0,Authorized,42,1
+CLM1666,20,11,368484,Theft,1,0,0,Local,12,0
+CLM1667,60,11,134073,Collision,0,0,1,Local,10,1
+CLM1668,19,8,123478,Fire,2,0,0,Authorized,54,1
+CLM1669,42,11,105999,Natural Disaster,4,1,0,Local,50,0
+CLM1670,62,0,456740,Collision,2,0,0,Local,16,0
+CLM1671,20,0,64136,Collision,1,0,1,Authorized,4,0
+CLM1672,49,8,103677,Natural Disaster,5,0,1,Authorized,49,1
+CLM1673,68,7,345509,Theft,4,0,1,Authorized,15,1
+CLM1674,39,6,21875,Natural Disaster,0,1,0,Authorized,12,1
+CLM1675,49,8,150017,Collision,5,1,0,Authorized,54,0
+CLM1676,51,0,1186,Collision,5,1,1,Authorized,52,1
+CLM1677,42,1,279967,Theft,4,0,1,Authorized,9,1
+CLM1678,59,2,23071,Collision,2,1,0,Authorized,55,1
+CLM1679,46,13,46350,Collision,3,0,1,Local,14,0
+CLM1680,51,11,218918,Theft,2,0,0,Local,58,1
+CLM1681,47,8,302662,Natural Disaster,5,0,0,Local,56,0
+CLM1682,70,15,403398,Fire,5,1,1,Authorized,26,0
+CLM1683,18,10,413887,Natural Disaster,2,1,0,Local,35,1
+CLM1684,21,6,313341,Fire,3,0,0,Local,60,0
+CLM1685,31,10,205924,Natural Disaster,4,1,1,Authorized,34,0
+CLM1686,60,8,59942,Theft,5,1,1,Authorized,60,0
+CLM1687,62,15,168087,Theft,2,1,1,Local,39,0
+CLM1688,56,7,165291,Theft,4,0,0,Authorized,5,1
+CLM1689,40,1,239815,Collision,0,0,1,Local,55,0
+CLM1690,26,0,362765,Natural Disaster,5,0,0,Authorized,16,0
+CLM1691,37,5,183484,Theft,1,1,0,Local,5,1
+CLM1692,33,11,433726,Theft,3,0,0,Local,23,1
+CLM1693,38,4,475784,Fire,0,0,1,Authorized,34,1
+CLM1694,24,12,113244,Theft,4,1,1,Local,13,0
+CLM1695,32,2,258061,Theft,4,1,1,Authorized,0,0
+CLM1696,20,8,468629,Collision,5,1,0,Local,49,1
+CLM1697,44,1,90286,Fire,3,0,1,Authorized,6,1
+CLM1698,64,8,161140,Theft,3,0,0,Authorized,41,1
+CLM1699,63,8,368918,Natural Disaster,4,0,1,Local,32,0
+CLM1700,23,15,175332,Natural Disaster,0,1,1,Authorized,57,0
+CLM1701,62,6,345733,Fire,4,1,0,Authorized,28,0
+CLM1702,44,7,411257,Theft,2,1,0,Local,32,0
+CLM1703,65,14,258291,Collision,2,1,1,Authorized,13,1
+CLM1704,60,15,284259,Theft,1,1,0,Authorized,4,0
+CLM1705,55,10,75676,Fire,1,1,0,Local,3,1
+CLM1706,61,4,316746,Fire,2,0,1,Local,48,1
+CLM1707,28,7,91139,Natural Disaster,5,1,1,Local,17,0
+CLM1708,35,8,460262,Collision,0,1,0,Authorized,0,0
+CLM1709,51,6,278554,Fire,4,1,0,Local,56,0
+CLM1710,19,1,163520,Fire,0,0,1,Authorized,26,0
+CLM1711,28,8,36446,Collision,0,0,1,Local,12,1
+CLM1712,42,8,245385,Natural Disaster,1,0,0,Authorized,3,1
+CLM1713,60,14,224731,Collision,2,0,1,Authorized,57,0
+CLM1714,53,7,44008,Fire,5,1,1,Local,53,0
+CLM1715,59,15,151029,Collision,1,0,1,Authorized,28,1
+CLM1716,45,15,327959,Theft,2,1,1,Local,5,1
+CLM1717,40,9,194726,Collision,4,0,0,Local,26,0
+CLM1718,67,14,467946,Natural Disaster,5,0,1,Authorized,1,1
+CLM1719,24,13,480337,Fire,3,1,0,Local,15,1
+CLM1720,27,7,274332,Theft,4,1,0,Authorized,49,1
+CLM1721,18,12,164970,Fire,2,1,0,Local,45,1
+CLM1722,37,0,133072,Natural Disaster,5,1,1,Authorized,37,0
+CLM1723,57,11,302383,Natural Disaster,2,0,0,Authorized,49,1
+CLM1724,51,0,463864,Theft,1,1,0,Authorized,10,0
+CLM1725,66,9,183255,Collision,4,0,1,Authorized,33,1
+CLM1726,61,6,224266,Theft,3,1,1,Local,53,0
+CLM1727,24,5,40928,Collision,0,1,0,Authorized,37,0
+CLM1728,64,3,395852,Theft,1,1,1,Authorized,29,0
+CLM1729,51,2,205775,Collision,0,1,0,Local,22,0
+CLM1730,30,13,419721,Theft,4,1,1,Local,15,0
+CLM1731,32,8,216249,Collision,2,1,0,Authorized,12,1
+CLM1732,60,2,454953,Natural Disaster,2,0,0,Authorized,29,0
+CLM1733,38,6,413433,Fire,0,1,0,Authorized,0,1
+CLM1734,34,15,415929,Fire,3,0,1,Local,2,1
+CLM1735,20,7,224871,Collision,3,0,1,Local,31,0
+CLM1736,31,11,253659,Fire,5,0,0,Local,1,0
+CLM1737,34,4,336605,Theft,0,0,1,Local,60,0
+CLM1738,19,2,155283,Fire,2,0,0,Local,23,0
+CLM1739,37,6,59416,Natural Disaster,4,1,1,Authorized,6,0
+CLM1740,32,4,227642,Natural Disaster,4,0,0,Local,17,0
+CLM1741,35,3,71653,Theft,3,1,0,Authorized,35,0
+CLM1742,24,12,145758,Theft,5,1,0,Local,33,0
+CLM1743,30,13,237737,Theft,4,0,1,Authorized,28,1
+CLM1744,65,4,123941,Theft,5,0,0,Authorized,4,0
+CLM1745,30,9,128285,Fire,3,1,1,Authorized,36,1
+CLM1746,65,4,149564,Collision,3,1,0,Authorized,24,0
+CLM1747,20,13,284162,Theft,2,0,1,Authorized,20,0
+CLM1748,36,6,315400,Fire,3,1,0,Authorized,15,0
+CLM1749,47,4,231309,Theft,0,1,0,Authorized,53,0
+CLM1750,58,15,166070,Fire,1,1,0,Local,27,1
+CLM1751,43,8,491694,Theft,2,0,1,Local,50,0
+CLM1752,66,6,92272,Theft,4,1,0,Authorized,41,0
+CLM1753,47,4,251081,Natural Disaster,5,0,0,Authorized,1,1
+CLM1754,60,4,225122,Theft,5,0,0,Authorized,48,0
+CLM1755,23,5,437878,Natural Disaster,2,0,0,Authorized,27,1
+CLM1756,30,12,255974,Theft,5,0,1,Local,52,1
+CLM1757,22,13,114229,Fire,2,1,0,Authorized,2,0
+CLM1758,26,6,336658,Natural Disaster,1,1,0,Authorized,16,1
+CLM1759,70,6,249314,Collision,0,0,0,Authorized,38,0
+CLM1760,41,4,99468,Theft,5,0,0,Local,60,1
+CLM1761,60,14,451858,Fire,1,0,1,Authorized,33,1
+CLM1762,28,7,381120,Fire,1,0,0,Local,39,1
+CLM1763,36,12,459268,Theft,2,0,1,Local,15,1
+CLM1764,30,9,306681,Collision,0,0,0,Local,4,0
+CLM1765,44,5,231703,Theft,2,1,0,Authorized,48,1
+CLM1766,36,15,309653,Collision,0,1,1,Authorized,59,0
+CLM1767,67,5,119993,Natural Disaster,1,1,0,Local,49,0
+CLM1768,52,15,59621,Theft,5,1,1,Local,60,0
+CLM1769,66,6,81317,Natural Disaster,1,0,0,Authorized,41,0
+CLM1770,22,9,427020,Natural Disaster,5,1,1,Authorized,1,0
+CLM1771,54,4,49464,Theft,1,0,0,Local,58,1
+CLM1772,42,0,240246,Collision,0,1,0,Authorized,8,1
+CLM1773,46,13,485846,Natural Disaster,2,0,1,Local,36,1
+CLM1774,46,8,112202,Natural Disaster,4,0,1,Authorized,49,0
+CLM1775,59,13,65868,Fire,3,1,0,Authorized,54,1
+CLM1776,57,8,243975,Collision,4,1,0,Local,50,0
+CLM1777,52,3,94844,Natural Disaster,0,0,0,Local,37,0
+CLM1778,30,5,394147,Fire,3,0,0,Authorized,41,0
+CLM1779,42,6,245935,Natural Disaster,2,0,1,Authorized,8,0
+CLM1780,63,2,142337,Natural Disaster,5,0,1,Local,57,0
+CLM1781,34,14,204957,Theft,1,0,1,Authorized,3,1
+CLM1782,20,4,85825,Collision,1,0,0,Authorized,54,0
+CLM1783,70,9,179685,Natural Disaster,2,1,1,Authorized,16,0
+CLM1784,64,5,324908,Fire,5,1,1,Local,25,1
+CLM1785,18,1,165728,Theft,2,0,1,Authorized,56,1
+CLM1786,66,8,365468,Natural Disaster,0,1,1,Authorized,8,1
+CLM1787,61,3,452027,Natural Disaster,1,0,0,Local,38,0
+CLM1788,22,6,51932,Natural Disaster,0,1,1,Local,27,1
+CLM1789,67,0,202606,Collision,1,0,1,Authorized,0,1
+CLM1790,51,8,224513,Theft,3,0,0,Authorized,12,1
+CLM1791,44,3,166039,Collision,3,0,0,Authorized,27,1
+CLM1792,65,3,415881,Fire,4,1,1,Authorized,8,0
+CLM1793,36,4,107134,Natural Disaster,2,1,0,Local,1,0
+CLM1794,51,14,315829,Natural Disaster,0,0,1,Authorized,18,1
+CLM1795,31,3,224034,Fire,5,1,1,Authorized,3,1
+CLM1796,32,1,307274,Fire,0,1,1,Authorized,2,1
+CLM1797,52,2,454471,Theft,2,1,0,Authorized,12,1
+CLM1798,34,6,83410,Fire,1,0,0,Local,55,1
+CLM1799,45,10,170203,Natural Disaster,5,0,1,Authorized,60,1
+CLM1800,47,15,390366,Fire,2,0,0,Local,49,1
+CLM1801,67,1,431186,Collision,3,1,0,Authorized,17,0
+CLM1802,41,14,171999,Collision,1,0,0,Authorized,30,0
+CLM1803,20,2,484813,Theft,0,1,1,Local,49,0
+CLM1804,35,12,269891,Collision,3,1,0,Local,45,1
+CLM1805,38,12,143503,Collision,0,1,1,Authorized,58,0
+CLM1806,41,12,259511,Fire,3,1,0,Local,58,0
+CLM1807,25,2,304933,Natural Disaster,3,1,1,Authorized,48,0
+CLM1808,32,9,242502,Theft,5,1,0,Local,34,0
+CLM1809,34,0,113321,Collision,4,1,0,Local,52,1
+CLM1810,43,9,492171,Natural Disaster,2,0,0,Local,45,1
+CLM1811,26,13,268915,Natural Disaster,2,0,1,Authorized,21,0
+CLM1812,36,7,20060,Collision,3,0,1,Local,19,1
+CLM1813,61,13,192246,Collision,0,1,1,Authorized,24,1
+CLM1814,50,9,434243,Natural Disaster,1,0,1,Authorized,7,0
+CLM1815,28,6,208611,Collision,3,0,0,Local,23,0
+CLM1816,62,4,317561,Fire,4,0,0,Authorized,6,0
+CLM1817,20,0,222870,Collision,5,1,0,Local,59,1
+CLM1818,60,13,180786,Natural Disaster,5,0,1,Authorized,28,0
+CLM1819,70,14,347837,Fire,5,1,1,Authorized,7,1
+CLM1820,34,14,437128,Theft,0,1,0,Local,48,1
+CLM1821,58,14,442534,Natural Disaster,1,0,0,Authorized,30,1
+CLM1822,32,13,473311,Collision,5,0,1,Authorized,56,1
+CLM1823,51,7,76750,Fire,5,0,0,Local,38,1
+CLM1824,68,12,486226,Theft,1,0,1,Authorized,25,1
+CLM1825,66,0,118117,Collision,1,0,0,Local,8,1
+CLM1826,53,2,245194,Theft,0,1,0,Authorized,20,0
+CLM1827,65,3,480213,Theft,0,1,1,Authorized,31,1
+CLM1828,41,11,71837,Collision,2,1,0,Authorized,12,1
+CLM1829,54,14,437107,Natural Disaster,4,0,0,Authorized,36,1
+CLM1830,28,2,80536,Natural Disaster,1,0,1,Local,54,1
+CLM1831,48,9,347201,Theft,5,1,0,Authorized,39,0
+CLM1832,57,8,24741,Natural Disaster,2,1,1,Local,9,0
+CLM1833,19,12,179451,Fire,0,1,1,Authorized,55,0
+CLM1834,32,1,76616,Natural Disaster,0,0,0,Local,36,0
+CLM1835,66,13,416736,Collision,2,0,0,Authorized,13,1
+CLM1836,27,6,24913,Collision,1,1,1,Authorized,55,1
+CLM1837,62,9,224432,Natural Disaster,1,1,1,Local,38,0
+CLM1838,50,3,90271,Collision,2,1,0,Local,38,1
+CLM1839,31,8,438296,Collision,0,1,0,Local,29,1
+CLM1840,53,15,243750,Theft,2,0,0,Authorized,39,1
+CLM1841,65,13,43582,Natural Disaster,1,0,1,Authorized,36,0
+CLM1842,58,10,216124,Fire,1,1,1,Local,38,1
+CLM1843,56,15,209291,Theft,4,0,1,Authorized,46,1
+CLM1844,19,0,75920,Collision,3,1,1,Local,40,1
+CLM1845,31,12,209232,Collision,5,0,1,Local,25,1
+CLM1846,58,7,440569,Collision,5,1,1,Local,0,1
+CLM1847,47,3,71599,Theft,4,1,0,Local,14,1
+CLM1848,38,0,232790,Natural Disaster,4,0,1,Authorized,17,1
+CLM1849,50,9,414216,Natural Disaster,1,0,0,Local,36,1
+CLM1850,21,11,200881,Theft,0,1,1,Authorized,20,1
+CLM1851,22,2,137284,Natural Disaster,2,0,0,Local,14,1
+CLM1852,18,8,83552,Collision,3,0,1,Local,11,0
+CLM1853,32,12,215553,Collision,4,0,1,Authorized,43,0
+CLM1854,59,0,388940,Fire,3,1,0,Local,39,1
+CLM1855,21,2,360075,Natural Disaster,4,0,1,Authorized,2,0
+CLM1856,40,3,462486,Fire,4,1,0,Local,18,0
+CLM1857,69,0,332484,Collision,2,0,1,Local,36,0
+CLM1858,60,0,322824,Fire,0,0,1,Authorized,9,0
+CLM1859,43,10,494491,Theft,5,0,0,Local,17,0
+CLM1860,31,2,237755,Fire,3,0,0,Authorized,9,0
+CLM1861,61,11,247320,Natural Disaster,5,0,0,Local,44,1
+CLM1862,69,12,450999,Fire,4,0,0,Authorized,35,1
+CLM1863,45,2,333143,Theft,0,0,0,Authorized,22,0
+CLM1864,52,0,264915,Collision,2,1,1,Local,18,0
+CLM1865,32,11,361546,Collision,4,0,1,Local,29,0
+CLM1866,35,12,107374,Collision,0,0,1,Authorized,6,0
+CLM1867,29,5,231146,Fire,3,1,0,Authorized,48,0
+CLM1868,48,1,197451,Fire,3,0,1,Local,2,1
+CLM1869,59,0,359823,Theft,2,0,0,Authorized,9,1
+CLM1870,36,13,287582,Collision,2,0,1,Authorized,21,1
+CLM1871,29,13,459314,Fire,3,0,0,Local,46,1
+CLM1872,51,3,321039,Fire,0,0,0,Authorized,20,1
+CLM1873,69,7,403763,Collision,3,1,0,Local,1,1
+CLM1874,64,2,169419,Natural Disaster,2,0,0,Local,18,1
+CLM1875,48,13,399680,Theft,0,1,0,Local,2,1
+CLM1876,62,0,133887,Fire,0,1,0,Local,1,0
+CLM1877,33,0,202676,Fire,0,1,0,Local,45,1
+CLM1878,60,8,309279,Fire,0,1,0,Authorized,21,1
+CLM1879,64,4,330444,Fire,5,1,1,Authorized,49,0
+CLM1880,38,12,383118,Fire,1,0,0,Authorized,24,1
+CLM1881,21,10,454352,Theft,0,0,1,Local,26,1
+CLM1882,41,13,32521,Natural Disaster,0,0,0,Authorized,50,1
+CLM1883,68,2,205672,Natural Disaster,3,1,1,Authorized,18,1
+CLM1884,65,10,360306,Collision,5,1,0,Authorized,55,1
+CLM1885,51,11,456744,Fire,0,1,1,Local,8,0
+CLM1886,52,6,213818,Collision,0,1,1,Local,18,1
+CLM1887,31,14,116993,Natural Disaster,2,0,0,Local,23,0
+CLM1888,55,8,250118,Collision,3,1,1,Local,29,1
+CLM1889,51,3,270995,Theft,3,1,0,Authorized,48,0
+CLM1890,69,3,434418,Fire,3,0,0,Authorized,21,1
+CLM1891,43,4,134289,Theft,1,0,0,Local,39,0
+CLM1892,69,8,148427,Collision,3,0,0,Authorized,8,1
+CLM1893,47,7,248985,Fire,3,0,0,Local,3,1
+CLM1894,54,1,454848,Fire,4,0,1,Authorized,53,0
+CLM1895,35,9,271803,Natural Disaster,3,1,1,Local,25,0
+CLM1896,60,14,297112,Fire,4,0,1,Authorized,43,0
+CLM1897,70,9,379271,Collision,0,0,0,Local,7,1
+CLM1898,56,13,149602,Theft,2,1,0,Authorized,30,0
+CLM1899,40,10,250342,Fire,1,0,1,Authorized,11,1
+CLM1900,57,11,233365,Collision,1,0,1,Authorized,35,1
+CLM1901,43,13,232909,Theft,1,0,1,Local,38,1
+CLM1902,40,6,29418,Fire,3,0,1,Authorized,34,1
+CLM1903,60,4,183827,Natural Disaster,5,0,0,Authorized,35,0
+CLM1904,22,10,80774,Fire,5,1,0,Authorized,3,0
+CLM1905,35,11,419944,Fire,3,1,0,Authorized,13,1
+CLM1906,30,6,203336,Collision,2,0,1,Authorized,28,1
+CLM1907,45,11,59487,Fire,0,1,1,Local,37,1
+CLM1908,37,9,266295,Fire,4,0,0,Local,1,0
+CLM1909,45,14,17477,Natural Disaster,2,0,0,Authorized,2,0
+CLM1910,41,14,280015,Theft,0,1,0,Authorized,47,0
+CLM1911,50,9,222126,Natural Disaster,0,1,1,Local,51,0
+CLM1912,70,12,181178,Collision,3,0,0,Authorized,17,1
+CLM1913,24,14,312953,Theft,2,0,0,Local,59,1
+CLM1914,19,10,302811,Fire,0,1,1,Local,12,1
+CLM1915,48,6,448570,Fire,1,1,1,Authorized,4,0
+CLM1916,28,6,50638,Theft,1,1,1,Authorized,4,0
+CLM1917,68,13,412258,Natural Disaster,5,1,0,Authorized,18,1
+CLM1918,36,4,379256,Collision,5,1,1,Authorized,19,0
+CLM1919,38,15,277191,Natural Disaster,0,1,0,Local,16,0
+CLM1920,18,4,383228,Collision,1,1,1,Authorized,1,0
+CLM1921,66,8,216072,Fire,2,0,1,Authorized,43,0
+CLM1922,35,14,424364,Collision,3,0,0,Authorized,9,0
+CLM1923,38,4,327551,Fire,5,1,0,Local,40,1
+CLM1924,35,9,428316,Natural Disaster,4,0,0,Authorized,43,1
+CLM1925,25,7,156286,Natural Disaster,2,0,0,Local,57,1
+CLM1926,30,5,390606,Theft,0,1,0,Local,10,0
+CLM1927,43,6,104554,Natural Disaster,1,0,1,Local,10,0
+CLM1928,64,3,421489,Theft,5,1,1,Authorized,15,1
+CLM1929,21,10,199589,Natural Disaster,4,0,1,Local,44,0
+CLM1930,23,4,468934,Collision,2,1,0,Local,50,1
+CLM1931,46,14,328681,Natural Disaster,1,1,0,Local,46,1
+CLM1932,48,3,193499,Theft,4,0,1,Local,0,1
+CLM1933,68,12,197941,Collision,2,0,0,Authorized,39,0
+CLM1934,25,15,100045,Fire,3,0,1,Authorized,5,1
+CLM1935,39,8,483148,Fire,1,1,0,Local,10,1
+CLM1936,22,3,68182,Natural Disaster,3,1,0,Authorized,19,0
+CLM1937,44,13,409498,Theft,5,0,0,Authorized,12,0
+CLM1938,34,13,470313,Theft,1,0,0,Local,13,1
+CLM1939,64,13,475518,Collision,2,0,0,Authorized,41,1
+CLM1940,65,4,246907,Theft,5,0,1,Authorized,33,0
+CLM1941,42,10,348270,Fire,2,1,1,Authorized,36,1
+CLM1942,54,14,256530,Fire,2,0,0,Authorized,18,0
+CLM1943,69,13,376539,Fire,4,1,1,Authorized,1,0
+CLM1944,54,7,326409,Fire,5,0,0,Local,20,1
+CLM1945,64,0,152490,Natural Disaster,1,1,1,Local,11,0
+CLM1946,26,14,114799,Fire,3,1,1,Local,42,1
+CLM1947,30,9,292807,Natural Disaster,4,1,1,Authorized,27,0
+CLM1948,56,2,469592,Collision,2,1,0,Local,20,1
+CLM1949,21,0,449797,Natural Disaster,5,0,0,Local,2,1
+CLM1950,69,1,91889,Collision,0,1,0,Authorized,33,1
+CLM1951,30,4,6107,Collision,3,1,0,Authorized,18,0
+CLM1952,58,6,62412,Natural Disaster,3,1,1,Local,4,1
+CLM1953,65,0,352232,Theft,4,1,1,Authorized,7,1
+CLM1954,33,13,431701,Natural Disaster,5,1,0,Local,47,1
+CLM1955,28,6,330111,Natural Disaster,2,0,0,Local,50,0
+CLM1956,43,4,469991,Natural Disaster,4,0,0,Local,24,0
+CLM1957,54,2,481885,Natural Disaster,3,0,1,Authorized,42,0
+CLM1958,34,3,251662,Natural Disaster,0,0,0,Authorized,43,0
+CLM1959,26,0,433721,Fire,5,0,0,Local,38,0
+CLM1960,37,8,456991,Collision,0,0,0,Authorized,31,0
+CLM1961,59,5,351118,Natural Disaster,5,0,0,Local,22,1
+CLM1962,25,6,8169,Fire,0,1,0,Local,25,0
+CLM1963,60,11,435302,Theft,2,0,0,Authorized,3,0
+CLM1964,66,3,360054,Natural Disaster,3,1,0,Authorized,24,0
+CLM1965,26,4,318024,Fire,1,1,1,Local,56,0
+CLM1966,37,12,89727,Theft,2,0,0,Local,44,0
+CLM1967,21,0,223906,Fire,1,0,1,Local,10,1
+CLM1968,62,12,320344,Theft,0,0,0,Authorized,51,1
+CLM1969,47,14,238750,Collision,3,1,1,Authorized,58,0
+CLM1970,18,4,48991,Natural Disaster,0,0,0,Authorized,56,0
+CLM1971,36,1,407480,Collision,0,0,0,Authorized,51,0
+CLM1972,25,1,391920,Fire,3,1,1,Authorized,42,0
+CLM1973,44,2,413651,Natural Disaster,4,0,0,Authorized,60,1
+CLM1974,36,8,236121,Natural Disaster,0,1,1,Local,10,0
+CLM1975,39,10,302015,Fire,1,1,0,Local,37,1
+CLM1976,28,0,407563,Collision,4,0,1,Authorized,35,1
+CLM1977,59,12,312147,Natural Disaster,2,0,1,Authorized,23,0
+CLM1978,40,3,121798,Natural Disaster,0,0,0,Local,0,1
+CLM1979,44,11,120787,Theft,2,0,0,Local,2,1
+CLM1980,65,15,286537,Natural Disaster,5,1,0,Local,14,1
+CLM1981,32,11,64875,Theft,0,1,0,Authorized,36,0
+CLM1982,57,15,227456,Theft,2,1,0,Authorized,16,0
+CLM1983,41,6,121658,Natural Disaster,4,0,0,Local,4,0
+CLM1984,36,14,424771,Fire,0,0,1,Local,16,1
+CLM1985,23,15,257250,Collision,5,0,0,Local,50,0
+CLM1986,30,6,348734,Theft,3,0,0,Authorized,56,0
+CLM1987,53,3,341384,Natural Disaster,5,0,0,Local,45,1
+CLM1988,19,10,270702,Natural Disaster,3,0,1,Local,60,1
+CLM1989,22,15,269040,Natural Disaster,2,0,0,Local,23,0
+CLM1990,66,5,371851,Fire,3,0,1,Local,40,1
+CLM1991,46,2,237696,Theft,3,0,0,Local,46,1
+CLM1992,34,5,123564,Fire,4,0,1,Authorized,54,0
+CLM1993,41,0,417558,Collision,3,0,0,Local,47,1
+CLM1994,68,6,457005,Collision,0,0,0,Local,54,0
+CLM1995,65,6,287322,Natural Disaster,5,1,0,Authorized,57,0
+CLM1996,29,1,50765,Collision,5,1,1,Local,26,0
+CLM1997,24,9,311461,Collision,2,1,0,Local,12,0
+CLM1998,19,7,37120,Collision,1,1,1,Authorized,24,1
+CLM1999,44,4,255538,Fire,3,0,1,Local,30,0
+CLM2000,36,4,273129,Natural Disaster,2,1,1,Authorized,16,1
+CLM2001,55,10,348204,Natural Disaster,1,1,0,Authorized,50,0
+CLM2002,25,0,360743,Fire,1,1,0,Authorized,21,1
+CLM2003,41,0,91834,Theft,3,0,1,Authorized,22,0
+CLM2004,46,9,124403,Natural Disaster,2,0,1,Local,46,0
+CLM2005,63,7,234965,Natural Disaster,4,0,0,Local,37,1
+CLM2006,28,10,23991,Natural Disaster,2,0,1,Local,16,1
+CLM2007,19,5,145835,Collision,5,0,1,Local,57,1
+CLM2008,20,5,374232,Fire,4,1,1,Local,21,1
+CLM2009,36,12,152751,Natural Disaster,5,1,1,Local,6,1
+CLM2010,50,0,127153,Collision,5,1,1,Local,38,1
+CLM2011,63,14,477999,Collision,4,0,0,Authorized,4,1
+CLM2012,69,4,422082,Collision,5,1,1,Local,36,0
+CLM2013,64,2,111293,Collision,3,1,1,Local,52,1
+CLM2014,65,13,311187,Fire,1,1,0,Local,54,0
+CLM2015,39,4,113812,Theft,5,0,0,Authorized,49,0
+CLM2016,51,13,208029,Fire,3,0,0,Local,20,1
+CLM2017,48,0,157357,Natural Disaster,1,0,1,Local,53,1
+CLM2018,21,2,364484,Fire,5,0,0,Local,56,1
+CLM2019,39,1,415824,Collision,2,0,0,Authorized,30,1
+CLM2020,24,2,383817,Theft,1,1,0,Local,12,0
+CLM2021,18,10,89621,Theft,1,1,1,Authorized,12,1
+CLM2022,30,6,274094,Collision,2,0,0,Authorized,37,0
+CLM2023,55,1,479774,Theft,3,0,1,Local,3,0
+CLM2024,56,12,399728,Theft,2,1,0,Authorized,19,1
+CLM2025,22,7,74998,Collision,0,0,1,Authorized,38,0
+CLM2026,35,5,139731,Fire,2,1,0,Authorized,56,0
+CLM2027,48,14,287795,Natural Disaster,1,0,1,Authorized,14,1
+CLM2028,47,2,43730,Fire,1,1,1,Authorized,38,1
+CLM2029,18,15,425025,Theft,5,1,0,Local,45,0
+CLM2030,25,15,416031,Fire,2,1,0,Authorized,45,1
+CLM2031,42,3,201106,Fire,5,1,0,Local,55,1
+CLM2032,64,15,140152,Theft,4,1,0,Authorized,0,1
+CLM2033,52,6,51364,Theft,4,0,1,Local,23,1
+CLM2034,41,10,222434,Theft,3,1,0,Local,56,0
+CLM2035,47,3,312477,Collision,1,1,0,Authorized,47,0
+CLM2036,27,10,311732,Theft,2,1,0,Local,47,1
+CLM2037,43,8,450680,Theft,2,1,0,Local,54,1
+CLM2038,57,8,266501,Theft,3,0,1,Local,3,0
+CLM2039,19,7,358302,Fire,3,0,1,Authorized,58,0
+CLM2040,62,3,472626,Natural Disaster,3,0,1,Local,2,1
+CLM2041,42,8,25133,Natural Disaster,1,0,1,Local,33,0
+CLM2042,65,6,459261,Collision,0,0,0,Local,5,0
+CLM2043,33,0,299377,Fire,2,0,1,Authorized,47,0
+CLM2044,65,5,308277,Collision,1,0,0,Local,9,1
+CLM2045,65,3,207634,Fire,0,0,1,Authorized,42,0
+CLM2046,45,8,225116,Collision,5,0,1,Local,33,0
+CLM2047,33,4,376719,Fire,3,0,0,Authorized,47,1
+CLM2048,53,5,497435,Natural Disaster,3,1,0,Local,31,1
+CLM2049,62,8,406849,Natural Disaster,3,1,0,Authorized,27,1
+CLM2050,64,0,274841,Fire,2,1,1,Authorized,15,0
+CLM2051,26,1,122237,Theft,5,1,0,Local,50,1
+CLM2052,43,3,224712,Collision,4,0,1,Authorized,47,0
+CLM2053,68,3,225045,Natural Disaster,4,0,0,Authorized,42,0
+CLM2054,33,3,202645,Fire,2,0,0,Authorized,48,0
+CLM2055,70,6,371935,Fire,5,1,0,Authorized,28,1
+CLM2056,68,7,65575,Collision,2,0,1,Local,26,0
+CLM2057,42,7,252507,Collision,4,1,1,Local,29,0
+CLM2058,34,1,457856,Theft,0,0,0,Local,33,1
+CLM2059,27,14,5811,Collision,2,1,0,Local,54,0
+CLM2060,62,4,62549,Theft,1,0,1,Local,3,0
+CLM2061,31,6,187320,Natural Disaster,1,0,1,Authorized,6,0
+CLM2062,33,12,137037,Natural Disaster,1,1,1,Authorized,38,0
+CLM2063,66,3,184288,Natural Disaster,3,1,0,Authorized,31,1
+CLM2064,46,8,208041,Collision,4,0,0,Authorized,60,0
+CLM2065,37,9,156054,Fire,2,1,1,Local,55,0
+CLM2066,41,13,289326,Collision,5,0,0,Local,34,1
+CLM2067,49,4,358531,Collision,5,1,0,Authorized,56,0
+CLM2068,26,1,456627,Theft,5,1,0,Local,23,1
+CLM2069,70,1,149365,Collision,0,1,1,Authorized,29,0
+CLM2070,63,3,102824,Theft,0,0,1,Local,17,1
+CLM2071,42,1,489304,Fire,5,0,0,Local,28,1
+CLM2072,64,7,4001,Natural Disaster,2,1,0,Authorized,35,1
+CLM2073,50,4,7696,Fire,0,0,0,Local,29,0
+CLM2074,60,0,470078,Fire,0,1,1,Local,4,0
+CLM2075,23,3,438390,Fire,3,0,0,Local,27,0
+CLM2076,47,15,456400,Theft,4,0,1,Local,8,1
+CLM2077,55,12,148497,Fire,1,0,1,Authorized,26,0
+CLM2078,51,4,58566,Theft,5,0,0,Authorized,30,1
+CLM2079,38,4,122033,Fire,5,1,0,Authorized,44,1
+CLM2080,48,10,144548,Fire,2,1,0,Authorized,34,0
+CLM2081,60,9,411100,Theft,2,1,1,Local,58,0
+CLM2082,20,1,472086,Collision,0,1,0,Local,49,0
+CLM2083,26,10,423527,Natural Disaster,1,0,1,Authorized,15,0
+CLM2084,29,1,497196,Collision,5,1,1,Authorized,4,0
+CLM2085,70,4,59070,Theft,5,1,0,Local,29,0
+CLM2086,20,4,127289,Theft,5,1,1,Local,32,0
+CLM2087,34,6,256254,Natural Disaster,5,0,0,Local,57,1
+CLM2088,62,4,439956,Fire,2,1,0,Authorized,58,1
+CLM2089,35,6,427987,Fire,4,0,0,Authorized,54,0
+CLM2090,30,11,146254,Natural Disaster,5,0,0,Authorized,12,0
+CLM2091,64,10,62804,Theft,0,1,0,Local,50,0
+CLM2092,50,1,195634,Theft,0,0,1,Local,23,0
+CLM2093,45,7,199839,Fire,1,1,0,Local,52,0
+CLM2094,25,6,379950,Fire,0,1,1,Local,30,0
+CLM2095,64,3,358237,Fire,1,0,1,Local,11,0
+CLM2096,35,0,386197,Collision,0,0,1,Authorized,46,1
+CLM2097,42,3,306393,Collision,3,1,0,Local,46,1
+CLM2098,64,5,141586,Collision,2,1,1,Authorized,27,0
+CLM2099,58,12,147448,Fire,1,1,0,Authorized,27,1
+CLM2100,35,8,8078,Natural Disaster,2,0,1,Authorized,18,0
+CLM2101,67,15,216713,Collision,2,1,0,Local,2,0
+CLM2102,29,9,78343,Collision,4,1,1,Authorized,44,1
+CLM2103,27,9,136557,Collision,2,0,1,Authorized,44,1
+CLM2104,44,11,181572,Collision,4,1,1,Authorized,52,1
+CLM2105,21,13,347666,Theft,4,0,0,Local,15,1
+CLM2106,46,1,192373,Natural Disaster,1,1,0,Authorized,39,1
+CLM2107,30,1,343340,Fire,4,1,0,Authorized,38,0
+CLM2108,22,12,485146,Fire,5,0,1,Local,12,1
+CLM2109,35,10,85726,Theft,4,1,0,Local,1,1
+CLM2110,58,8,400979,Natural Disaster,2,1,1,Authorized,33,0
+CLM2111,36,6,142659,Fire,4,1,1,Authorized,53,0
+CLM2112,23,1,120915,Collision,0,0,0,Local,17,1
+CLM2113,64,15,297104,Theft,0,1,1,Authorized,37,0
+CLM2114,22,11,22523,Theft,1,1,0,Local,0,1
+CLM2115,18,1,238051,Collision,1,1,1,Authorized,54,1
+CLM2116,53,2,30979,Fire,5,1,0,Authorized,23,1
+CLM2117,48,15,468700,Natural Disaster,4,0,1,Authorized,43,0
+CLM2118,65,10,478533,Theft,0,1,1,Local,24,0
+CLM2119,54,3,234428,Theft,2,1,1,Authorized,15,1
+CLM2120,36,9,389819,Collision,5,0,1,Local,21,1
+CLM2121,42,8,88838,Fire,5,0,1,Authorized,35,1
+CLM2122,47,3,108148,Natural Disaster,3,0,0,Local,2,0
+CLM2123,47,7,317586,Natural Disaster,5,1,0,Authorized,16,1
+CLM2124,49,10,366975,Collision,4,0,1,Local,60,0
+CLM2125,31,14,148856,Collision,0,0,1,Local,5,0
+CLM2126,66,3,216105,Theft,1,0,1,Authorized,15,0
+CLM2127,45,10,338942,Theft,4,1,0,Local,31,1
+CLM2128,28,10,326114,Collision,5,1,1,Local,13,0
+CLM2129,47,6,456534,Collision,3,1,0,Local,9,1
+CLM2130,41,6,385009,Theft,0,1,1,Authorized,58,0
+CLM2131,58,6,342581,Fire,0,0,1,Authorized,37,0
+CLM2132,65,5,178459,Natural Disaster,0,1,0,Local,2,1
+CLM2133,43,1,340775,Fire,3,1,1,Local,4,1
+CLM2134,22,14,421817,Fire,2,1,0,Authorized,17,0
+CLM2135,70,14,28051,Theft,1,0,1,Local,23,1
+CLM2136,55,10,377446,Collision,1,1,0,Authorized,36,1
+CLM2137,62,8,160341,Natural Disaster,2,1,0,Local,40,0
+CLM2138,64,5,180153,Fire,3,1,1,Authorized,55,0
+CLM2139,39,10,213116,Collision,4,1,1,Local,8,0
+CLM2140,48,9,3697,Fire,3,1,0,Authorized,27,0
+CLM2141,48,7,281141,Fire,4,1,1,Authorized,21,0
+CLM2142,20,3,486044,Natural Disaster,4,1,1,Local,45,1
+CLM2143,66,14,384273,Natural Disaster,3,1,1,Local,41,0
+CLM2144,45,7,486755,Theft,3,0,0,Local,13,1
+CLM2145,26,8,483735,Natural Disaster,2,0,0,Authorized,24,1
+CLM2146,64,1,296866,Fire,5,1,1,Authorized,39,0
+CLM2147,22,8,360879,Collision,4,1,1,Authorized,16,1
+CLM2148,33,14,336041,Collision,2,1,0,Local,49,0
+CLM2149,36,1,447113,Natural Disaster,1,1,0,Local,1,1
+CLM2150,32,10,135372,Fire,5,0,0,Authorized,35,0
+CLM2151,27,14,401564,Collision,5,1,0,Authorized,37,1
+CLM2152,62,2,137175,Natural Disaster,0,1,0,Local,49,0
+CLM2153,68,5,497498,Natural Disaster,3,1,0,Authorized,46,1
+CLM2154,70,6,63557,Fire,5,1,1,Local,32,1
+CLM2155,63,2,133949,Theft,1,1,1,Local,31,1
+CLM2156,30,4,417182,Collision,5,1,0,Authorized,52,0
+CLM2157,39,9,85304,Natural Disaster,0,1,0,Authorized,34,0
+CLM2158,36,5,366346,Fire,0,1,1,Authorized,1,1
+CLM2159,33,7,124720,Theft,3,1,1,Authorized,48,0
+CLM2160,60,15,225878,Natural Disaster,0,0,1,Local,57,1
+CLM2161,69,12,308156,Theft,3,1,1,Local,15,0
+CLM2162,40,3,385612,Fire,5,0,1,Local,23,1
+CLM2163,38,12,237843,Collision,5,0,1,Authorized,53,1
+CLM2164,69,13,303730,Collision,2,1,0,Local,32,1
+CLM2165,68,4,354163,Collision,2,1,0,Local,22,1
+CLM2166,48,3,122943,Theft,4,1,1,Local,35,0
+CLM2167,25,7,304092,Fire,0,1,0,Authorized,1,1
+CLM2168,43,9,86007,Theft,5,1,0,Authorized,37,1
+CLM2169,40,15,67725,Collision,3,1,0,Local,12,1
+CLM2170,32,15,403993,Fire,3,0,1,Local,30,0
+CLM2171,62,3,356773,Collision,1,1,1,Local,10,0
+CLM2172,55,15,444363,Fire,3,1,0,Local,43,1
+CLM2173,33,5,304950,Collision,0,1,0,Local,2,1
+CLM2174,47,13,348441,Natural Disaster,1,1,0,Authorized,24,0
+CLM2175,35,0,28059,Fire,3,1,0,Local,42,0
+CLM2176,31,12,183880,Natural Disaster,0,1,1,Local,60,0
+CLM2177,57,1,147740,Fire,3,0,1,Authorized,5,0
+CLM2178,49,8,162182,Theft,0,1,0,Authorized,23,1
+CLM2179,64,5,107674,Theft,2,1,0,Local,9,1
+CLM2180,36,14,399806,Theft,0,1,1,Local,27,1
+CLM2181,31,9,2101,Fire,0,0,0,Local,60,0
+CLM2182,66,11,433895,Fire,5,1,1,Local,58,0
+CLM2183,65,7,39071,Natural Disaster,2,1,0,Local,32,1
+CLM2184,70,3,389179,Theft,1,1,0,Authorized,37,0
+CLM2185,25,10,338845,Theft,0,0,1,Local,25,0
+CLM2186,46,13,468246,Collision,3,0,0,Local,40,1
+CLM2187,33,15,440360,Theft,5,0,0,Local,16,0
+CLM2188,69,6,177042,Theft,1,1,0,Authorized,23,0
+CLM2189,33,8,184773,Collision,2,0,1,Authorized,38,0
+CLM2190,19,0,410649,Natural Disaster,0,1,0,Local,46,0
+CLM2191,64,14,264809,Collision,3,0,0,Authorized,57,1
+CLM2192,46,4,221366,Fire,5,0,0,Local,39,1
+CLM2193,54,9,171501,Collision,0,0,1,Local,32,0
+CLM2194,41,1,269863,Collision,5,1,0,Local,12,0
+CLM2195,31,5,315346,Theft,3,0,0,Local,27,0
+CLM2196,44,13,148572,Fire,3,1,0,Local,10,0
+CLM2197,30,4,300833,Collision,4,1,0,Local,8,1
+CLM2198,61,1,325182,Fire,2,0,1,Local,52,0
+CLM2199,62,7,457810,Fire,0,1,0,Local,34,1
+CLM2200,30,6,322570,Fire,5,0,0,Authorized,58,1
+CLM2201,38,14,414794,Natural Disaster,0,0,0,Authorized,50,1
+CLM2202,65,13,475659,Natural Disaster,1,0,1,Authorized,16,0
+CLM2203,69,9,253709,Theft,5,0,1,Local,41,0
+CLM2204,56,4,253518,Fire,2,0,1,Authorized,52,0
+CLM2205,32,13,225698,Theft,3,0,1,Authorized,25,1
+CLM2206,46,15,313236,Fire,4,1,1,Local,36,1
+CLM2207,59,9,74863,Natural Disaster,3,0,1,Local,56,1
+CLM2208,23,12,108828,Collision,0,1,0,Local,49,0
+CLM2209,68,11,32545,Collision,3,0,0,Local,48,1
+CLM2210,56,15,154289,Theft,3,0,0,Local,4,1
+CLM2211,46,8,460671,Theft,1,0,1,Local,3,1
+CLM2212,45,7,125261,Natural Disaster,4,1,1,Local,37,0
+CLM2213,35,15,402053,Theft,4,0,0,Local,19,0
+CLM2214,22,15,387085,Collision,2,0,1,Authorized,36,0
+CLM2215,43,2,226108,Theft,0,0,1,Local,22,0
+CLM2216,58,14,297208,Natural Disaster,4,1,1,Authorized,24,1
+CLM2217,64,10,128640,Fire,3,1,1,Local,24,1
+CLM2218,33,4,68632,Natural Disaster,3,1,0,Local,37,1
+CLM2219,21,7,142521,Natural Disaster,1,1,0,Authorized,17,1
+CLM2220,31,6,82815,Natural Disaster,3,0,1,Authorized,45,0
+CLM2221,24,4,415248,Collision,0,1,1,Local,40,0
+CLM2222,24,10,205568,Fire,4,1,0,Authorized,16,0
+CLM2223,42,15,214336,Fire,2,0,0,Local,59,0
+CLM2224,45,10,450602,Natural Disaster,2,0,0,Authorized,16,1
+CLM2225,54,1,139324,Natural Disaster,3,0,0,Authorized,19,1
+CLM2226,70,3,438970,Collision,5,0,0,Authorized,56,0
+CLM2227,22,2,130419,Natural Disaster,3,1,0,Local,36,1
+CLM2228,21,2,118195,Natural Disaster,5,0,0,Authorized,6,1
+CLM2229,35,1,380594,Natural Disaster,0,1,1,Authorized,55,0
+CLM2230,27,6,476853,Collision,1,0,0,Authorized,44,1
+CLM2231,67,3,46680,Fire,5,1,1,Authorized,50,1
+CLM2232,67,12,89622,Theft,0,0,0,Local,15,0
+CLM2233,55,6,376654,Natural Disaster,3,0,0,Local,25,1
+CLM2234,70,13,416306,Collision,3,1,0,Local,59,0
+CLM2235,69,4,318487,Natural Disaster,3,0,1,Local,12,0
+CLM2236,39,13,311743,Fire,4,0,1,Authorized,31,0
+CLM2237,37,7,496356,Natural Disaster,2,1,1,Local,16,0
+CLM2238,44,15,459156,Natural Disaster,0,1,0,Local,54,1
+CLM2239,66,7,145643,Fire,3,0,1,Local,32,1
+CLM2240,59,14,432188,Natural Disaster,2,1,1,Local,50,1
+CLM2241,45,6,374540,Natural Disaster,4,1,1,Local,41,1
+CLM2242,29,15,394780,Theft,1,0,1,Authorized,34,0
+CLM2243,37,3,200046,Collision,1,0,1,Local,0,1
+CLM2244,32,10,85848,Natural Disaster,0,1,1,Local,48,0
+CLM2245,40,13,380252,Collision,5,0,0,Authorized,55,1
+CLM2246,59,9,35039,Fire,3,1,0,Authorized,35,0
+CLM2247,19,8,487588,Collision,0,0,1,Local,30,1
+CLM2248,44,8,370678,Fire,2,0,0,Authorized,45,1
+CLM2249,54,8,375677,Natural Disaster,0,1,1,Local,43,0
+CLM2250,21,10,306073,Collision,5,0,0,Authorized,55,1
+CLM2251,19,4,188814,Natural Disaster,1,1,0,Local,14,0
+CLM2252,38,8,459080,Natural Disaster,1,1,0,Local,20,1
+CLM2253,23,2,439127,Fire,2,1,1,Local,22,1
+CLM2254,66,3,191951,Fire,2,0,1,Authorized,21,1
+CLM2255,22,6,485427,Collision,4,0,1,Local,42,0
+CLM2256,56,7,369626,Natural Disaster,3,0,0,Authorized,36,1
+CLM2257,20,5,46955,Collision,3,0,1,Local,1,1
+CLM2258,37,12,308362,Fire,1,0,1,Authorized,55,1
+CLM2259,34,5,404650,Fire,4,0,0,Local,49,1
+CLM2260,25,3,62054,Collision,0,0,0,Authorized,29,0
+CLM2261,45,2,272725,Natural Disaster,4,1,0,Authorized,26,1
+CLM2262,56,7,51106,Collision,4,1,1,Authorized,20,1
+CLM2263,24,10,187465,Natural Disaster,0,0,0,Authorized,12,0
+CLM2264,67,4,56333,Natural Disaster,4,0,0,Local,35,0
+CLM2265,69,3,229117,Natural Disaster,4,1,1,Local,43,1
+CLM2266,27,3,279217,Fire,4,1,1,Local,32,0
+CLM2267,32,10,104313,Fire,1,1,0,Local,12,0
+CLM2268,70,5,419784,Fire,4,0,1,Authorized,12,0
+CLM2269,37,5,115194,Collision,1,1,1,Authorized,9,0
+CLM2270,40,10,84603,Theft,5,0,0,Local,31,1
+CLM2271,55,7,464327,Theft,5,1,1,Authorized,1,0
+CLM2272,48,0,386927,Fire,3,1,0,Local,25,0
+CLM2273,70,5,388004,Theft,2,0,1,Authorized,21,1
+CLM2274,31,2,191082,Fire,3,1,1,Authorized,52,0
+CLM2275,29,15,338640,Collision,5,1,1,Authorized,35,1
+CLM2276,24,15,115047,Collision,4,1,0,Authorized,40,1
+CLM2277,27,13,384749,Collision,3,1,1,Authorized,24,1
+CLM2278,58,14,332955,Collision,4,1,0,Authorized,48,0
+CLM2279,55,12,244475,Natural Disaster,3,1,0,Local,46,1
+CLM2280,50,5,133563,Fire,3,0,0,Authorized,45,1
+CLM2281,34,3,439924,Theft,4,0,1,Authorized,25,1
+CLM2282,23,6,394603,Fire,2,1,1,Authorized,24,0
+CLM2283,36,12,199337,Collision,5,0,1,Local,4,0
+CLM2284,50,5,424841,Fire,2,0,0,Local,11,1
+CLM2285,47,9,223635,Natural Disaster,5,1,0,Authorized,0,1
+CLM2286,22,12,176539,Natural Disaster,5,1,1,Authorized,12,0
+CLM2287,34,13,291645,Natural Disaster,1,0,1,Local,54,1
+CLM2288,61,4,21742,Theft,1,0,0,Local,57,0
+CLM2289,33,2,131627,Fire,0,1,1,Authorized,39,1
+CLM2290,67,10,72681,Collision,5,0,0,Local,55,0
+CLM2291,52,0,408028,Fire,3,1,1,Local,52,1
+CLM2292,53,1,193102,Collision,2,1,0,Authorized,3,0
+CLM2293,30,1,20294,Collision,2,0,1,Local,59,1
+CLM2294,38,1,325196,Theft,5,0,0,Authorized,60,0
+CLM2295,19,9,283691,Collision,1,0,0,Local,55,1
+CLM2296,57,15,43454,Theft,4,0,0,Local,49,0
+CLM2297,57,12,475093,Theft,4,0,1,Authorized,58,0
+CLM2298,68,11,304043,Theft,3,0,1,Authorized,8,1
+CLM2299,51,13,369589,Fire,3,1,1,Local,0,1
+CLM2300,36,9,375530,Natural Disaster,3,1,1,Authorized,34,0
+CLM2301,50,9,462239,Fire,0,1,1,Local,23,0
+CLM2302,63,15,495707,Collision,0,0,1,Authorized,57,1
+CLM2303,69,14,35518,Fire,4,1,0,Authorized,58,1
+CLM2304,65,3,1173,Collision,1,0,0,Local,19,1
+CLM2305,27,10,14682,Natural Disaster,4,1,0,Authorized,25,0
+CLM2306,54,11,493929,Theft,3,1,1,Local,13,1
+CLM2307,62,1,200229,Theft,1,1,1,Authorized,12,1
+CLM2308,66,4,183595,Natural Disaster,4,1,1,Authorized,47,0
+CLM2309,53,1,90057,Collision,4,0,0,Authorized,48,1
+CLM2310,29,11,217820,Natural Disaster,1,1,1,Local,21,0
+CLM2311,32,9,12306,Natural Disaster,2,1,0,Authorized,17,0
+CLM2312,35,15,211452,Theft,2,1,0,Local,13,1
+CLM2313,41,14,296545,Collision,0,0,0,Authorized,51,1
+CLM2314,58,11,328913,Fire,4,1,1,Authorized,33,0
+CLM2315,55,14,275140,Theft,0,0,0,Local,32,1
+CLM2316,21,14,431989,Theft,4,1,1,Local,39,0
+CLM2317,59,14,332949,Natural Disaster,4,1,0,Local,4,0
+CLM2318,60,5,425602,Natural Disaster,0,1,1,Local,33,1
+CLM2319,54,2,160605,Collision,0,0,1,Authorized,47,0
+CLM2320,24,15,283778,Natural Disaster,3,0,0,Local,17,1
+CLM2321,53,11,362097,Fire,2,0,1,Authorized,59,0
+CLM2322,66,6,177599,Theft,0,1,1,Local,18,0
+CLM2323,40,7,383907,Theft,3,0,0,Authorized,17,0
+CLM2324,36,13,55037,Natural Disaster,2,1,0,Authorized,32,0
+CLM2325,20,12,346487,Natural Disaster,3,0,0,Authorized,2,0
+CLM2326,69,2,203307,Fire,1,0,0,Local,5,1
+CLM2327,51,9,498562,Natural Disaster,1,0,1,Authorized,60,0
+CLM2328,34,1,499188,Collision,0,0,0,Authorized,9,1
+CLM2329,33,8,171091,Collision,4,0,0,Local,27,1
+CLM2330,35,2,447192,Theft,5,0,1,Local,21,0
+CLM2331,70,6,135049,Collision,4,1,1,Local,25,0
+CLM2332,44,2,196600,Natural Disaster,3,0,1,Authorized,25,1
+CLM2333,64,3,160642,Theft,1,1,1,Local,36,0
+CLM2334,66,8,368262,Collision,1,1,1,Authorized,15,0
+CLM2335,22,4,282087,Natural Disaster,4,0,0,Authorized,50,0
+CLM2336,19,13,105569,Natural Disaster,2,0,0,Local,47,1
+CLM2337,32,4,246281,Theft,0,0,1,Authorized,5,1
+CLM2338,26,12,331170,Natural Disaster,2,0,1,Authorized,28,1
+CLM2339,29,4,315444,Theft,2,0,0,Local,9,0
+CLM2340,18,13,485626,Collision,3,1,0,Authorized,19,0
+CLM2341,47,9,164041,Fire,0,1,1,Authorized,47,0
+CLM2342,41,8,358665,Natural Disaster,1,0,0,Local,40,1
+CLM2343,52,8,388945,Natural Disaster,3,1,0,Authorized,34,0
+CLM2344,57,15,262067,Theft,1,1,1,Local,56,0
+CLM2345,59,14,91071,Theft,3,0,1,Local,9,1
+CLM2346,65,2,316004,Collision,4,0,0,Authorized,59,1
+CLM2347,38,6,453896,Theft,5,1,0,Local,23,1
+CLM2348,28,15,303101,Fire,5,0,0,Authorized,40,0
+CLM2349,58,7,132442,Theft,4,1,1,Authorized,58,0
+CLM2350,55,2,125172,Theft,2,1,1,Authorized,1,1
+CLM2351,40,7,489974,Natural Disaster,3,1,1,Local,9,0
+CLM2352,31,15,365365,Theft,1,1,0,Authorized,16,1
+CLM2353,39,9,85859,Theft,2,0,1,Local,16,0
+CLM2354,67,13,235898,Fire,4,0,0,Local,50,1
+CLM2355,31,12,74757,Natural Disaster,4,0,0,Local,22,0
+CLM2356,67,11,374952,Fire,4,0,0,Local,27,1
+CLM2357,70,3,402714,Collision,4,0,0,Local,48,0
+CLM2358,65,12,172186,Collision,3,1,1,Local,52,0
+CLM2359,35,11,337377,Theft,4,1,1,Authorized,51,1
+CLM2360,24,0,342081,Collision,4,1,1,Local,6,0
+CLM2361,39,0,441298,Natural Disaster,5,1,1,Local,58,0
+CLM2362,43,14,17529,Theft,5,1,0,Authorized,25,0
+CLM2363,33,13,293093,Fire,3,0,1,Authorized,35,1
+CLM2364,54,1,452120,Fire,3,1,1,Local,18,0
+CLM2365,33,2,167883,Theft,1,0,1,Local,51,1
+CLM2366,49,5,308731,Natural Disaster,2,0,1,Authorized,26,0
+CLM2367,68,4,193403,Theft,4,1,1,Authorized,50,1
+CLM2368,51,8,423296,Collision,4,0,0,Authorized,36,0
+CLM2369,20,6,126773,Natural Disaster,4,1,1,Local,30,0
+CLM2370,61,7,19684,Theft,0,1,1,Authorized,11,0
+CLM2371,20,9,178685,Theft,0,1,1,Authorized,30,0
+CLM2372,18,15,416856,Natural Disaster,3,0,1,Local,0,0
+CLM2373,36,7,417141,Collision,3,0,1,Local,9,0
+CLM2374,21,0,89053,Theft,2,0,0,Local,45,1
+CLM2375,18,7,221754,Collision,4,1,1,Authorized,39,1
+CLM2376,42,5,264505,Collision,5,1,0,Local,34,0
+CLM2377,32,15,94720,Collision,4,0,1,Local,19,0
+CLM2378,21,5,318676,Fire,1,0,0,Local,42,0
+CLM2379,59,1,229380,Collision,4,0,1,Local,12,0
+CLM2380,32,15,435116,Fire,1,0,0,Authorized,22,0
+CLM2381,44,5,130218,Natural Disaster,2,0,1,Local,20,0
+CLM2382,26,8,487984,Natural Disaster,2,1,1,Authorized,16,0
+CLM2383,70,10,346944,Natural Disaster,5,0,0,Authorized,3,1
+CLM2384,38,15,57863,Theft,1,0,1,Local,31,0
+CLM2385,58,7,473477,Theft,2,0,0,Authorized,22,0
+CLM2386,27,10,208347,Natural Disaster,4,0,1,Local,16,0
+CLM2387,31,9,36609,Natural Disaster,0,1,0,Authorized,40,0
+CLM2388,37,4,36137,Natural Disaster,5,0,1,Authorized,40,0
+CLM2389,58,6,468777,Fire,2,1,1,Local,52,1
+CLM2390,50,15,400760,Theft,5,1,1,Authorized,2,0
+CLM2391,44,7,139541,Fire,2,1,1,Local,49,0
+CLM2392,43,15,278948,Fire,1,1,1,Authorized,17,1
+CLM2393,33,1,331240,Theft,0,1,0,Local,2,0
+CLM2394,69,12,139533,Collision,4,0,0,Local,58,0
+CLM2395,35,3,70859,Collision,2,1,1,Authorized,10,1
+CLM2396,41,10,158485,Theft,0,0,1,Authorized,26,1
+CLM2397,38,13,465972,Theft,2,0,1,Local,12,0
+CLM2398,43,12,333849,Collision,0,1,0,Authorized,32,1
+CLM2399,24,2,86453,Collision,5,1,1,Local,54,0
+CLM2400,55,2,161902,Collision,5,0,1,Local,4,1
+CLM2401,43,2,138070,Theft,5,1,1,Authorized,23,1
+CLM2402,53,13,400376,Theft,5,1,1,Local,2,1
+CLM2403,40,7,491610,Natural Disaster,3,0,0,Authorized,3,0
+CLM2404,45,11,83645,Natural Disaster,2,1,0,Local,12,1
+CLM2405,36,9,58043,Natural Disaster,5,1,0,Local,37,1
+CLM2406,49,5,131680,Collision,2,0,1,Local,38,1
+CLM2407,65,11,221187,Natural Disaster,3,0,1,Authorized,55,0
+CLM2408,46,5,465875,Fire,2,1,0,Local,37,1
+CLM2409,65,7,351695,Collision,3,0,1,Local,35,0
+CLM2410,57,15,247389,Collision,5,1,1,Authorized,5,0
+CLM2411,57,0,389286,Theft,4,1,0,Authorized,57,1
+CLM2412,67,1,322293,Collision,0,1,0,Authorized,6,0
+CLM2413,46,6,220241,Collision,0,1,0,Authorized,15,0
+CLM2414,52,10,147727,Theft,4,1,1,Authorized,42,0
+CLM2415,69,11,412452,Natural Disaster,1,0,1,Local,57,1
+CLM2416,32,12,64838,Collision,2,0,1,Local,26,1
+CLM2417,28,7,311149,Theft,3,1,0,Local,16,1
+CLM2418,39,2,279166,Natural Disaster,3,1,0,Local,42,1
+CLM2419,70,14,237000,Theft,1,0,1,Local,9,1
+CLM2420,30,9,387384,Fire,3,1,0,Authorized,53,0
+CLM2421,52,1,55104,Natural Disaster,0,0,1,Authorized,2,0
+CLM2422,37,1,322520,Fire,1,0,0,Local,57,0
+CLM2423,51,0,459312,Theft,4,0,1,Local,0,1
+CLM2424,21,3,294311,Collision,4,0,1,Authorized,45,0
+CLM2425,62,11,444940,Collision,0,1,1,Authorized,44,0
+CLM2426,59,2,429331,Collision,4,0,0,Local,46,0
+CLM2427,54,7,125612,Theft,4,1,0,Local,45,0
+CLM2428,37,15,281466,Collision,1,1,0,Local,20,0
+CLM2429,58,6,226178,Collision,0,1,0,Authorized,16,0
+CLM2430,34,13,385938,Fire,4,0,1,Authorized,47,0
+CLM2431,19,10,226724,Fire,2,0,1,Local,23,0
+CLM2432,52,1,197108,Collision,4,1,0,Local,18,1
+CLM2433,67,8,218826,Fire,1,0,0,Local,47,0
+CLM2434,26,11,487866,Collision,1,1,1,Local,32,1
+CLM2435,62,6,191640,Collision,2,1,1,Local,27,0
+CLM2436,19,15,317189,Collision,5,0,0,Authorized,59,0
+CLM2437,42,13,270891,Theft,2,0,0,Authorized,53,0
+CLM2438,52,3,349113,Collision,3,1,1,Authorized,4,1
+CLM2439,20,5,180220,Natural Disaster,0,1,1,Local,27,0
+CLM2440,51,13,362285,Natural Disaster,4,1,1,Local,60,1
+CLM2441,34,2,450855,Collision,1,0,0,Local,15,1
+CLM2442,44,14,27655,Theft,3,1,0,Authorized,15,1
+CLM2443,19,15,392896,Collision,2,0,0,Authorized,6,0
+CLM2444,32,7,62930,Theft,3,1,0,Authorized,25,0
+CLM2445,49,14,389666,Natural Disaster,3,1,0,Local,47,0
+CLM2446,67,8,132585,Collision,4,0,1,Authorized,9,1
+CLM2447,23,2,244173,Collision,5,0,0,Local,46,1
+CLM2448,55,0,107998,Fire,4,0,1,Authorized,56,0
+CLM2449,23,11,284820,Theft,5,1,1,Authorized,22,1
+CLM2450,51,10,45972,Fire,3,1,1,Authorized,45,1
+CLM2451,28,7,256168,Theft,5,1,0,Authorized,40,1
+CLM2452,61,6,197630,Natural Disaster,4,1,1,Authorized,30,1
+CLM2453,36,9,329696,Theft,5,0,1,Authorized,55,0
+CLM2454,66,13,124541,Collision,0,1,1,Local,4,1
+CLM2455,43,1,106342,Theft,4,0,1,Authorized,31,0
+CLM2456,66,1,227464,Fire,0,1,1,Authorized,50,0
+CLM2457,42,15,210120,Natural Disaster,4,0,1,Authorized,43,0
+CLM2458,67,7,80873,Natural Disaster,1,1,1,Authorized,16,1
+CLM2459,42,4,13304,Theft,1,0,0,Authorized,7,1
+CLM2460,44,14,41930,Fire,2,1,1,Local,37,0
+CLM2461,60,8,280650,Theft,4,1,0,Authorized,33,1
+CLM2462,54,12,375763,Fire,2,1,1,Authorized,44,1
+CLM2463,21,7,376241,Natural Disaster,0,1,1,Local,55,1
+CLM2464,53,1,235787,Collision,3,1,1,Authorized,17,1
+CLM2465,44,14,291930,Theft,1,1,0,Local,59,0
+CLM2466,52,7,247211,Theft,2,1,0,Authorized,45,0
+CLM2467,21,4,233913,Theft,0,1,0,Local,51,1
+CLM2468,58,12,285157,Fire,4,1,1,Authorized,13,0
+CLM2469,68,0,414968,Natural Disaster,0,1,1,Local,1,1
+CLM2470,59,15,35817,Collision,5,0,1,Local,6,0
+CLM2471,36,12,20968,Natural Disaster,0,0,1,Authorized,22,1
+CLM2472,43,6,217316,Theft,5,1,1,Authorized,56,1
+CLM2473,33,8,324203,Theft,3,0,0,Local,59,1
+CLM2474,54,0,324924,Theft,0,0,0,Authorized,19,1
+CLM2475,48,9,304144,Natural Disaster,2,1,0,Local,22,1
+CLM2476,28,5,103424,Fire,3,0,0,Local,58,0
+CLM2477,38,5,22963,Theft,3,1,1,Local,3,0
+CLM2478,45,2,468517,Theft,2,0,1,Authorized,35,1
+CLM2479,30,12,449015,Collision,4,1,0,Local,30,0
+CLM2480,27,10,325453,Collision,3,0,1,Authorized,20,0
+CLM2481,23,7,68065,Theft,5,1,1,Local,59,0
+CLM2482,30,1,338638,Fire,4,0,1,Local,6,1
+CLM2483,31,3,393682,Collision,1,1,0,Authorized,53,0
+CLM2484,51,5,42037,Fire,4,0,0,Authorized,43,0
+CLM2485,33,4,146634,Theft,4,1,0,Authorized,34,1
+CLM2486,64,6,428466,Fire,1,0,1,Local,15,1
+CLM2487,68,5,297385,Theft,1,0,0,Authorized,15,0
+CLM2488,27,8,222502,Natural Disaster,0,0,1,Authorized,17,1
+CLM2489,54,11,188150,Theft,0,1,1,Local,23,0
+CLM2490,18,12,413839,Collision,0,1,0,Local,20,1
+CLM2491,28,6,53323,Theft,2,1,1,Authorized,28,1
+CLM2492,29,2,6112,Fire,4,1,0,Local,58,1
+CLM2493,43,1,454758,Fire,3,0,0,Authorized,49,1
+CLM2494,60,0,386027,Theft,0,1,1,Local,53,0
+CLM2495,35,1,194216,Fire,0,1,1,Authorized,3,0
+CLM2496,60,10,211790,Natural Disaster,4,0,1,Local,6,1
+CLM2497,68,4,83433,Natural Disaster,2,1,1,Local,52,1
+CLM2498,70,13,440250,Natural Disaster,4,1,0,Local,36,1
+CLM2499,59,9,313843,Fire,2,1,0,Local,48,1
+CLM2500,48,8,112107,Collision,1,1,1,Local,4,0
+CLM2501,59,7,37849,Natural Disaster,3,0,0,Authorized,30,0
+CLM2502,45,5,406869,Theft,3,1,0,Local,11,1
+CLM2503,69,7,73445,Collision,0,0,0,Local,11,1
+CLM2504,28,6,287967,Fire,3,0,0,Local,37,1
+CLM2505,42,3,70352,Theft,4,0,0,Authorized,57,1
+CLM2506,65,7,19768,Natural Disaster,2,0,1,Authorized,29,1
+CLM2507,56,3,474649,Theft,1,1,1,Authorized,5,1
+CLM2508,26,8,112893,Theft,2,1,0,Local,28,0
+CLM2509,23,1,327037,Fire,5,0,1,Authorized,54,0
+CLM2510,52,8,262277,Theft,0,0,1,Authorized,41,1
+CLM2511,66,11,496360,Collision,5,0,0,Authorized,54,1
+CLM2512,64,15,26126,Collision,3,0,1,Authorized,39,1
+CLM2513,37,11,142880,Natural Disaster,2,1,0,Local,24,0
+CLM2514,31,13,235519,Theft,4,1,1,Authorized,18,1
+CLM2515,23,3,331885,Theft,0,1,1,Authorized,34,1
+CLM2516,51,3,487525,Collision,2,1,1,Local,6,0
+CLM2517,66,15,362058,Collision,5,0,0,Local,17,0
+CLM2518,20,0,284422,Collision,0,0,1,Local,4,0
+CLM2519,19,2,371240,Theft,4,1,0,Local,8,0
+CLM2520,39,13,192494,Collision,4,0,0,Authorized,50,1
+CLM2521,51,11,94303,Theft,2,1,1,Authorized,33,1
+CLM2522,46,6,367356,Natural Disaster,1,1,1,Authorized,13,1
+CLM2523,52,12,353146,Fire,3,0,0,Authorized,54,1
+CLM2524,50,5,251510,Theft,5,1,1,Authorized,58,0
+CLM2525,41,12,61803,Natural Disaster,0,0,0,Local,52,1
+CLM2526,32,2,213094,Theft,1,1,0,Local,4,0
+CLM2527,36,4,418094,Theft,4,0,0,Authorized,8,0
+CLM2528,37,9,260624,Natural Disaster,2,1,1,Local,32,0
+CLM2529,22,4,439132,Collision,4,1,0,Authorized,14,0
+CLM2530,18,15,105790,Collision,4,0,0,Authorized,34,0
+CLM2531,25,15,211259,Collision,1,0,0,Local,17,1
+CLM2532,69,1,298096,Fire,3,1,0,Local,26,1
+CLM2533,56,11,155681,Theft,3,1,0,Local,10,0
+CLM2534,58,11,49897,Fire,4,0,1,Local,36,0
+CLM2535,64,9,242932,Natural Disaster,1,1,0,Authorized,13,1
+CLM2536,34,5,449388,Fire,1,1,1,Authorized,35,0
+CLM2537,55,13,451612,Theft,0,1,1,Local,55,1
+CLM2538,21,7,126251,Natural Disaster,5,1,0,Authorized,20,1
+CLM2539,35,3,489027,Fire,1,1,1,Local,48,1
+CLM2540,47,2,260143,Theft,1,1,1,Local,2,1
+CLM2541,20,2,124861,Theft,1,0,0,Authorized,4,0
+CLM2542,64,6,173553,Theft,4,0,0,Authorized,25,1
+CLM2543,47,14,436563,Natural Disaster,3,1,0,Local,54,1
+CLM2544,45,14,430278,Natural Disaster,5,0,1,Authorized,7,1
+CLM2545,70,7,39281,Theft,3,1,1,Authorized,7,1
+CLM2546,48,4,375967,Theft,0,0,1,Authorized,14,0
+CLM2547,40,11,436376,Fire,3,1,1,Authorized,38,1
+CLM2548,66,10,417075,Theft,2,1,1,Local,55,0
+CLM2549,28,1,304647,Natural Disaster,5,1,1,Local,47,0
+CLM2550,41,10,128151,Theft,0,1,0,Authorized,60,1
+CLM2551,38,4,2241,Theft,1,1,0,Local,48,0
+CLM2552,43,13,111371,Fire,2,0,0,Local,12,0
+CLM2553,49,4,191465,Fire,3,0,0,Authorized,52,1
+CLM2554,51,6,397569,Collision,1,1,1,Local,42,0
+CLM2555,21,12,202352,Theft,3,1,0,Local,41,1
+CLM2556,45,4,179910,Theft,0,1,1,Local,29,1
+CLM2557,33,2,325038,Natural Disaster,0,0,0,Authorized,54,0
+CLM2558,68,9,62564,Fire,2,0,1,Local,32,0
+CLM2559,63,12,16682,Theft,0,0,0,Local,32,1
+CLM2560,59,2,76397,Theft,0,1,0,Authorized,44,1
+CLM2561,65,2,237095,Fire,0,1,0,Local,22,1
+CLM2562,53,14,402311,Theft,4,0,0,Authorized,44,0
+CLM2563,65,2,182731,Theft,2,0,1,Authorized,36,0
+CLM2564,24,14,43382,Collision,2,0,1,Local,55,1
+CLM2565,36,3,187251,Natural Disaster,0,0,0,Local,16,1
+CLM2566,62,11,214611,Theft,5,0,1,Authorized,21,0
+CLM2567,37,5,207873,Collision,4,1,1,Local,27,1
+CLM2568,44,2,89989,Collision,3,0,1,Authorized,30,0
+CLM2569,65,11,233124,Theft,4,0,1,Local,48,1
+CLM2570,22,5,249596,Theft,1,0,0,Local,15,1
+CLM2571,24,8,350370,Collision,0,1,0,Local,23,1
+CLM2572,23,3,397623,Fire,3,0,0,Local,54,1
+CLM2573,45,6,319154,Theft,2,1,0,Authorized,53,1
+CLM2574,21,0,349287,Fire,1,1,1,Authorized,4,0
+CLM2575,28,3,107821,Theft,1,1,0,Authorized,53,1
+CLM2576,69,13,427897,Theft,3,1,1,Authorized,39,1
+CLM2577,22,14,204708,Theft,4,0,1,Authorized,43,0
+CLM2578,32,2,250399,Collision,0,1,1,Authorized,43,0
+CLM2579,52,2,419126,Theft,3,0,1,Local,42,1
+CLM2580,56,12,334924,Natural Disaster,0,1,1,Authorized,54,1
+CLM2581,65,8,274745,Natural Disaster,0,0,0,Local,49,1
+CLM2582,55,11,264051,Fire,4,0,1,Local,52,1
+CLM2583,43,14,359390,Fire,2,1,0,Local,16,0
+CLM2584,56,14,260624,Theft,4,1,0,Local,0,1
+CLM2585,54,7,421955,Fire,5,0,1,Local,33,1
+CLM2586,44,5,254812,Fire,5,0,0,Local,57,1
+CLM2587,26,10,177954,Natural Disaster,0,1,1,Local,5,0
+CLM2588,62,15,54974,Theft,5,0,0,Local,43,1
+CLM2589,44,3,377622,Collision,1,1,0,Authorized,5,0
+CLM2590,49,9,25149,Natural Disaster,1,0,0,Authorized,52,0
+CLM2591,57,14,283779,Theft,5,1,0,Local,37,1
+CLM2592,39,12,22012,Fire,4,1,1,Authorized,4,1
+CLM2593,37,8,427481,Fire,1,1,0,Local,33,1
+CLM2594,44,0,62287,Theft,5,0,1,Authorized,20,1
+CLM2595,59,0,479170,Collision,1,0,0,Authorized,28,0
+CLM2596,70,10,423242,Theft,2,1,0,Authorized,57,1
+CLM2597,61,1,45634,Collision,3,0,0,Authorized,10,0
+CLM2598,52,15,161652,Fire,0,1,1,Authorized,48,1
+CLM2599,58,9,480356,Fire,0,0,0,Local,54,1
+CLM2600,18,7,110482,Natural Disaster,0,0,1,Local,26,1
+CLM2601,37,9,443558,Fire,1,1,1,Local,25,0
+CLM2602,68,2,458638,Collision,3,0,1,Local,36,1
+CLM2603,57,8,268174,Natural Disaster,0,1,0,Authorized,46,0
+CLM2604,29,15,163219,Natural Disaster,4,1,1,Local,22,1
+CLM2605,27,14,331578,Fire,2,1,0,Authorized,14,0
+CLM2606,32,0,397463,Collision,2,1,0,Authorized,14,0
+CLM2607,56,7,103682,Collision,2,0,0,Local,42,0
+CLM2608,56,14,343368,Fire,1,0,0,Local,5,1
+CLM2609,60,15,67724,Collision,1,0,0,Authorized,46,0
+CLM2610,53,4,143255,Natural Disaster,0,0,1,Authorized,6,1
+CLM2611,41,3,460018,Natural Disaster,4,1,0,Authorized,39,0
+CLM2612,26,2,180044,Collision,5,0,1,Authorized,44,1
+CLM2613,66,14,233083,Fire,4,1,1,Authorized,26,1
+CLM2614,62,10,129940,Theft,2,0,1,Local,23,1
+CLM2615,37,5,7636,Collision,0,1,0,Authorized,5,1
+CLM2616,62,10,204452,Collision,4,1,0,Local,33,1
+CLM2617,52,4,189967,Fire,0,1,0,Local,22,1
+CLM2618,63,9,217733,Collision,3,0,1,Local,24,1
+CLM2619,60,8,264872,Collision,3,1,0,Local,39,1
+CLM2620,36,11,415833,Collision,3,1,0,Local,50,1
+CLM2621,44,15,400418,Theft,5,1,0,Local,28,0
+CLM2622,49,5,212720,Natural Disaster,4,1,1,Authorized,56,0
+CLM2623,23,1,265448,Natural Disaster,1,0,1,Local,26,1
+CLM2624,64,15,26477,Natural Disaster,0,1,1,Local,19,0
+CLM2625,36,3,402872,Collision,1,0,1,Authorized,59,1
+CLM2626,24,8,472201,Fire,1,1,1,Local,34,1
+CLM2627,65,14,214780,Theft,2,1,1,Local,18,1
+CLM2628,59,4,377378,Collision,2,0,1,Local,2,1
+CLM2629,51,14,142031,Fire,2,0,0,Authorized,25,0
+CLM2630,52,3,77253,Theft,3,1,1,Local,36,1
+CLM2631,68,7,373296,Natural Disaster,0,0,0,Authorized,25,1
+CLM2632,23,5,486054,Collision,4,1,0,Authorized,50,0
+CLM2633,63,1,408772,Collision,0,0,0,Local,33,0
+CLM2634,50,2,367442,Theft,3,1,0,Local,45,1
+CLM2635,54,0,228084,Theft,5,1,1,Local,54,1
+CLM2636,49,11,3206,Fire,3,0,1,Local,53,1
+CLM2637,24,5,324036,Fire,4,0,1,Authorized,55,0
+CLM2638,58,9,465908,Fire,1,0,0,Authorized,37,1
+CLM2639,18,0,20507,Collision,5,1,1,Authorized,60,1
+CLM2640,62,15,410842,Natural Disaster,0,0,1,Authorized,29,1
+CLM2641,70,10,410327,Theft,3,1,1,Authorized,40,0
+CLM2642,33,0,345244,Collision,5,0,1,Local,32,1
+CLM2643,49,15,261660,Natural Disaster,4,1,1,Authorized,26,0
+CLM2644,19,1,276552,Fire,5,1,1,Authorized,22,0
+CLM2645,23,13,128908,Natural Disaster,4,1,1,Local,35,1
+CLM2646,55,6,84567,Fire,1,1,1,Local,53,1
+CLM2647,22,5,467043,Theft,0,1,1,Authorized,23,0
+CLM2648,26,11,316841,Theft,0,1,0,Authorized,40,1
+CLM2649,52,4,454198,Natural Disaster,1,1,0,Local,55,0
+CLM2650,51,8,328811,Theft,2,0,1,Local,24,1
+CLM2651,42,12,288828,Fire,5,1,0,Local,4,0
+CLM2652,62,15,148478,Collision,0,0,0,Authorized,30,0
+CLM2653,25,3,297412,Theft,0,0,1,Authorized,15,1
+CLM2654,63,9,233147,Collision,4,0,0,Authorized,53,0
+CLM2655,61,4,32218,Collision,3,1,1,Authorized,31,1
+CLM2656,53,8,397728,Fire,5,0,0,Local,50,0
+CLM2657,54,5,407175,Theft,5,1,1,Local,47,0
+CLM2658,23,6,21946,Collision,3,1,1,Local,42,0
+CLM2659,64,0,120185,Fire,5,1,0,Authorized,29,0
+CLM2660,20,7,171526,Fire,3,0,0,Local,5,1
+CLM2661,52,11,115706,Fire,0,0,0,Authorized,40,1
+CLM2662,42,15,218190,Collision,3,0,0,Local,43,0
+CLM2663,69,5,464273,Collision,3,0,1,Authorized,37,0
+CLM2664,20,12,407251,Theft,2,1,1,Local,13,1
+CLM2665,29,15,131062,Natural Disaster,5,1,0,Authorized,3,0
+CLM2666,52,3,177813,Fire,0,0,1,Authorized,55,0
+CLM2667,50,5,216954,Fire,2,0,1,Authorized,38,0
+CLM2668,50,1,335307,Fire,3,0,1,Authorized,54,0
+CLM2669,50,10,185051,Collision,0,1,1,Local,30,0
+CLM2670,68,1,6199,Theft,0,1,1,Authorized,35,0
+CLM2671,59,10,199754,Theft,5,1,0,Local,38,1
+CLM2672,51,1,297602,Theft,1,0,1,Local,49,0
+CLM2673,66,10,432857,Collision,2,1,0,Local,33,0
+CLM2674,69,2,450901,Theft,4,0,0,Local,52,1
+CLM2675,68,10,57400,Natural Disaster,3,1,0,Authorized,13,1
+CLM2676,60,15,450561,Natural Disaster,0,0,1,Local,30,0
+CLM2677,59,12,312486,Natural Disaster,5,0,1,Local,3,1
+CLM2678,59,8,78497,Collision,1,1,1,Local,50,0
+CLM2679,18,5,212821,Fire,3,0,0,Authorized,44,0
+CLM2680,25,1,403445,Theft,0,0,1,Authorized,5,0
+CLM2681,24,1,2150,Natural Disaster,1,1,0,Local,39,0
+CLM2682,66,9,72471,Collision,3,1,0,Local,51,0
+CLM2683,56,4,482572,Natural Disaster,5,0,1,Local,47,0
+CLM2684,21,0,314743,Theft,1,0,1,Authorized,15,0
+CLM2685,61,2,348126,Fire,2,1,0,Authorized,23,1
+CLM2686,61,13,404501,Fire,3,0,0,Authorized,46,0
+CLM2687,26,0,153024,Theft,1,0,0,Authorized,49,1
+CLM2688,30,15,321901,Natural Disaster,3,0,1,Authorized,36,1
+CLM2689,36,13,184576,Fire,0,1,1,Authorized,54,0
+CLM2690,18,7,78154,Collision,1,1,1,Authorized,58,1
+CLM2691,54,5,268925,Natural Disaster,1,1,1,Local,0,1
+CLM2692,64,1,345312,Theft,1,0,1,Local,56,1
+CLM2693,63,15,411131,Theft,3,0,1,Authorized,42,0
+CLM2694,42,12,170783,Theft,1,0,0,Authorized,52,0
+CLM2695,50,5,194721,Collision,4,1,1,Local,28,0
+CLM2696,33,8,296737,Fire,0,0,0,Local,25,1
+CLM2697,63,10,95002,Theft,4,0,1,Authorized,50,0
+CLM2698,50,1,43550,Fire,1,1,0,Local,57,0
+CLM2699,38,3,367707,Collision,2,0,0,Local,9,1
+CLM2700,18,3,474043,Collision,5,1,1,Local,51,0
+CLM2701,63,11,88776,Fire,1,1,1,Authorized,3,1
+CLM2702,23,8,107447,Theft,2,0,1,Authorized,56,1
+CLM2703,67,0,440979,Natural Disaster,3,0,1,Authorized,25,1
+CLM2704,40,8,275033,Theft,1,1,1,Local,8,0
+CLM2705,68,7,431188,Fire,5,1,0,Authorized,9,0
+CLM2706,43,3,81711,Fire,5,0,1,Local,38,1
+CLM2707,34,6,384282,Theft,0,0,1,Authorized,36,0
+CLM2708,34,10,376009,Collision,5,0,0,Authorized,17,1
+CLM2709,56,7,205639,Fire,1,0,1,Local,39,1
+CLM2710,53,6,68465,Natural Disaster,5,1,0,Authorized,57,0
+CLM2711,36,10,84862,Theft,0,0,1,Local,40,0
+CLM2712,64,9,27783,Natural Disaster,1,1,1,Local,15,1
+CLM2713,61,10,238230,Collision,1,1,1,Authorized,50,0
+CLM2714,62,13,142344,Natural Disaster,1,1,0,Authorized,26,1
+CLM2715,64,4,228583,Collision,4,1,0,Local,46,1
+CLM2716,49,12,75274,Natural Disaster,0,1,0,Authorized,44,0
+CLM2717,46,7,202195,Theft,4,0,0,Authorized,58,1
+CLM2718,54,14,14411,Theft,0,1,0,Authorized,59,0
+CLM2719,39,13,371939,Fire,4,1,1,Authorized,45,1
+CLM2720,47,11,420366,Natural Disaster,3,1,0,Local,19,1
+CLM2721,65,2,185180,Theft,4,1,0,Authorized,12,1
+CLM2722,58,10,254438,Natural Disaster,1,1,0,Authorized,52,1
+CLM2723,35,12,350926,Natural Disaster,1,1,1,Authorized,5,1
+CLM2724,53,5,167052,Natural Disaster,5,1,1,Authorized,46,0
+CLM2725,21,8,206665,Fire,2,1,1,Local,8,1
+CLM2726,61,5,51634,Fire,2,0,1,Authorized,26,1
+CLM2727,38,13,405207,Natural Disaster,2,0,1,Authorized,32,1
+CLM2728,32,2,465825,Collision,2,1,1,Authorized,30,0
+CLM2729,50,3,207278,Fire,1,1,0,Authorized,43,0
+CLM2730,39,6,406771,Collision,4,1,0,Authorized,9,1
+CLM2731,51,1,255840,Fire,5,0,0,Authorized,59,1
+CLM2732,29,9,225940,Collision,2,1,1,Authorized,60,0
+CLM2733,31,4,464929,Natural Disaster,0,0,0,Authorized,46,1
+CLM2734,40,3,374812,Collision,1,1,0,Authorized,52,0
+CLM2735,61,0,221830,Collision,4,0,0,Authorized,27,1
+CLM2736,58,11,66829,Theft,2,0,1,Local,25,0
+CLM2737,38,9,185096,Collision,5,1,0,Local,58,0
+CLM2738,30,2,130719,Theft,3,0,1,Local,50,1
+CLM2739,26,4,22517,Collision,4,0,1,Authorized,22,0
+CLM2740,39,9,125072,Theft,1,1,1,Local,0,1
+CLM2741,49,10,346973,Theft,5,1,0,Authorized,32,0
+CLM2742,43,10,422348,Fire,1,0,0,Authorized,2,0
+CLM2743,26,11,398643,Theft,4,0,1,Authorized,6,0
+CLM2744,43,5,436928,Collision,0,1,1,Local,27,0
+CLM2745,68,7,181053,Collision,5,0,1,Local,41,1
+CLM2746,25,2,471871,Theft,4,1,0,Authorized,14,0
+CLM2747,23,1,61038,Collision,5,1,1,Authorized,5,0
+CLM2748,31,4,485965,Natural Disaster,3,0,1,Authorized,14,0
+CLM2749,23,10,312260,Collision,5,1,0,Local,49,1
+CLM2750,29,14,336967,Collision,5,1,1,Authorized,12,0
+CLM2751,45,1,269222,Fire,3,0,0,Authorized,50,0
+CLM2752,29,15,67994,Collision,2,1,1,Local,9,0
+CLM2753,51,2,19565,Collision,4,0,0,Authorized,32,0
+CLM2754,54,11,33631,Theft,1,0,1,Authorized,55,0
+CLM2755,19,0,287273,Fire,0,0,1,Local,14,1
+CLM2756,41,12,12242,Natural Disaster,2,1,1,Authorized,47,0
+CLM2757,38,0,378635,Collision,4,0,0,Local,22,0
+CLM2758,53,1,62124,Theft,0,1,0,Authorized,30,0
+CLM2759,33,10,326289,Fire,2,1,1,Authorized,20,0
+CLM2760,25,15,32657,Fire,3,0,0,Authorized,32,0
+CLM2761,70,0,173655,Collision,1,1,0,Authorized,53,0
+CLM2762,26,0,45407,Collision,3,0,0,Authorized,38,0
+CLM2763,33,5,469693,Theft,3,1,1,Local,12,1
+CLM2764,28,0,394403,Collision,1,0,1,Authorized,14,1
+CLM2765,65,13,236036,Theft,4,0,1,Local,23,0
+CLM2766,65,10,374846,Collision,2,1,1,Authorized,11,1
+CLM2767,36,1,255489,Natural Disaster,0,0,1,Authorized,34,0
+CLM2768,63,12,496864,Collision,5,1,0,Authorized,53,0
+CLM2769,52,12,227169,Collision,2,0,0,Authorized,34,0
+CLM2770,57,10,383222,Collision,0,1,0,Local,57,1
+CLM2771,62,6,220097,Theft,5,1,0,Authorized,23,0
+CLM2772,51,2,30532,Fire,2,0,0,Local,17,1
+CLM2773,29,5,122585,Natural Disaster,2,1,0,Local,54,0
+CLM2774,22,11,110380,Theft,3,1,1,Local,44,1
+CLM2775,29,6,398845,Natural Disaster,3,0,0,Authorized,11,1
+CLM2776,46,6,248909,Natural Disaster,3,0,0,Local,1,0
+CLM2777,65,8,89472,Theft,4,1,0,Authorized,39,0
+CLM2778,30,3,251213,Collision,2,1,0,Authorized,14,0
+CLM2779,50,2,336149,Theft,1,0,0,Local,54,0
+CLM2780,62,9,266414,Fire,1,0,1,Local,13,1
+CLM2781,26,1,163953,Natural Disaster,5,0,0,Authorized,38,0
+CLM2782,22,9,349106,Fire,5,0,0,Authorized,42,1
+CLM2783,43,15,109434,Theft,4,1,1,Local,3,1
+CLM2784,19,14,100850,Theft,1,1,1,Authorized,9,0
+CLM2785,47,12,405512,Collision,0,0,0,Local,43,0
+CLM2786,53,0,138584,Fire,3,1,0,Authorized,23,1
+CLM2787,49,8,325932,Theft,1,1,1,Authorized,16,0
+CLM2788,38,4,447634,Fire,3,1,1,Local,2,1
+CLM2789,25,6,132016,Theft,5,0,1,Local,37,0
+CLM2790,44,8,296718,Collision,0,0,0,Local,44,0
+CLM2791,66,7,269957,Theft,3,0,0,Local,20,0
+CLM2792,68,4,3731,Theft,3,0,0,Authorized,6,1
+CLM2793,49,9,432774,Natural Disaster,3,0,0,Local,13,0
+CLM2794,68,5,146034,Fire,5,1,1,Authorized,45,0
+CLM2795,39,10,26708,Theft,5,1,0,Local,17,0
+CLM2796,30,9,289397,Collision,2,1,1,Authorized,48,0
+CLM2797,69,1,14373,Fire,4,1,1,Local,41,1
+CLM2798,35,13,352844,Theft,0,0,0,Local,59,1
+CLM2799,42,7,351896,Fire,5,1,0,Authorized,16,0
+CLM2800,32,12,351625,Natural Disaster,2,1,0,Authorized,42,0
+CLM2801,56,9,53119,Natural Disaster,1,0,0,Local,26,1
+CLM2802,36,15,276591,Natural Disaster,2,1,0,Local,39,0
+CLM2803,21,9,299737,Theft,3,1,1,Local,32,1
+CLM2804,48,9,487903,Theft,3,1,1,Local,50,1
+CLM2805,26,11,286432,Fire,0,0,1,Local,54,1
+CLM2806,33,5,498551,Fire,1,1,0,Authorized,58,1
+CLM2807,34,0,317316,Collision,1,0,1,Local,19,0
+CLM2808,46,6,113904,Fire,5,1,1,Authorized,43,0
+CLM2809,45,2,300361,Collision,2,0,0,Authorized,13,1
+CLM2810,21,6,190356,Collision,2,0,1,Authorized,43,1
+CLM2811,66,0,328028,Collision,3,0,1,Local,4,1
+CLM2812,18,12,457532,Collision,0,0,0,Authorized,15,0
+CLM2813,56,15,126518,Fire,0,0,1,Local,15,0
+CLM2814,37,11,470641,Theft,3,1,0,Local,21,0
+CLM2815,41,5,31429,Fire,3,1,1,Authorized,56,0
+CLM2816,24,14,381462,Fire,1,1,0,Authorized,32,0
+CLM2817,46,2,125913,Theft,1,0,0,Local,7,0
+CLM2818,51,9,147497,Fire,3,1,0,Local,12,0
+CLM2819,20,10,475966,Collision,1,1,1,Local,32,0
+CLM2820,23,1,355697,Theft,2,0,0,Authorized,9,1
+CLM2821,48,12,341272,Theft,0,0,0,Local,59,0
+CLM2822,29,11,15232,Theft,4,0,0,Authorized,52,0
+CLM2823,60,7,73769,Collision,0,1,0,Local,5,1
+CLM2824,32,15,292285,Fire,5,0,1,Authorized,1,1
+CLM2825,62,7,422291,Theft,4,0,1,Authorized,34,1
+CLM2826,23,11,484000,Collision,5,0,0,Authorized,34,1
+CLM2827,47,4,340186,Fire,3,0,1,Authorized,55,1
+CLM2828,37,1,418066,Natural Disaster,3,1,1,Authorized,24,0
+CLM2829,70,13,139615,Fire,3,1,0,Authorized,47,1
+CLM2830,23,5,353194,Theft,4,0,0,Authorized,21,1
+CLM2831,20,1,373590,Theft,2,1,1,Authorized,43,0
+CLM2832,18,6,184371,Fire,0,1,1,Local,40,0
+CLM2833,63,10,81130,Theft,5,0,0,Authorized,2,1
+CLM2834,38,1,376470,Natural Disaster,3,0,1,Authorized,19,0
+CLM2835,51,0,248093,Fire,5,0,0,Local,59,1
+CLM2836,54,3,68975,Natural Disaster,4,1,1,Authorized,25,0
+CLM2837,23,15,57683,Theft,2,0,1,Authorized,43,1
+CLM2838,69,4,482950,Fire,2,0,0,Local,12,0
+CLM2839,27,11,470973,Collision,3,1,0,Authorized,0,1
+CLM2840,40,5,109399,Collision,0,1,0,Local,42,1
+CLM2841,43,8,167569,Fire,0,0,1,Local,45,0
+CLM2842,43,2,195900,Natural Disaster,4,0,0,Authorized,36,1
+CLM2843,53,7,77322,Natural Disaster,1,1,0,Authorized,42,1
+CLM2844,40,1,427978,Natural Disaster,3,0,1,Local,14,0
+CLM2845,61,11,115898,Fire,0,1,1,Authorized,1,0
+CLM2846,22,15,50857,Fire,5,0,1,Local,6,0
+CLM2847,56,14,221124,Collision,3,0,1,Authorized,34,1
+CLM2848,61,0,473629,Natural Disaster,3,1,0,Local,27,1
+CLM2849,43,14,5559,Fire,5,1,0,Authorized,44,0
+CLM2850,69,11,65221,Fire,3,0,0,Authorized,25,0
+CLM2851,26,13,182247,Theft,5,1,1,Authorized,35,1
+CLM2852,47,5,21230,Natural Disaster,2,0,0,Local,11,1
+CLM2853,41,4,309959,Natural Disaster,1,1,1,Authorized,50,1
+CLM2854,34,7,268136,Fire,3,1,0,Local,31,1
+CLM2855,50,6,73577,Natural Disaster,4,1,0,Local,56,1
+CLM2856,23,4,483651,Fire,3,0,0,Authorized,49,1
+CLM2857,29,8,140675,Fire,1,0,1,Local,21,1
+CLM2858,54,12,74129,Collision,1,0,1,Authorized,3,0
+CLM2859,62,11,116438,Fire,1,0,0,Authorized,57,0
+CLM2860,28,5,444881,Natural Disaster,2,0,0,Authorized,30,0
+CLM2861,25,14,298054,Natural Disaster,4,1,0,Authorized,16,1
+CLM2862,40,6,257288,Theft,0,1,1,Authorized,36,1
+CLM2863,25,10,142153,Collision,3,0,1,Local,26,0
+CLM2864,31,4,450431,Theft,3,1,0,Authorized,38,1
+CLM2865,49,2,150671,Fire,3,1,0,Authorized,32,1
+CLM2866,55,1,158243,Theft,4,1,1,Local,36,0
+CLM2867,55,2,450655,Collision,1,0,0,Local,42,0
+CLM2868,55,0,299038,Natural Disaster,1,0,1,Local,52,0
+CLM2869,43,1,461727,Fire,4,0,0,Authorized,33,1
+CLM2870,32,8,129445,Collision,5,1,0,Local,41,0
+CLM2871,67,0,125283,Theft,5,0,0,Local,41,0
+CLM2872,40,10,20573,Theft,0,1,1,Authorized,50,1
+CLM2873,63,6,240726,Collision,3,0,1,Authorized,41,0
+CLM2874,68,1,66527,Fire,5,1,0,Local,14,0
+CLM2875,46,4,172961,Natural Disaster,5,0,1,Authorized,40,0
+CLM2876,37,5,323850,Theft,5,0,0,Local,1,1
+CLM2877,64,12,239141,Theft,4,1,1,Local,17,1
+CLM2878,57,12,442012,Fire,5,0,1,Authorized,34,1
+CLM2879,44,5,86877,Collision,1,0,1,Authorized,51,0
+CLM2880,63,12,256066,Fire,2,1,1,Authorized,57,1
+CLM2881,69,7,55223,Theft,5,1,1,Local,18,0
+CLM2882,19,9,197407,Collision,4,1,0,Local,59,1
+CLM2883,60,11,454493,Theft,2,1,1,Local,11,1
+CLM2884,51,13,104900,Fire,0,0,1,Authorized,8,0
+CLM2885,49,12,263885,Natural Disaster,3,0,0,Local,38,1
+CLM2886,54,0,368224,Collision,5,1,1,Local,25,1
+CLM2887,65,14,490862,Theft,0,1,0,Authorized,7,0
+CLM2888,53,1,152151,Collision,5,1,0,Authorized,24,0
+CLM2889,29,7,381000,Theft,5,1,0,Authorized,13,0
+CLM2890,48,10,29315,Collision,2,0,0,Local,15,1
+CLM2891,20,4,186307,Fire,1,0,0,Authorized,59,0
+CLM2892,37,3,414228,Fire,2,0,0,Local,47,1
+CLM2893,18,14,440359,Natural Disaster,4,1,0,Authorized,46,0
+CLM2894,62,10,238706,Theft,1,1,1,Local,18,0
+CLM2895,30,15,127291,Natural Disaster,1,1,1,Authorized,12,0
+CLM2896,25,10,302309,Theft,5,0,1,Local,48,0
+CLM2897,69,11,266535,Theft,3,1,0,Authorized,58,1
+CLM2898,30,3,283210,Fire,2,1,0,Authorized,48,1
+CLM2899,22,15,10456,Fire,4,0,0,Authorized,15,1
+CLM2900,56,15,176660,Natural Disaster,3,0,1,Local,13,0
+CLM2901,57,15,280012,Fire,0,1,1,Authorized,7,0
+CLM2902,25,13,65931,Collision,3,0,1,Local,34,1
+CLM2903,24,5,376586,Theft,0,0,1,Local,41,1
+CLM2904,51,10,441710,Fire,3,0,1,Local,8,1
+CLM2905,53,5,71800,Theft,5,0,1,Authorized,25,0
+CLM2906,25,3,78587,Fire,5,0,1,Local,29,1
+CLM2907,55,12,152059,Fire,0,0,0,Local,5,0
+CLM2908,18,1,171072,Fire,2,0,0,Authorized,55,0
+CLM2909,65,15,208395,Theft,0,1,0,Local,1,0
+CLM2910,31,14,202316,Collision,5,0,0,Authorized,30,1
+CLM2911,26,5,135329,Fire,1,1,0,Authorized,27,0
+CLM2912,56,15,447002,Theft,5,1,0,Authorized,20,1
+CLM2913,44,13,255632,Natural Disaster,0,1,0,Local,28,1
+CLM2914,65,3,263942,Natural Disaster,0,1,0,Local,46,0
+CLM2915,62,7,312557,Collision,4,1,0,Authorized,14,1
+CLM2916,60,14,497957,Collision,1,1,0,Authorized,12,0
+CLM2917,44,11,27028,Fire,1,0,1,Authorized,50,0
+CLM2918,36,4,33778,Theft,3,1,1,Authorized,47,0
+CLM2919,36,7,321144,Theft,1,1,1,Local,23,0
+CLM2920,23,8,414039,Collision,0,1,0,Authorized,42,1
+CLM2921,43,10,314290,Collision,1,1,1,Authorized,33,1
+CLM2922,34,7,140956,Fire,1,1,1,Authorized,15,1
+CLM2923,56,9,208316,Fire,4,1,0,Local,6,0
+CLM2924,32,12,73118,Theft,3,0,1,Local,19,1
+CLM2925,25,10,7557,Natural Disaster,2,1,0,Local,23,1
+CLM2926,41,11,462813,Fire,1,0,1,Authorized,6,1
+CLM2927,23,1,217913,Collision,4,0,1,Local,7,1
+CLM2928,47,3,256174,Fire,2,0,0,Authorized,58,1
+CLM2929,27,4,293560,Natural Disaster,1,1,1,Authorized,41,0
+CLM2930,47,5,343170,Fire,5,0,0,Local,28,1
+CLM2931,56,7,36690,Natural Disaster,4,0,0,Authorized,18,0
+CLM2932,58,13,73662,Collision,2,0,1,Local,22,1
+CLM2933,23,8,97836,Fire,5,0,0,Authorized,38,0
+CLM2934,40,2,78237,Theft,0,1,0,Authorized,4,0
+CLM2935,27,12,282453,Theft,3,1,1,Local,30,1
+CLM2936,59,2,220092,Collision,4,1,1,Local,1,0
+CLM2937,50,7,120045,Fire,2,0,1,Local,7,1
+CLM2938,22,7,326266,Fire,4,1,0,Local,48,1
+CLM2939,32,9,387298,Fire,3,0,1,Local,0,0
+CLM2940,19,7,5674,Collision,4,1,0,Local,43,1
+CLM2941,61,6,20109,Collision,4,0,1,Authorized,56,1
+CLM2942,33,4,105803,Collision,0,0,0,Local,23,1
+CLM2943,18,6,133009,Collision,0,0,1,Authorized,48,0
+CLM2944,57,5,229310,Fire,1,0,0,Authorized,49,0
+CLM2945,50,1,158418,Fire,0,1,0,Authorized,58,0
+CLM2946,48,13,248526,Fire,1,1,1,Local,55,0
+CLM2947,34,13,363588,Collision,1,0,1,Local,10,0
+CLM2948,21,5,370276,Collision,0,0,0,Authorized,18,1
+CLM2949,38,8,464643,Theft,5,1,0,Authorized,5,1
+CLM2950,36,2,136192,Natural Disaster,3,0,1,Authorized,36,0
+CLM2951,69,14,154828,Natural Disaster,0,0,0,Authorized,55,0
+CLM2952,32,2,369546,Fire,4,1,0,Authorized,39,0
+CLM2953,35,0,295794,Theft,0,1,0,Authorized,51,1
+CLM2954,24,11,4486,Collision,4,0,0,Authorized,33,0
+CLM2955,21,1,258163,Natural Disaster,4,1,0,Local,0,0
+CLM2956,45,4,289436,Natural Disaster,1,1,1,Authorized,59,0
+CLM2957,66,2,326913,Collision,0,1,1,Authorized,47,1
+CLM2958,33,11,166578,Fire,3,1,0,Authorized,27,1
+CLM2959,32,12,462191,Natural Disaster,4,1,0,Local,36,1
+CLM2960,64,14,364291,Collision,2,0,1,Authorized,17,1
+CLM2961,19,11,331137,Theft,1,0,0,Authorized,27,1
+CLM2962,40,6,186148,Collision,3,0,1,Authorized,18,0
+CLM2963,66,3,104327,Theft,2,0,1,Local,34,1
+CLM2964,25,3,283549,Fire,0,1,1,Local,3,1
+CLM2965,22,11,219882,Collision,1,1,1,Authorized,27,1
+CLM2966,38,4,215745,Fire,3,0,0,Authorized,49,0
+CLM2967,29,13,183299,Natural Disaster,4,1,1,Local,10,1
+CLM2968,56,14,229438,Theft,4,0,1,Local,30,1
+CLM2969,55,0,62318,Fire,1,0,0,Authorized,43,1
+CLM2970,32,15,4492,Collision,5,0,1,Local,19,0
+CLM2971,22,9,376644,Theft,3,0,0,Authorized,0,0
+CLM2972,48,5,49050,Theft,5,1,0,Local,28,0
+CLM2973,25,0,174292,Fire,2,0,0,Local,14,1
+CLM2974,59,14,430662,Natural Disaster,5,0,1,Local,36,1
+CLM2975,54,0,218712,Collision,5,1,0,Local,42,1
+CLM2976,70,1,365351,Collision,4,1,1,Local,47,1
+CLM2977,46,8,159475,Natural Disaster,2,1,1,Local,45,0
+CLM2978,34,0,63032,Natural Disaster,4,1,0,Local,2,1
+CLM2979,64,3,162047,Theft,5,0,0,Local,45,1
+CLM2980,35,2,149130,Natural Disaster,1,0,0,Authorized,1,0
+CLM2981,32,2,384002,Collision,0,1,0,Local,60,0
+CLM2982,52,2,11639,Collision,1,1,1,Local,39,1
+CLM2983,35,0,61568,Theft,3,1,1,Local,10,1
+CLM2984,36,9,461874,Theft,4,1,1,Authorized,26,1
+CLM2985,44,5,333436,Theft,5,0,1,Authorized,11,0
+CLM2986,20,6,25018,Natural Disaster,1,0,1,Authorized,28,0
+CLM2987,46,8,80149,Natural Disaster,5,1,0,Authorized,51,0
+CLM2988,55,9,322893,Theft,5,0,1,Authorized,38,0
+CLM2989,35,0,36798,Fire,3,1,1,Local,42,1
+CLM2990,63,9,466682,Collision,1,0,0,Authorized,27,1
+CLM2991,61,12,292323,Fire,0,1,1,Local,46,1
+CLM2992,52,8,368433,Collision,0,1,0,Local,30,1
+CLM2993,41,9,28199,Natural Disaster,5,0,0,Local,34,0
+CLM2994,21,2,492001,Natural Disaster,1,1,1,Local,28,0
+CLM2995,68,4,20983,Collision,2,1,1,Authorized,9,1
+CLM2996,46,5,158825,Theft,4,1,0,Authorized,37,0
+CLM2997,23,11,143218,Natural Disaster,5,1,0,Local,30,1
+CLM2998,64,14,269064,Collision,5,0,0,Local,56,0
+CLM2999,44,9,41784,Fire,1,0,1,Local,11,0
+CLM3000,64,0,72296,Theft,2,0,1,Authorized,34,0
+CLM3001,49,3,398175,Theft,5,1,0,Local,59,0
+CLM3002,48,6,338548,Collision,5,0,0,Local,58,1
+CLM3003,45,6,124677,Theft,1,1,1,Authorized,18,1
+CLM3004,47,13,410262,Theft,1,1,0,Local,56,1
+CLM3005,46,3,392638,Fire,3,1,0,Authorized,40,0
+CLM3006,50,2,258791,Natural Disaster,1,1,0,Local,14,1
+CLM3007,65,15,382357,Fire,4,0,1,Local,44,1
+CLM3008,67,12,484139,Fire,0,0,0,Authorized,41,1
+CLM3009,34,13,453817,Natural Disaster,1,1,0,Authorized,55,1
+CLM3010,62,14,238868,Natural Disaster,1,0,0,Authorized,45,0
+CLM3011,68,12,354622,Natural Disaster,3,1,1,Authorized,6,0
+CLM3012,63,12,313951,Natural Disaster,0,0,1,Local,53,1
+CLM3013,52,0,402506,Fire,3,1,1,Local,30,1
+CLM3014,29,9,422127,Fire,2,1,1,Local,23,1
+CLM3015,43,1,139544,Natural Disaster,0,0,1,Local,49,1
+CLM3016,52,14,399348,Collision,4,1,1,Authorized,43,1
+CLM3017,26,1,84841,Collision,0,0,0,Authorized,24,0
+CLM3018,67,10,266404,Collision,4,0,0,Local,50,0
+CLM3019,52,15,315924,Collision,2,1,1,Authorized,20,1
+CLM3020,54,6,251235,Collision,2,0,1,Local,56,1
+CLM3021,56,9,290156,Natural Disaster,2,0,0,Authorized,60,0
+CLM3022,43,3,60220,Collision,0,0,0,Local,51,1
+CLM3023,60,13,370041,Collision,3,1,1,Authorized,29,0
+CLM3024,42,15,281776,Collision,0,1,1,Authorized,14,0
+CLM3025,63,13,49299,Collision,0,1,0,Local,28,0
+CLM3026,39,13,329806,Natural Disaster,3,1,1,Local,50,1
+CLM3027,45,1,123069,Collision,5,0,1,Authorized,42,0
+CLM3028,23,14,288430,Theft,2,0,0,Local,46,0
+CLM3029,62,4,419054,Natural Disaster,0,0,0,Authorized,15,0
+CLM3030,46,9,284785,Fire,0,1,0,Local,37,1
+CLM3031,68,12,68768,Fire,0,0,0,Local,28,1
+CLM3032,19,5,11551,Collision,0,0,0,Local,18,0
+CLM3033,42,1,398775,Fire,2,0,1,Local,5,0
+CLM3034,25,7,437958,Theft,5,0,1,Local,44,1
+CLM3035,67,7,259320,Collision,1,1,0,Local,12,1
+CLM3036,61,7,158115,Theft,3,0,0,Authorized,6,1
+CLM3037,18,4,440782,Natural Disaster,2,1,1,Local,60,1
+CLM3038,52,9,347001,Fire,1,1,0,Authorized,57,0
+CLM3039,31,14,289402,Natural Disaster,0,1,0,Local,29,0
+CLM3040,45,4,252144,Collision,4,0,0,Local,36,0
+CLM3041,67,2,157385,Natural Disaster,0,0,0,Authorized,18,1
+CLM3042,26,12,300801,Fire,4,0,0,Authorized,1,1
+CLM3043,23,8,47267,Fire,5,0,1,Local,44,1
+CLM3044,36,14,199657,Collision,2,0,1,Authorized,39,1
+CLM3045,26,1,308666,Fire,2,0,1,Local,45,0
+CLM3046,41,15,376866,Collision,4,0,1,Local,32,1
+CLM3047,51,12,413062,Theft,1,0,0,Local,34,1
+CLM3048,41,7,388787,Theft,1,0,1,Authorized,45,0
+CLM3049,46,11,261372,Natural Disaster,2,1,0,Authorized,40,1
+CLM3050,70,4,385697,Collision,1,1,1,Authorized,16,0
+CLM3051,55,8,139876,Natural Disaster,2,1,0,Local,53,0
+CLM3052,48,13,339951,Collision,4,1,0,Authorized,53,1
+CLM3053,62,2,321561,Theft,5,1,0,Authorized,52,0
+CLM3054,61,7,498293,Natural Disaster,4,0,0,Local,17,1
+CLM3055,27,0,426038,Collision,3,0,0,Local,41,1
+CLM3056,35,4,251303,Natural Disaster,1,0,1,Authorized,42,0
+CLM3057,59,14,480481,Fire,0,0,1,Authorized,29,1
+CLM3058,23,9,120440,Theft,4,1,1,Authorized,15,1
+CLM3059,20,13,388185,Fire,0,0,0,Local,3,1
+CLM3060,57,15,225929,Theft,2,0,1,Authorized,1,0
+CLM3061,52,1,345600,Theft,5,0,1,Local,46,0
+CLM3062,42,11,77242,Natural Disaster,1,0,1,Authorized,58,1
+CLM3063,54,14,359896,Theft,5,1,1,Local,36,1
+CLM3064,41,2,285878,Fire,2,1,0,Local,33,1
+CLM3065,66,14,431564,Collision,3,1,1,Authorized,26,0
+CLM3066,54,4,414978,Theft,2,1,0,Authorized,31,1
+CLM3067,57,13,61287,Fire,1,0,1,Authorized,47,0
+CLM3068,51,9,418636,Fire,5,0,0,Authorized,43,1
+CLM3069,64,14,450224,Theft,5,1,1,Local,23,1
+CLM3070,45,14,21144,Fire,1,0,1,Local,36,0
+CLM3071,67,3,244486,Collision,5,1,0,Local,30,1
+CLM3072,60,5,341636,Natural Disaster,5,1,1,Authorized,0,0
+CLM3073,20,1,274528,Theft,0,0,0,Authorized,39,0
+CLM3074,22,11,406488,Theft,5,0,0,Local,6,0
+CLM3075,23,6,396772,Theft,3,1,1,Authorized,5,0
+CLM3076,38,1,264735,Natural Disaster,0,0,1,Authorized,5,1
+CLM3077,45,15,461607,Theft,3,0,0,Local,44,1
+CLM3078,41,9,360304,Theft,0,1,0,Local,0,0
+CLM3079,67,3,414205,Theft,4,1,0,Authorized,43,1
+CLM3080,25,7,110312,Natural Disaster,3,0,0,Authorized,11,0
+CLM3081,37,3,106480,Fire,1,1,1,Local,15,0
+CLM3082,44,2,486009,Fire,4,0,0,Authorized,39,1
+CLM3083,32,11,119110,Fire,5,1,1,Local,44,0
+CLM3084,33,11,9507,Collision,4,1,0,Authorized,37,0
+CLM3085,44,5,111011,Natural Disaster,3,0,1,Authorized,15,1
+CLM3086,68,10,211775,Collision,4,0,0,Local,8,0
+CLM3087,31,9,310215,Natural Disaster,1,1,1,Local,5,1
+CLM3088,70,3,98608,Theft,0,1,0,Authorized,28,1
+CLM3089,67,15,394155,Collision,3,0,1,Authorized,16,1
+CLM3090,34,7,428095,Natural Disaster,0,1,0,Authorized,38,1
+CLM3091,23,4,315731,Theft,5,1,1,Authorized,26,0
+CLM3092,44,15,302026,Natural Disaster,3,1,1,Local,24,0
+CLM3093,28,12,331067,Collision,3,0,0,Authorized,24,1
+CLM3094,22,1,361338,Natural Disaster,0,0,1,Local,3,1
+CLM3095,20,14,241916,Fire,2,1,0,Local,18,0
+CLM3096,25,9,12940,Theft,0,0,1,Authorized,3,1
+CLM3097,26,3,91274,Theft,3,1,1,Authorized,57,0
+CLM3098,63,0,109732,Natural Disaster,1,0,1,Authorized,10,1
+CLM3099,19,1,243559,Collision,0,0,1,Local,0,0
+CLM3100,54,8,498390,Collision,5,1,1,Authorized,43,1
+CLM3101,18,12,93671,Fire,3,0,0,Authorized,28,0
+CLM3102,18,4,291336,Collision,5,1,1,Authorized,16,1
+CLM3103,63,13,16472,Theft,0,1,1,Local,33,1
+CLM3104,64,7,1491,Collision,2,0,0,Local,8,0
+CLM3105,24,2,99647,Fire,0,0,1,Local,11,1
+CLM3106,50,13,305519,Fire,0,0,1,Local,25,0
+CLM3107,18,6,224831,Fire,1,1,1,Local,41,1
+CLM3108,65,12,443509,Theft,4,1,1,Authorized,44,1
+CLM3109,47,8,92775,Natural Disaster,1,0,1,Authorized,30,1
+CLM3110,62,3,449642,Natural Disaster,3,0,1,Local,35,1
+CLM3111,32,3,182789,Natural Disaster,3,1,1,Local,35,0
+CLM3112,24,0,431427,Theft,4,0,0,Local,0,0
+CLM3113,60,7,192783,Collision,4,1,1,Local,23,1
+CLM3114,31,2,300913,Fire,0,0,0,Local,57,0
+CLM3115,25,2,304118,Natural Disaster,4,0,1,Local,1,1
+CLM3116,55,15,448388,Natural Disaster,1,0,1,Local,18,1
+CLM3117,53,14,466815,Theft,3,0,1,Authorized,31,1
+CLM3118,67,1,199130,Theft,5,0,1,Authorized,15,0
+CLM3119,18,3,391358,Natural Disaster,0,1,0,Local,6,0
+CLM3120,65,2,25863,Fire,0,0,0,Authorized,20,0
+CLM3121,46,7,215896,Theft,0,0,1,Local,4,0
+CLM3122,51,12,379044,Natural Disaster,5,1,0,Authorized,20,0
+CLM3123,49,4,80367,Fire,1,0,1,Authorized,21,0
+CLM3124,21,9,388476,Collision,3,1,1,Local,50,1
+CLM3125,46,3,286420,Fire,1,0,1,Authorized,23,0
+CLM3126,20,10,240672,Collision,5,0,1,Local,54,1
+CLM3127,52,5,12577,Theft,1,0,1,Authorized,44,0
+CLM3128,28,9,249956,Fire,1,0,1,Authorized,19,1
+CLM3129,40,5,215364,Collision,4,1,1,Authorized,23,0
+CLM3130,61,5,151609,Collision,2,0,0,Local,56,1
+CLM3131,41,1,170442,Theft,4,1,0,Local,40,1
+CLM3132,19,2,56914,Fire,5,0,0,Authorized,44,0
+CLM3133,63,5,66360,Natural Disaster,2,1,1,Local,58,0
+CLM3134,60,1,432328,Fire,0,1,1,Local,40,1
+CLM3135,48,5,374647,Fire,3,1,0,Authorized,57,1
+CLM3136,61,5,158724,Collision,1,0,0,Local,7,0
+CLM3137,63,5,100311,Theft,3,0,1,Local,56,1
+CLM3138,62,1,346021,Fire,5,1,1,Local,51,1
+CLM3139,21,15,374782,Theft,2,0,0,Authorized,11,0
+CLM3140,65,5,495362,Collision,1,0,0,Local,28,0
+CLM3141,67,3,358815,Theft,0,0,1,Authorized,19,0
+CLM3142,51,11,188433,Collision,3,0,0,Authorized,23,1
+CLM3143,61,8,284692,Collision,1,1,0,Local,34,0
+CLM3144,69,8,233341,Theft,5,0,1,Local,28,1
+CLM3145,39,1,34113,Fire,5,1,0,Authorized,22,0
+CLM3146,68,2,42357,Collision,1,1,0,Authorized,51,0
+CLM3147,67,12,44759,Collision,3,0,1,Local,52,1
+CLM3148,18,14,188394,Theft,2,1,1,Local,7,0
+CLM3149,19,15,44306,Theft,2,0,0,Local,6,0
+CLM3150,28,1,341763,Theft,0,1,0,Authorized,19,1
+CLM3151,27,15,338768,Collision,1,0,0,Authorized,47,1
+CLM3152,33,14,243312,Theft,2,0,0,Local,60,1
+CLM3153,54,15,293288,Theft,2,0,1,Authorized,31,0
+CLM3154,58,14,101773,Collision,1,1,1,Local,6,1
+CLM3155,20,12,34466,Collision,4,0,0,Local,42,1
+CLM3156,24,4,421522,Natural Disaster,3,0,0,Local,6,0
+CLM3157,30,9,375774,Fire,0,0,1,Authorized,29,1
+CLM3158,41,4,277610,Natural Disaster,3,0,1,Local,1,1
+CLM3159,33,8,65234,Fire,0,0,0,Authorized,4,0
+CLM3160,70,1,99660,Fire,4,0,0,Authorized,5,0
+CLM3161,62,7,85549,Fire,1,0,1,Local,48,0
+CLM3162,27,7,1910,Theft,3,0,0,Authorized,27,1
+CLM3163,36,14,321596,Natural Disaster,1,0,1,Authorized,39,1
+CLM3164,60,4,172532,Theft,5,1,0,Authorized,58,0
+CLM3165,66,1,239028,Theft,0,0,0,Local,24,0
+CLM3166,45,13,436901,Natural Disaster,1,0,0,Authorized,29,0
+CLM3167,28,1,471682,Natural Disaster,0,1,1,Local,46,0
+CLM3168,55,10,248602,Fire,1,1,1,Authorized,55,1
+CLM3169,61,2,174255,Collision,3,1,0,Authorized,51,1
+CLM3170,61,3,394222,Theft,5,0,0,Local,41,0
+CLM3171,62,12,307356,Natural Disaster,5,1,1,Authorized,3,1
+CLM3172,18,9,485753,Theft,1,0,1,Authorized,2,1
+CLM3173,63,5,313742,Fire,5,0,0,Authorized,5,0
+CLM3174,42,9,158134,Theft,0,1,0,Local,3,1
+CLM3175,42,11,93207,Collision,1,0,1,Authorized,48,1
+CLM3176,66,11,55824,Theft,0,0,0,Local,48,1
+CLM3177,49,6,290173,Natural Disaster,5,1,0,Local,49,1
+CLM3178,23,3,341935,Fire,1,1,0,Local,51,1
+CLM3179,37,10,474229,Natural Disaster,1,1,1,Authorized,11,1
+CLM3180,66,6,162956,Theft,1,0,1,Authorized,39,0
+CLM3181,64,1,290798,Collision,4,1,0,Authorized,35,0
+CLM3182,54,8,138466,Theft,4,1,0,Authorized,8,1
+CLM3183,21,9,224936,Natural Disaster,3,0,1,Authorized,47,1
+CLM3184,55,14,185279,Theft,2,1,0,Authorized,40,1
+CLM3185,24,1,86172,Fire,3,0,0,Local,20,1
+CLM3186,18,6,391384,Theft,3,1,0,Authorized,43,1
+CLM3187,35,11,64963,Theft,5,0,1,Authorized,54,0
+CLM3188,47,5,261730,Fire,2,0,1,Authorized,29,1
+CLM3189,41,5,435309,Natural Disaster,0,0,1,Authorized,23,1
+CLM3190,66,7,86678,Fire,0,1,1,Authorized,45,1
+CLM3191,57,0,37879,Collision,1,1,1,Authorized,21,0
+CLM3192,67,2,488849,Natural Disaster,0,0,1,Authorized,45,1
+CLM3193,31,5,453637,Fire,5,1,1,Local,43,0
+CLM3194,44,15,496583,Theft,0,1,0,Local,25,0
+CLM3195,24,1,419416,Collision,3,0,1,Local,57,1
+CLM3196,66,13,471952,Natural Disaster,1,0,1,Local,60,0
+CLM3197,63,10,101244,Collision,3,1,1,Authorized,11,1
+CLM3198,41,14,26980,Theft,0,0,1,Authorized,38,1
+CLM3199,63,6,214976,Collision,3,0,1,Authorized,46,0
+CLM3200,39,11,448554,Collision,1,1,0,Local,39,1
+CLM3201,41,8,100143,Collision,1,1,0,Authorized,28,0
+CLM3202,58,15,34035,Natural Disaster,5,0,1,Authorized,41,1
+CLM3203,61,4,82834,Fire,5,1,1,Local,11,1
+CLM3204,29,11,489155,Fire,4,1,1,Authorized,33,0
+CLM3205,59,2,213508,Theft,5,1,0,Local,0,0
+CLM3206,48,7,133166,Fire,2,0,0,Authorized,5,0
+CLM3207,58,9,63461,Collision,4,1,0,Authorized,46,0
+CLM3208,48,13,273284,Fire,0,1,0,Authorized,20,1
+CLM3209,30,12,220815,Theft,1,0,1,Local,1,1
+CLM3210,54,15,491012,Collision,5,0,1,Authorized,53,0
+CLM3211,53,8,70801,Collision,4,0,0,Local,12,0
+CLM3212,30,14,98824,Theft,2,1,0,Local,33,1
+CLM3213,28,9,13022,Theft,1,1,0,Local,59,1
+CLM3214,66,11,386203,Theft,3,0,0,Authorized,18,1
+CLM3215,23,0,46436,Natural Disaster,0,0,0,Authorized,59,1
+CLM3216,36,12,439251,Fire,5,1,0,Local,40,1
+CLM3217,57,11,472789,Fire,5,0,0,Authorized,43,0
+CLM3218,48,0,346268,Natural Disaster,5,0,0,Authorized,4,0
+CLM3219,68,10,26514,Fire,5,1,1,Local,12,0
+CLM3220,29,13,330329,Natural Disaster,1,0,1,Authorized,30,0
+CLM3221,50,3,107172,Natural Disaster,1,1,1,Local,59,0
+CLM3222,43,2,446764,Theft,5,0,1,Local,45,0
+CLM3223,58,10,491393,Collision,4,0,0,Authorized,1,1
+CLM3224,30,6,455748,Fire,3,1,1,Local,1,0
+CLM3225,39,9,413364,Theft,2,0,1,Authorized,38,1
+CLM3226,59,0,10653,Natural Disaster,3,0,0,Authorized,20,0
+CLM3227,70,5,294990,Theft,1,1,1,Authorized,2,1
+CLM3228,21,9,298501,Theft,4,1,1,Local,49,0
+CLM3229,29,9,183437,Collision,1,1,1,Local,8,0
+CLM3230,43,10,318836,Theft,2,0,1,Local,12,0
+CLM3231,34,13,458181,Natural Disaster,1,1,1,Authorized,24,1
+CLM3232,46,3,34683,Fire,5,0,1,Authorized,51,0
+CLM3233,62,15,162560,Theft,1,0,0,Authorized,6,1
+CLM3234,26,14,375804,Collision,0,0,0,Authorized,27,1
+CLM3235,68,15,63863,Theft,4,0,0,Local,16,0
+CLM3236,45,13,335389,Theft,0,0,0,Authorized,16,1
+CLM3237,30,6,479763,Collision,2,1,1,Authorized,33,0
+CLM3238,39,10,310352,Theft,1,1,0,Local,29,1
+CLM3239,57,7,381217,Natural Disaster,1,0,0,Authorized,38,1
+CLM3240,59,1,90975,Fire,2,0,1,Authorized,14,1
+CLM3241,56,4,388482,Fire,5,0,1,Authorized,4,1
+CLM3242,69,13,69716,Natural Disaster,2,0,1,Local,49,1
+CLM3243,52,6,80676,Collision,2,0,0,Local,30,1
+CLM3244,61,3,234983,Fire,4,1,0,Local,23,1
+CLM3245,69,14,227520,Natural Disaster,3,0,1,Authorized,52,0
+CLM3246,26,0,229892,Collision,3,0,1,Authorized,26,1
+CLM3247,23,2,271995,Collision,5,1,0,Authorized,60,1
+CLM3248,36,15,100716,Natural Disaster,2,1,1,Authorized,1,1
+CLM3249,41,7,111071,Theft,3,0,0,Local,28,0
+CLM3250,62,1,6619,Collision,5,0,1,Authorized,35,0
+CLM3251,49,1,9691,Collision,2,0,0,Authorized,46,1
+CLM3252,67,10,219172,Fire,1,0,0,Local,41,0
+CLM3253,54,10,358411,Natural Disaster,5,1,1,Authorized,58,1
+CLM3254,31,12,115181,Natural Disaster,0,1,0,Local,42,0
+CLM3255,41,2,16892,Fire,5,0,1,Local,29,0
+CLM3256,56,12,104028,Collision,2,0,0,Authorized,45,1
+CLM3257,40,13,321119,Fire,5,1,0,Authorized,30,1
+CLM3258,39,9,213988,Theft,4,1,0,Authorized,52,0
+CLM3259,35,12,450260,Fire,0,1,0,Local,53,0
+CLM3260,48,10,402556,Theft,0,1,0,Authorized,9,1
+CLM3261,42,9,208772,Collision,0,0,0,Local,21,1
+CLM3262,36,9,355742,Natural Disaster,0,0,1,Authorized,44,0
+CLM3263,31,15,117869,Theft,3,1,0,Authorized,60,0
+CLM3264,23,11,262701,Natural Disaster,3,1,1,Local,18,0
+CLM3265,37,11,45057,Natural Disaster,4,0,0,Local,25,1
+CLM3266,52,10,339497,Collision,2,0,1,Local,0,1
+CLM3267,35,13,61093,Fire,4,1,0,Local,44,0
+CLM3268,61,12,109241,Fire,5,1,0,Authorized,39,1
+CLM3269,66,9,156265,Theft,3,1,0,Local,51,1
+CLM3270,35,2,337362,Fire,5,0,0,Local,32,1
+CLM3271,20,11,359045,Theft,4,0,1,Local,7,0
+CLM3272,57,8,256630,Fire,5,0,0,Authorized,54,0
+CLM3273,43,6,266066,Collision,1,1,1,Authorized,47,0
+CLM3274,34,3,322175,Theft,3,1,1,Local,46,0
+CLM3275,22,4,442469,Theft,5,1,0,Authorized,22,0
+CLM3276,62,12,137916,Natural Disaster,2,0,0,Local,0,1
+CLM3277,33,5,454534,Collision,2,1,0,Authorized,28,0
+CLM3278,60,4,425481,Collision,3,0,1,Authorized,54,1
+CLM3279,26,14,185158,Natural Disaster,1,0,1,Authorized,33,1
+CLM3280,48,11,200255,Collision,4,1,0,Local,41,1
+CLM3281,67,10,91869,Natural Disaster,3,0,0,Local,12,0
+CLM3282,49,3,242384,Natural Disaster,5,1,1,Local,29,1
+CLM3283,62,14,26194,Natural Disaster,4,0,1,Authorized,12,1
+CLM3284,57,2,274377,Fire,3,1,0,Local,6,1
+CLM3285,62,4,215444,Theft,5,0,1,Authorized,58,0
+CLM3286,69,4,430337,Fire,3,0,0,Local,14,1
+CLM3287,19,9,63850,Natural Disaster,5,1,1,Local,26,0
+CLM3288,55,10,88839,Natural Disaster,4,0,0,Authorized,35,0
+CLM3289,50,5,480635,Fire,5,1,0,Local,59,0
+CLM3290,51,9,171123,Collision,4,1,1,Authorized,34,1
+CLM3291,29,10,121299,Natural Disaster,2,1,0,Local,35,0
+CLM3292,33,12,364199,Fire,1,0,0,Authorized,5,1
+CLM3293,57,15,288232,Theft,1,0,1,Local,22,1
+CLM3294,57,11,430485,Collision,5,1,0,Authorized,57,1
+CLM3295,43,0,477188,Theft,0,0,0,Local,21,1
+CLM3296,27,4,145176,Fire,3,1,1,Local,51,1
+CLM3297,30,7,222949,Theft,1,0,1,Authorized,23,1
+CLM3298,21,12,341504,Natural Disaster,1,0,0,Local,51,0
+CLM3299,60,14,375447,Theft,0,1,1,Local,53,0
+CLM3300,42,4,93854,Fire,4,0,0,Authorized,35,1
+CLM3301,56,10,471673,Natural Disaster,1,0,0,Authorized,45,0
+CLM3302,42,3,310621,Collision,0,1,0,Authorized,7,1
+CLM3303,39,7,379712,Natural Disaster,2,0,1,Authorized,37,1
+CLM3304,45,8,481358,Natural Disaster,5,0,0,Local,14,0
+CLM3305,52,10,16328,Fire,1,0,1,Authorized,30,0
+CLM3306,54,2,23186,Theft,1,1,0,Local,53,1
+CLM3307,41,1,304986,Fire,5,1,1,Local,44,1
+CLM3308,60,3,339180,Collision,1,0,0,Local,60,1
+CLM3309,45,10,310168,Theft,1,0,0,Local,29,0
+CLM3310,37,1,314300,Collision,0,1,1,Authorized,0,1
+CLM3311,25,15,444028,Collision,1,0,1,Local,28,0
+CLM3312,67,7,423524,Natural Disaster,1,1,1,Local,48,0
+CLM3313,20,3,224972,Natural Disaster,3,0,0,Local,46,1
+CLM3314,47,3,190717,Fire,3,1,1,Authorized,50,1
+CLM3315,47,2,424783,Natural Disaster,5,0,1,Authorized,4,1
+CLM3316,58,12,165097,Natural Disaster,2,1,1,Authorized,9,0
+CLM3317,45,5,326645,Fire,2,0,1,Authorized,44,1
+CLM3318,41,13,372011,Fire,5,1,1,Local,41,1
+CLM3319,66,6,491657,Theft,2,0,1,Authorized,3,1
+CLM3320,39,8,4633,Collision,1,1,1,Authorized,12,1
+CLM3321,36,9,385035,Collision,2,1,1,Authorized,30,1
+CLM3322,32,10,98495,Collision,2,0,0,Authorized,10,1
+CLM3323,38,4,99202,Theft,2,1,0,Authorized,57,0
+CLM3324,36,12,327127,Natural Disaster,0,0,0,Local,25,0
+CLM3325,25,8,182475,Collision,3,0,0,Authorized,37,1
+CLM3326,39,3,388753,Fire,3,1,1,Local,30,1
+CLM3327,57,12,354976,Theft,4,0,1,Authorized,5,1
+CLM3328,55,6,270622,Theft,1,0,1,Authorized,54,0
+CLM3329,41,10,418397,Fire,5,0,1,Local,17,1
+CLM3330,36,7,76275,Natural Disaster,1,0,1,Local,33,1
+CLM3331,68,15,381314,Fire,1,0,0,Local,32,0
+CLM3332,43,13,110296,Fire,4,1,0,Authorized,0,0
+CLM3333,18,8,357908,Natural Disaster,1,1,1,Local,33,1
+CLM3334,69,10,225552,Collision,0,0,1,Authorized,10,1
+CLM3335,36,9,149358,Theft,5,0,1,Local,2,1
+CLM3336,41,13,177520,Collision,0,1,0,Authorized,25,1
+CLM3337,28,6,62014,Fire,1,0,0,Local,19,0
+CLM3338,39,10,125855,Theft,0,1,0,Local,24,1
+CLM3339,33,3,332287,Collision,1,1,0,Authorized,52,1
+CLM3340,21,14,474259,Theft,3,1,1,Local,19,0
+CLM3341,45,5,438675,Fire,5,0,0,Local,27,1
+CLM3342,22,13,329692,Collision,0,1,1,Local,12,0
+CLM3343,52,7,16766,Fire,1,0,0,Authorized,21,1
+CLM3344,44,9,451989,Fire,5,1,0,Local,55,0
+CLM3345,39,2,45821,Collision,0,1,0,Local,35,0
+CLM3346,21,2,492881,Theft,3,0,1,Authorized,6,1
+CLM3347,43,4,436425,Natural Disaster,0,1,1,Local,59,0
+CLM3348,51,14,321879,Theft,2,0,0,Authorized,31,0
+CLM3349,53,15,198575,Fire,4,0,0,Authorized,6,1
+CLM3350,70,1,435306,Natural Disaster,3,1,0,Local,52,1
+CLM3351,37,4,286732,Collision,1,0,0,Local,33,1
+CLM3352,41,2,251555,Theft,3,0,1,Local,44,0
+CLM3353,44,5,331551,Collision,3,1,1,Authorized,18,0
+CLM3354,54,6,371691,Theft,3,0,0,Local,36,1
+CLM3355,56,1,454236,Natural Disaster,3,1,1,Local,37,0
+CLM3356,28,3,377696,Theft,2,1,1,Local,43,1
+CLM3357,46,2,382311,Natural Disaster,4,0,0,Local,24,1
+CLM3358,37,8,173664,Theft,0,1,1,Local,26,1
+CLM3359,34,0,273084,Natural Disaster,2,0,0,Authorized,57,0
+CLM3360,28,14,22375,Natural Disaster,4,0,1,Authorized,52,1
+CLM3361,45,0,233536,Theft,0,1,0,Authorized,29,1
+CLM3362,24,0,352092,Natural Disaster,0,0,1,Local,42,0
+CLM3363,54,7,6770,Collision,4,1,0,Local,49,1
+CLM3364,56,4,304001,Natural Disaster,1,1,0,Authorized,42,1
+CLM3365,36,15,382448,Natural Disaster,5,1,0,Authorized,30,0
+CLM3366,49,14,408556,Theft,3,0,0,Authorized,21,0
+CLM3367,54,5,387736,Collision,0,0,1,Authorized,25,1
+CLM3368,33,3,34337,Fire,3,0,1,Authorized,27,0
+CLM3369,34,7,196316,Natural Disaster,3,1,0,Local,25,1
+CLM3370,60,9,335123,Natural Disaster,5,1,1,Local,56,1
+CLM3371,67,15,177761,Natural Disaster,2,1,1,Authorized,51,0
+CLM3372,49,11,7669,Fire,5,0,1,Authorized,29,1
+CLM3373,38,13,34051,Collision,0,1,1,Local,24,0
+CLM3374,61,14,16234,Natural Disaster,0,0,1,Authorized,47,1
+CLM3375,59,11,228506,Fire,0,0,1,Authorized,26,1
+CLM3376,31,4,271287,Collision,0,0,0,Authorized,47,1
+CLM3377,42,3,195235,Natural Disaster,1,1,0,Authorized,8,1
+CLM3378,56,11,210790,Collision,4,1,0,Authorized,28,1
+CLM3379,41,4,298598,Natural Disaster,3,1,0,Local,43,1
+CLM3380,61,13,350629,Natural Disaster,3,0,0,Local,20,1
+CLM3381,68,15,130928,Natural Disaster,0,1,0,Authorized,6,0
+CLM3382,59,4,234836,Collision,4,1,1,Local,45,0
+CLM3383,55,12,140806,Collision,0,1,0,Local,19,0
+CLM3384,51,0,244793,Theft,2,0,1,Local,20,1
+CLM3385,28,1,113468,Natural Disaster,1,0,1,Authorized,5,1
+CLM3386,45,11,165603,Collision,4,0,1,Authorized,50,0
+CLM3387,56,2,207366,Collision,2,1,1,Authorized,38,1
+CLM3388,53,0,333469,Collision,0,1,1,Authorized,37,1
+CLM3389,37,4,230385,Theft,5,0,0,Authorized,53,1
+CLM3390,45,3,145153,Fire,2,1,0,Local,8,1
+CLM3391,46,12,476709,Natural Disaster,4,1,0,Local,35,1
+CLM3392,44,14,360332,Theft,1,0,0,Local,8,0
+CLM3393,18,4,330795,Natural Disaster,1,0,0,Authorized,25,0
+CLM3394,61,15,24849,Collision,5,0,0,Authorized,54,1
+CLM3395,43,8,463570,Theft,5,0,0,Local,12,0
+CLM3396,63,3,331820,Collision,5,1,1,Local,5,0
+CLM3397,38,15,183264,Collision,5,0,0,Authorized,3,1
+CLM3398,68,12,6612,Natural Disaster,4,1,0,Authorized,51,0
+CLM3399,24,12,267245,Fire,3,0,0,Authorized,18,0
+CLM3400,28,12,387093,Fire,5,1,0,Local,3,0
+CLM3401,39,7,173659,Theft,4,0,1,Authorized,60,1
+CLM3402,57,6,495906,Collision,0,1,0,Local,10,1
+CLM3403,22,4,487472,Natural Disaster,0,1,0,Authorized,9,1
+CLM3404,52,3,42166,Fire,0,0,1,Authorized,48,0
+CLM3405,59,4,346767,Fire,3,1,1,Authorized,56,1
+CLM3406,38,2,44774,Natural Disaster,4,0,0,Local,52,0
+CLM3407,20,14,436545,Collision,2,0,1,Local,19,1
+CLM3408,38,5,139596,Theft,0,0,1,Local,20,1
+CLM3409,56,6,225429,Theft,0,1,0,Authorized,43,1
+CLM3410,56,13,149708,Fire,3,0,0,Authorized,23,1
+CLM3411,59,10,322814,Collision,4,1,0,Authorized,34,1
+CLM3412,43,9,100631,Natural Disaster,2,1,0,Local,29,0
+CLM3413,32,3,231315,Natural Disaster,5,1,0,Local,58,0
+CLM3414,68,5,441030,Fire,5,0,0,Local,36,1
+CLM3415,70,3,373354,Natural Disaster,4,0,0,Local,45,1
+CLM3416,70,15,221342,Natural Disaster,0,0,0,Authorized,38,0
+CLM3417,51,10,460274,Natural Disaster,5,1,0,Local,2,0
+CLM3418,37,5,402772,Fire,2,0,0,Local,12,1
+CLM3419,61,1,1670,Natural Disaster,5,0,1,Authorized,43,1
+CLM3420,30,13,40045,Collision,2,0,1,Local,9,0
+CLM3421,40,15,313537,Collision,3,0,1,Local,8,0
+CLM3422,70,7,114064,Natural Disaster,2,0,1,Local,50,1
+CLM3423,20,15,367261,Collision,3,1,0,Local,48,0
+CLM3424,46,9,105230,Natural Disaster,4,0,0,Local,20,1
+CLM3425,43,12,89304,Theft,0,0,1,Local,40,0
+CLM3426,69,14,161688,Natural Disaster,1,1,0,Authorized,54,1
+CLM3427,39,5,284653,Collision,0,0,0,Authorized,8,0
+CLM3428,51,7,133812,Fire,4,0,1,Local,49,0
+CLM3429,70,4,299374,Collision,4,0,1,Local,56,1
+CLM3430,69,5,183482,Theft,2,1,0,Local,43,0
+CLM3431,34,2,425126,Fire,0,1,1,Local,33,0
+CLM3432,45,1,69112,Natural Disaster,5,0,0,Local,9,1
+CLM3433,30,9,210393,Natural Disaster,2,1,1,Local,7,0
+CLM3434,65,3,70429,Fire,0,0,0,Local,28,1
+CLM3435,49,6,375385,Natural Disaster,4,0,1,Local,58,0
+CLM3436,51,1,282766,Natural Disaster,1,1,1,Local,33,1
+CLM3437,69,6,133931,Theft,0,0,0,Authorized,27,1
+CLM3438,20,11,89985,Fire,1,1,1,Authorized,3,0
+CLM3439,45,3,197455,Fire,5,0,0,Authorized,1,1
+CLM3440,35,13,26050,Theft,1,1,1,Authorized,58,1
+CLM3441,56,13,452786,Theft,1,1,1,Local,33,0
+CLM3442,54,14,327990,Collision,5,0,0,Local,15,0
+CLM3443,27,13,312370,Theft,3,1,0,Local,58,0
+CLM3444,39,13,345976,Collision,3,1,1,Authorized,12,1
+CLM3445,24,3,118318,Collision,3,0,1,Authorized,24,1
+CLM3446,68,7,162030,Collision,3,1,1,Local,24,1
+CLM3447,27,7,307737,Fire,2,0,1,Authorized,50,0
+CLM3448,28,13,39972,Theft,3,1,0,Authorized,41,1
+CLM3449,31,3,371280,Fire,1,0,0,Authorized,41,0
+CLM3450,52,5,132732,Natural Disaster,3,0,0,Local,44,0
+CLM3451,59,15,360715,Natural Disaster,1,0,1,Authorized,21,0
+CLM3452,69,12,143644,Collision,1,0,0,Authorized,13,1
+CLM3453,29,7,263580,Fire,5,1,0,Local,37,1
+CLM3454,56,7,174921,Fire,1,1,0,Authorized,26,0
+CLM3455,21,12,77567,Theft,3,1,1,Authorized,6,1
+CLM3456,69,11,498186,Theft,2,0,1,Authorized,15,1
+CLM3457,39,0,498794,Fire,4,1,0,Authorized,40,1
+CLM3458,52,14,261752,Collision,3,0,1,Authorized,53,0
+CLM3459,19,3,487881,Collision,4,1,1,Authorized,5,0
+CLM3460,40,7,355522,Theft,1,0,1,Authorized,59,0
+CLM3461,40,9,255365,Fire,0,1,1,Local,41,1
+CLM3462,33,0,204125,Theft,4,1,0,Authorized,17,0
+CLM3463,33,12,208088,Theft,2,1,0,Local,37,1
+CLM3464,22,5,163101,Natural Disaster,0,1,1,Local,45,1
+CLM3465,60,15,196524,Fire,5,1,0,Authorized,26,1
+CLM3466,45,2,50879,Natural Disaster,5,0,0,Local,38,0
+CLM3467,57,13,278659,Natural Disaster,4,1,1,Local,46,0
+CLM3468,58,5,361871,Fire,0,1,1,Authorized,7,0
+CLM3469,55,12,54344,Collision,5,0,1,Authorized,51,0
+CLM3470,23,13,129954,Theft,5,0,0,Local,44,0
+CLM3471,37,15,239616,Natural Disaster,1,1,0,Authorized,2,0
+CLM3472,66,6,344135,Fire,3,0,1,Authorized,29,1
+CLM3473,35,1,80223,Natural Disaster,4,1,0,Local,9,1
+CLM3474,23,1,51837,Natural Disaster,1,0,1,Authorized,59,1
+CLM3475,35,13,290055,Fire,1,1,0,Authorized,9,0
+CLM3476,22,10,311500,Collision,3,0,1,Local,48,0
+CLM3477,18,14,35888,Fire,0,1,0,Local,2,1
+CLM3478,32,7,181162,Theft,0,1,0,Local,33,0
+CLM3479,40,1,298172,Fire,5,0,1,Local,33,1
+CLM3480,26,4,412552,Fire,1,1,1,Local,45,0
+CLM3481,48,4,294132,Theft,1,1,0,Local,28,1
+CLM3482,28,1,425724,Fire,2,0,0,Authorized,60,1
+CLM3483,66,6,171439,Natural Disaster,5,1,0,Local,43,1
+CLM3484,22,3,316378,Fire,2,0,0,Local,34,0
+CLM3485,24,9,149842,Fire,2,0,0,Local,28,0
+CLM3486,58,0,189090,Collision,5,0,1,Authorized,3,0
+CLM3487,28,5,220730,Collision,0,1,0,Local,36,1
+CLM3488,25,9,257370,Natural Disaster,0,1,0,Local,4,1
+CLM3489,32,2,262968,Collision,4,1,1,Authorized,35,0
+CLM3490,56,4,86229,Collision,4,0,1,Local,45,1
+CLM3491,60,13,227818,Natural Disaster,4,1,1,Local,25,1
+CLM3492,48,10,122336,Theft,5,0,0,Authorized,59,0
+CLM3493,39,3,70779,Collision,0,1,0,Local,57,0
+CLM3494,20,5,311154,Collision,4,1,0,Local,50,1
+CLM3495,36,6,286596,Collision,4,0,1,Local,5,0
+CLM3496,40,5,260984,Theft,3,0,0,Local,4,0
+CLM3497,60,8,103702,Fire,1,1,1,Local,52,1
+CLM3498,63,6,266416,Theft,3,0,1,Authorized,52,1
+CLM3499,53,8,256546,Natural Disaster,5,0,1,Local,40,0

@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: radial-gradient(circle at top left, rgba(175, 232, 255, 0.9), transparent 30%),
+                radial-gradient(circle at bottom right, rgba(191, 219, 254, 0.9), transparent 25%),
+                linear-gradient(180deg, #e8f7ff 0%, #dbefff 45%, #f7fcff 100%);
+            color: #0f172a;
+        }
+
+        /* LAYOUT */
+        .dashboard {
+            display: flex;
+            height: 100vh;
+        }
+
+        /* SIDEBAR */
+        .sidebar {
+            width: 260px;
+            background: linear-gradient(180deg, #d6edff 0%, #b9e1ff 100%);
+            padding: 24px 20px;
+            box-shadow: 8px 0 30px rgba(15, 60, 100, 0.12);
+            border-right: 1px solid rgba(15, 60, 100, 0.12);
+        }
+
+        .sidebar h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #0f172a;
+        }
+
+        .menu-item {
+            padding: 16px 18px;
+            margin: 10px 0;
+            border-radius: 18px;
+            cursor: pointer;
+            transition: transform 0.25s ease, background 0.3s ease, box-shadow 0.3s ease;
+            color: #0f172a;
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid rgba(59, 130, 246, 0.16);
+            box-shadow: 0 12px 30px rgba(15, 60, 100, 0.07);
+        }
+
+        .menu-item:hover {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.22), rgba(129, 224, 255, 0.22));
+            color: #0f172a;
+            transform: translateY(-2px);
+            box-shadow: 0 16px 36px rgba(15, 60, 100, 0.12);
+        }
+
+        .active {
+            background: linear-gradient(135deg, #7dd3fc 0%, #38bdf8 100%);
+            color: #07254f;
+            box-shadow: 0 16px 36px rgba(56, 189, 248, 0.25);
+        }
+
+        /* MAIN CONTENT */
+        .main {
+            flex: 1;
+            padding: 30px;
+            color: #0f172a;
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+            overflow-y: auto;
+        }
+
+        .topbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 18px;
+            width: 100%;
+        }
+
+        .logout {
+            background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+            padding: 12px 20px;
+            border-radius: 12px;
+            cursor: pointer;
+            color: white;
+            font-weight: 700;
+            box-shadow: 0 16px 34px rgba(14, 165, 233, 0.28);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .logout:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 20px 42px rgba(14, 165, 233, 0.33);
+        }
+
+        /* CARD */
+        .card {
+            width: 100%;
+            margin-top: 0;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.98) 0%, rgba(241, 249, 255, 0.96) 100%);
+            padding: 34px;
+            border-radius: 30px;
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(59, 130, 246, 0.16);
+            box-shadow: 0 48px 120px rgba(15, 60, 100, 0.16);
+            max-height: 82vh;
+            overflow-y: auto;
+            color: #0f172a;
+            position: relative;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 58px 130px rgba(15, 60, 100, 0.2);
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: -22px;
+            right: -26px;
+            width: 130px;
+            height: 130px;
+            background: rgba(56, 189, 248, 0.14);
+            border-radius: 50%;
+            filter: blur(32px);
+            z-index: -1;
+        }
+
+        .card::after {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            left: 20px;
+            width: 100px;
+            height: 100px;
+            background: rgba(96, 165, 250, 0.12);
+            border-radius: 50%;
+            filter: blur(26px);
+            z-index: -1;
+        }
+
+        /* ROW ALIGNMENT */
+        .form-row {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .form-row .input-group {
+            flex: 1;
+            margin: 0;
+        }
+
+        .input-group {
+            margin: 14px 0;
+        }
+
+        /* INPUT STYLING */
+        .input-group input,
+        .input-group textarea,
+        .input-group select {
+            width: 100%;
+            padding: 12px;
+            border-radius: 10px;
+            border: 1px solid rgba(59, 130, 246, 0.25);
+            background: rgba(255, 255, 255, 0.94);
+            color: #0f172a;
+            box-sizing: border-box;
+        }
+
+        /* TEXTAREA */
+        textarea {
+            height: 90px;
+            resize: none;
+            background: rgba(255, 255, 255, 0.94);
+        }
+
+        /* FILE INPUT FIX */
+        input[type="file"] {
+            width: 100%;
+            padding: 8px;
+            background: rgba(255, 255, 255, 0.94);
+            border-radius: 10px;
+            color: #0f172a;
+            border: 1px solid rgba(59, 130, 246, 0.25);
+        }
+
+        /* HEADINGS */
+        h4 {
+            margin-top: 25px;
+            margin-bottom: 10px;
+            color: #0f172a;
+        }
+
+        /* BUTTON */
+        button {
+            width: 100%;
+            padding: 14px;
+            border-radius: 10px;
+            background: linear-gradient(90deg, #7dd3fc, #38bdf8);
+            color: #0f172a;
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 16px 30px rgba(59, 130, 246, 0.18);
+        }
+
+        button:hover {
+            background: linear-gradient(90deg, #93c5fd, #38bdf8);
+        }
+
+        /* FOCUS EFFECT */
+        input:focus,
+        textarea:focus,
+        select:focus {
+            outline: none;
+            box-shadow: 0 0 5px #00c6ff;
+        }
+
+        .result {
+            margin-top: 15px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <!-- SIDEBAR -->
+        <div class="sidebar">
+            <h2><i class="fa fa-shield"></i> Secure Panel</h2>
+
+            <div class="menu-item active" onclick="showPage('claim', this)">
+                <i class="fa fa-plus"></i> New Claim
+            </div>
+
+            <div class="menu-item" onclick="showPage('status', this)">
+                <i class="fa fa-search"></i> Claim Status
+            </div>
+
+            <div class="menu-item" onclick="showPage('history', this)">
+                <i class="fa fa-clock"></i> Claim History
+            </div>
+
+            <div class="menu-item" onclick="showPage('policy', this)">
+                <i class="fa fa-file"></i> Insurance Policy
+            </div>
+
+            <div class="menu-item" onclick="showPage('help', this)">
+                <i class="fa fa-question"></i> Help
+            </div>
+        </div>
+
+        <!-- MAIN -->
+        <div class="main">
+
+            <div class="topbar">
+                <h2>User Dashboard</h2>
+                <div class="logout" onclick="logout()">Logout</div>
+            </div>
+
+            <div id="content" class="card"></div>
+
+        </div>
+
+    </div>
+
+    <script>
+
+        let currentUser = localStorage.getItem("currentUser") || "user";
+
+        window.onload = function () {
+            showPage('claim', document.querySelector('.menu-item'));
+        };
+
+        function logout() {
+            localStorage.removeItem("currentUser");
+            window.location = "firstpage.html";
+        }
+
+        function showPage(page, el) {
+
+            let content = document.getElementById("content");
+
+            if (page === "claim") {
+                content.innerHTML = `
+        <h3>🚗 Automobile Insurance Claim</h3>
+
+        <h4>👤 Personal Info</h4>
+        <div class="form-row">
+            <div class="input-group"><input id="name" placeholder="Full Name"></div>
+            <div class="input-group"><input id="phone" placeholder="Contact Number"></div>
+        </div>
+        <div class="input-group"><input id="email" placeholder="Email"></div>
+        <div class="input-group"><input id="address" placeholder="Address"></div>
+
+        <h4>🚘 Vehicle Info</h4>
+        <div class="form-row">
+            <div class="input-group"><input id="vehicle" placeholder="Vehicle Number"></div>
+            <div class="input-group">
+                <select id="type">
+                    <option value="">Vehicle Type</option>
+                    <option>Car</option>
+                    <option>Bike</option>
+                    <option>Truck</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="input-group"><input id="model" placeholder="Model & Brand"></div>
+            <div class="input-group"><input id="year" placeholder="Year"></div>
+        </div>
+
+        <div class="input-group"><input id="engine" placeholder="Engine/Chassis Number"></div>
+
+        <h4>📄 Policy Info</h4>
+        <div class="form-row">
+            <div class="input-group"><input id="policy" placeholder="Policy Number"></div>
+            <div class="input-group"><input id="company" placeholder="Company Name"></div>
+        </div>
+
+        <div class="form-row">
+            <div class="input-group"><input type="date" id="start" placeholder="start date"></div>
+            <div class="input-group"><input type="date" id="end"></div>
+        </div>
+
+        <div class="input-group">
+            <select id="coverage">
+                <option value="">Coverage Type</option>
+                <option>Third-party</option>
+                <option>Comprehensive</option>
+            </select>
+        </div>
+
+        <h4>⚠️ Accident Details</h4>
+        <div class="form-row">
+            <div class="input-group"><input type="date" id="date"></div>
+            <div class="input-group"><input type="time" id="time" required></div>
+        </div>
+
+        <div class="input-group"><input id="location" placeholder="Accident Location"></div>
+
+        <div class="input-group">
+            <select id="accidentType">
+                <option value="">Accident Type</option>
+                <option>Collision</option>
+                <option>Theft</option>
+                <option>Fire</option>
+                <option>Natural Disaster</option>
+            </select>
+        </div>
+
+        <h4>📝 Description</h4>
+        <div class="input-group">
+            <textarea id="desc" placeholder="Accident Description"></textarea>
+        </div>
+        <div class="input-group">
+            <input id="vehicles" placeholder="Number of Vehicles Involved">
+        </div>
+
+        <h4>📷 Upload Evidence</h4>
+        <div class="input-group"><input type="file" id="image"></div>
+        <div class="input-group"><input type="file" id="video"></div>
+        <div class="input-group"><input type="file" id="fir"></div>
+
+        <h4>👮 Third Party Info</h4>
+        <div class="form-row">
+            <div class="input-group"><input id="otherVehicle" placeholder="Other Vehicle Number"></div>
+            <div class="input-group"><input id="driver" placeholder="Driver Name"></div>
+        </div>
+        <div class="form-row">
+            <div class="input-group"><input id="police" placeholder="Police Station"></div>
+            <div class="input-group"><input id="firno" placeholder="FIR Number"></div>
+        </div>
+
+        <h4>💰 Claim Details</h4>
+        <div class="form-row">
+            <div class="input-group"><input id="cost" placeholder="Estimated Cost"></div>
+            <div class="input-group"><input id="garage" placeholder="Garage Name"></div>
+        </div>
+
+        <div class="input-group">
+            <select id="previous">
+                <option value="">Previous Claims</option>
+                <option>Yes</option>
+                <option>No</option>
+            </select>
+        </div>
+
+        <button onclick="submitClaim()">Submit Claim</button>
+        <div class="result" id="result"></div>
+        `;
+            }
+
+            else if (page === "status") {
+                content.innerHTML = `
+    <h3>🔍 Claim Status Tracker</h3>
+    <div class="form-row">
+        <div class="input-group"><input id="cid" placeholder="Enter Claim ID (e.g., CLM-001)"></div>
+        <div style="flex: 0 0 120px;"><button onclick="checkStatus()" style="width:100%;padding:12px;margin-top:16px;">Search</button></div>
+    </div>
+    <div id="statusResult" style="margin-top:20px;"></div>
+    `;
+            }
+
+            else if (page === "history") {
+                content.innerHTML = `
+        <h3>📜 Claim History</h3>
+        <div id="historyList" style="display:flex;flex-direction:column;gap:12px;"></div>
+        `;
+                loadClaimHistory();
+            }
+
+            else if (page === "policy") {
+                content.innerHTML = `
+        <h3>📋 Insurance Policy Details</h3>
+        <div id="policyContainer"><p>Loading policies...</p></div>
+        `;
+                loadPolicyDetails();
+            }
+
+            else if (page === "help") {
+                content.innerHTML = `
+        <h3>❓ Help & Support Center</h3>
+        
+        <div style="background:rgba(59,130,246,0.08);padding:18px;border-radius:14px;margin:16px 0;cursor:pointer;transition:0.3s;" onmouseover="this.style.background='rgba(59,130,246,0.14)'" onmouseout="this.style.background='rgba(59,130,246,0.08)'">
+            <h4 style="margin:0 0 6px;color:#0f172a;">📞 Call Us</h4>
+            <p style="margin:0;color:#475569;">Toll Free: 1800-123-4567 | Available 24/7</p>
+        </div>
+
+        <div style="background:rgba(34,197,94,0.08);padding:18px;border-radius:14px;margin:16px 0;cursor:pointer;transition:0.3s;" onmouseover="this.style.background='rgba(34,197,94,0.14)'" onmouseout="this.style.background='rgba(34,197,94,0.08)'">
+            <h4 style="margin:0 0 6px;color:#0f172a;">✉️ Email Support</h4>
+            <p style="margin:0;color:#475569;">helpdesk@insurance.com | Response within 2 hours</p>
+        </div>
+
+        <div style="background:rgba(59,130,246,0.08);padding:18px;border-radius:14px;margin:16px 0;cursor:pointer;transition:0.3s;" onmouseover="this.style.background='rgba(59,130,246,0.14)'" onmouseout="this.style.background='rgba(59,130,246,0.08)'">
+            <h4 style="margin:0 0 6px;color:#0f172a;">💬 Live Chat</h4>
+            <p style="margin:0;color:#475569;"><u color:blue> Click here</u> to start a live chat with our support team</p>
+        </div>
+
+        <div style="background:rgba(249,115,22,0.08);padding:18px;border-radius:14px;margin:16px 0;">
+            <h4 style="margin:0 0 10px;color:#0f172a;">❔ Frequently Asked Questions</h4>
+            <div style="color:#475569;line-height:1.8;">
+                <p><strong>Q: How do I file a claim?</strong><br>A: Go to "New Claim" and fill in all required details with accident information and evidence.</p>
+                <p><strong>Q: What documents do I need?</strong><br>A: Policy document, photos of damage, and FIR (if applicable).</p>
+                <p><strong>Q: How long does claim processing take?</strong><br>A: Usually 7-10 business days from submission.</p>
+                <p><strong>Q: Can I track my claim status?</strong><br>A: Yes, use "Claim Status" section with your Claim ID.</p>
+            </div>
+        </div>
+        `;
+            }
+
+            let items = document.querySelectorAll(".menu-item");
+            items.forEach(i => i.classList.remove("active"));
+            el.classList.add("active");
+        }
+
+        function loadPolicyDetails() {
+            let policyContainer = document.getElementById("policyContainer");
+
+            fetch("get_claims.php")
+                .then(res => res.json())
+                .then(data => {
+                    let myClaims = JSON.parse(localStorage.getItem(currentUser + "_claims") || "[]");
+                    let userClaims = data.filter(c => myClaims.includes(c.claim_id) || (c.name && c.name.toLowerCase() === currentUser.toLowerCase()));
+
+                    if (userClaims.length === 0) {
+                        policyContainer.innerHTML = "<div style='background:rgba(59,130,246,0.08);padding:18px;border-radius:12px;text-align:center;color:#475569;'>No policies found. Submit a new claim to register your policy details!</div>";
+                        return;
+                    }
+
+                    // Extract unique policies by policy number
+                    let uniquePolicies = {};
+                    userClaims.forEach(c => {
+                        if (c.policy && !uniquePolicies[c.policy]) {
+                            uniquePolicies[c.policy] = c;
+                        }
+                    });
+
+                    let policyArray = Object.values(uniquePolicies);
+                    if (policyArray.length === 0) {
+                        policyContainer.innerHTML = "<div style='background:rgba(59,130,246,0.08);padding:18px;border-radius:12px;text-align:center;color:#475569;'>No valid policies found in your records.</div>";
+                        return;
+                    }
+
+                    policyContainer.innerHTML = "";
+                    policyArray.forEach(p => {
+                        let div = document.createElement("div");
+                        div.style.cssText = "margin-bottom: 30px; border-bottom: 2px dashed #cbd5e1; padding-bottom: 20px;";
+                        div.innerHTML = `
+                            <div style="background:rgba(59,130,246,0.08);padding:16px;border-radius:12px;margin:14px 0;border-left:4px solid #3b82f6;">
+                                <h4 style="margin:0 0 8px;color:#0f172a;">🛡️ Policy Number</h4>
+                                <p style="margin:0;font-weight:600;color:#0f172a;">${p.policy || 'N/A'}</p>
+                            </div>
+
+                            <div style="background:rgba(34,197,94,0.08);padding:16px;border-radius:12px;margin:14px 0;border-left:4px solid #22c55e;">
+                                <h4 style="margin:0 0 8px;color:#0f172a;">🏢 Company</h4>
+                                <p style="margin:0;color:#0f172a;">${p.company || 'N/A'}</p>
+                            </div>
+
+                            <div style="background:rgba(249,115,22,0.08);padding:16px;border-radius:12px;margin:14px 0;border-left:4px solid #f97316;">
+                                <h4 style="margin:0 0 8px;color:#0f172a;">✅ Coverage Type</h4>
+                                <p style="margin:0;font-weight:600;color:#0f172a;">${p.coverage || 'N/A'}</p>
+                            </div>
+
+                            <div style="background:rgba(139,92,246,0.08);padding:16px;border-radius:12px;margin:14px 0;border-left:4px solid #8b5cf6;">
+                                <h4 style="margin:0 0 8px;color:#0f172a;">📅 Policy Period</h4>
+                                <p style="margin:0;color:#0f172a;">${p.start_date || 'Unknown'} to ${p.end_date || 'Unknown'}</p>
+                            </div>
+                        `;
+                        policyContainer.appendChild(div);
+                    });
+                })
+                .catch(err => {
+                    policyContainer.innerHTML = "<p style='color:red;'>Error loading policies.</p>";
+                });
+        }
+
+        function checkStatus() {
+            let id = document.getElementById("cid").value.trim();
+
+            if (id === "") {
+                document.getElementById("statusResult").innerHTML = `
+        <div style="background:rgba(239,68,68,0.08);padding:14px;border-radius:10px;color:#dc2626;border-left:4px solid #dc2626;">
+            ⚠️ Please enter a valid Claim ID
+        </div>
+        `;
+                return;
+            }
+
+            fetch("check_status.php?id=" + id)
+                .then(res => res.json())
+                .then(data => {
+                    let statusColor = data.status === "Approved" ? "#22c55e" : data.status === "Under Review" ? "#f97316" : "#dc2626";
+                    let statusBg = data.status === "Approved" ? "rgba(34,197,94,0.08)" : data.status === "Under Review" ? "rgba(249,115,22,0.08)" : "rgba(220,38,38,0.08)";
+
+                    document.getElementById("statusResult").innerHTML = `
+        <div style="background:${statusBg};padding:18px;border-radius:12px;border-left:4px solid ${statusColor};color:#0f172a;">
+            <h4 style="margin:0 0 10px;color:${statusColor};">Claim ID: ${id}</h4>
+            <p style="margin:4px 0;"><strong>Status:</strong> ${data.status}</p>
+            <p style="margin:4px 0;"><strong>Last Updated:</strong> Today</p>
+        </div>
+        `;
+                })
+                .catch(err => {
+                    document.getElementById("statusResult").innerHTML = `
+        <div style="background:rgba(220,38,38,0.08);padding:14px;border-radius:10px;color:#dc2626;border-left:4px solid #dc2626;">
+            ❌ Claim not found. Please check the ID and try again.
+        </div>
+        `;
+                });
+        }
+
+        function loadClaimHistory() {
+            let historyList = document.getElementById("historyList");
+            historyList.innerHTML = "<p>Loading history...</p>";
+
+            fetch("get_claims.php")
+                .then(res => res.json())
+                .then(data => {
+                    let myClaims = JSON.parse(localStorage.getItem(currentUser + "_claims") || "[]");
+                    let userClaims = data.filter(c => myClaims.includes(c.claim_id) || (c.name && c.name.toLowerCase() === currentUser.toLowerCase()));
+
+                    historyList.innerHTML = "";
+
+                    if (userClaims.length === 0) {
+                        historyList.innerHTML = "<div style='background:rgba(59,130,246,0.08);padding:18px;border-radius:12px;text-align:center;color:#475569;'>No claims found for your account. Submit a new claim to see it here!</div>";
+                        return;
+                    }
+
+                    userClaims.forEach(claim => {
+                        let displayStatus = claim.db_status || "Pending";
+                        let statusColor = displayStatus === "Approved" ? "#22c55e" : (displayStatus === "Under Review" ? "#f97316" : (displayStatus === "Pending" ? "#3b82f6" : "#dc2626"));
+                        let statusBg = displayStatus === "Approved" ? "rgba(34,197,94,0.08)" : (displayStatus === "Under Review" ? "rgba(249,115,22,0.08)" : (displayStatus === "Pending" ? "rgba(59,130,246,0.08)" : "rgba(220,38,38,0.08)"));
+
+                        let claimCard = document.createElement("div");
+                        claimCard.style.cssText = `
+                background:${statusBg};
+                padding:16px;
+                border-radius:12px;
+                border-left:4px solid ${statusColor};
+                cursor:pointer;
+                transition:0.3s;
+                margin-bottom:12px;
+            `;
+                        claimCard.onmouseover = function () { this.style.transform = "translateY(-2px)"; this.style.boxShadow = "0 8px 16px rgba(15,60,100,0.1)"; };
+                        claimCard.onmouseout = function () { this.style.transform = "translateY(0)"; this.style.boxShadow = "none"; };
+
+                        claimCard.innerHTML = `
+                <div style="display:flex;justify-content:space-between;align-items:center;">
+                    <div style="color:#0f172a;">
+                        <h4 style="margin:0 0 4px;">📋 ${claim.claim_id}</h4>
+                        <p style="margin:0;font-size:14px;color:#475569;">Filed on: ${claim.date || "Just now"}</p>
+                    </div>
+                    <div style="text-align:right;color:#0f172a;">
+                        <p style="margin:0;font-weight:600;font-size:16px;color:${statusColor};">${displayStatus}</p>
+                        <p style="margin:4px 0 0;font-weight:700;color:#0f172a;">₹${claim.cost}</p>
+                    </div>
+                </div>
+            `;
+                        historyList.appendChild(claimCard);
+                    });
+                })
+                .catch(err => {
+                    historyList.innerHTML = "<p style='color:red;'>Error loading history.</p>";
+                });
+        }
+
+        function submitClaim() {
+
+            let nameVal = document.getElementById("name").value.trim();
+            let phoneVal = document.getElementById("phone").value.trim();
+            let emailVal = document.getElementById("email").value.trim();
+            let vehicleVal = document.getElementById("vehicle").value.trim();
+            let costVal = document.getElementById("cost").value.trim();
+            let timeVal = document.getElementById("time").value;
+            let locationVal = document.getElementById("location").value.trim();
+
+            // ✅ REQUIRED VALIDATION
+            if (nameVal === "" || phoneVal === "" || emailVal === "" || vehicleVal === "" || costVal === "") {
+                document.getElementById("result").innerHTML =
+                    "❌ Please fill all required fields!";
+                return;
+            }
+
+            // ✅ PHONE
+            if (!/^[0-9]{10}$/.test(phoneVal)) {
+                document.getElementById("result").innerHTML =
+                    "❌ Enter valid 10-digit phone number!";
+                return;
+            }
+
+            // ✅ EMAIL
+            if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailVal)) {
+                document.getElementById("result").innerHTML =
+                    "❌ Enter valid email!";
+                return;
+            }
+
+            // ✅ TIME FIX
+            if (timeVal === "") {
+                document.getElementById("result").innerHTML =
+                    "❌ Please select accident time!";
+                return;
+            }
+
+            // ✅ LOCATION FIX
+            if (locationVal === "") {
+                document.getElementById("result").innerHTML =
+                    "❌ Please enter accident location!";
+                return;
+            }
+
+            // ✅ DATA OBJECT
+            const requiredFields = [
+                { id: 'name', label: 'Full Name' },
+                { id: 'phone', label: 'Contact Number' },
+                { id: 'email', label: 'Email' },
+                { id: 'vehicle', label: 'Vehicle Number' },
+                { id: 'type', label: 'Vehicle Type' },
+                { id: 'model', label: 'Model & Brand' },
+                { id: 'year', label: 'Year' },
+                { id: 'engine', label: 'Engine/Chassis Number' },
+                { id: 'policy', label: 'Policy Number' },
+                { id: 'company', label: 'Company Name' },
+                { id: 'start', label: 'Policy Start Date' },
+                { id: 'end', label: 'Policy End Date' },
+                { id: 'coverage', label: 'Coverage Type' },
+                { id: 'date', label: 'Accident Date' },
+                { id: 'time', label: 'Accident Time' },
+                { id: 'location', label: 'Accident Location' },
+                { id: 'accidentType', label: 'Accident Type' },
+                { id: 'desc', label: 'Accident Description' },
+                { id: 'cost', label: 'Estimated Cost' },
+                { id: 'garage', label: 'Garage Name' },
+                { id: 'previous', label: 'Previous Claims' }
+            ];
+
+            const emptyFields = requiredFields.filter(field => {
+                const value = document.getElementById(field.id).value;
+                return !value || value.trim() === '';
+            });
+
+            if (emptyFields.length > 0) {
+                const fieldNames = emptyFields.map(field => field.label).join(', ');
+                document.getElementById("result").innerHTML =
+                    `<div style='color:#dc2626; margin-top:15px;'>❌ Please fill the following details: ${fieldNames}.</div>`;
+                return;
+            }
+
+            let claim = {
+                name: nameVal,
+                phone: phoneVal,
+                email: emailVal,
+                address: document.getElementById("address").value,
+
+                vehicle: vehicleVal,
+                type: document.getElementById("type").value,
+                model: document.getElementById("model").value,
+                year: document.getElementById("year").value,
+                engine: document.getElementById("engine").value,
+
+                policy: document.getElementById("policy").value,
+                company: document.getElementById("company").value,
+                start: document.getElementById("start").value,
+                end: document.getElementById("end").value,
+                coverage: document.getElementById("coverage").value,
+
+                date: document.getElementById("date").value,
+                time: timeVal,
+                location: locationVal,
+
+                accidentType: document.getElementById("accidentType").value,
+
+                desc: document.getElementById("desc").value,
+                vehicles: document.getElementById("vehicles").value,
+
+                otherVehicle: document.getElementById("otherVehicle").value,
+                driver: document.getElementById("driver").value,
+                police: document.getElementById("police").value,
+                firno: document.getElementById("firno").value,
+
+                cost: costVal,
+                garage: document.getElementById("garage").value,
+                previous: document.getElementById("previous").value
+            };
+
+            // ✅ SEND DATA
+            fetch("submit_claim.php", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(claim)
+            })
+                .then(res => res.json())
+                .then(data => {
+                    if (data.status === "success") {
+                        // Save to localStorage so we can display it in history
+                        let myClaims = JSON.parse(localStorage.getItem(currentUser + "_claims") || "[]");
+                        if (data.claim_id) myClaims.push(data.claim_id);
+                        localStorage.setItem(currentUser + "_claims", JSON.stringify(myClaims));
+
+                        // Display comprehensive fraud prediction analysis
+                        displayFraudAnalysisResult(data);
+                    } else {
+                        document.getElementById("result").innerHTML = "<div style='color:#dc2626; margin-top:15px;'>❌ Error: " + (data.msg || "Failed to submit.") + "</div>";
+                    }
+                })
+                .catch(err => {
+                    document.getElementById("result").innerHTML =
+                        "<div style='color:#dc2626; margin-top:15px;'>❌ Error: " + err + "</div>";
+                });
+        }
+
+        function displayFraudAnalysisResult(data) {
+            const fraudProb = data.fraud_probability || 0;
+            const riskLevel = data.risk_level || 'UNKNOWN';
+            const dbStatus = data.db_status || 'Pending';
+            const confidence = data.confidence || 0;
+            const features = data.ml_features || [];
+            
+            // Determine color based on risk level
+            let riskColor, riskBg, statusEmoji;
+            if (riskLevel === 'LOW') {
+                riskColor = '#22c55e';
+                riskBg = 'rgba(34,197,94,0.08)';
+                statusEmoji = '✅';
+            } else if (riskLevel === 'MEDIUM') {
+                riskColor = '#f97316';
+                riskBg = 'rgba(249,115,22,0.08)';
+                statusEmoji = '⚠️';
+            } else {
+                riskColor = '#dc2626';
+                riskBg = 'rgba(220,38,38,0.08)';
+                statusEmoji = '🚨';
+            }
+            
+            let resultHTML = `
+            <div style="margin-top:20px; animation: slideIn 0.5s ease;">
+                
+                <!-- MAIN FRAUD PREDICTION BOX -->
+                <div style="background:${riskBg}; padding:24px; border-radius:16px; border-left:6px solid ${riskColor}; margin-bottom:20px; box-shadow: 0 8px 24px rgba(15,60,100,0.12);">
+                    <div style="display:flex; justify-content:space-between; align-items:start; gap:20px;">
+                        <div style="flex:1;">
+                            <h3 style="margin:0 0 12px; color:${riskColor}; font-size:24px;">${statusEmoji} AI Fraud Detection Analysis</h3>
+                            <p style="margin:8px 0; color:#475569; font-size:14px;">${data.prediction_reasoning}</p>
+                        </div>
+                        <div style="text-align:right;">
+                            <div style="font-size:36px; font-weight:bold; color:${riskColor};">${fraudProb}%</div>
+                            <div style="color:#475569; font-size:12px;">Fraud Probability</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RISK LEVEL & STATUS -->
+                <div style="display:grid; grid-template-columns: 1fr 1fr; gap:16px; margin-bottom:20px;">
+                    <div style="background:rgba(59,130,246,0.08); padding:18px; border-radius:12px; border-left:4px solid #3b82f6;">
+                        <h4 style="margin:0 0 8px; color:#0f172a;">Risk Level</h4>
+                        <div style="font-size:20px; font-weight:bold; color:${riskColor};">${riskLevel} RISK</div>
+                        <div style="font-size:12px; color:#475569; margin-top:4px;">Model Confidence: ${confidence}%</div>
+                    </div>
+                    <div style="background:rgba(139,92,246,0.08); padding:18px; border-radius:12px; border-left:4px solid #8b5cf6;">
+                        <h4 style="margin:0 0 8px; color:#0f172a;">Claim Status</h4>
+                        <div style="font-size:20px; font-weight:bold; color:#8b5cf6;">${dbStatus}</div>
+                        <div style="font-size:12px; color:#475569; margin-top:4px;">Claim ID: ${data.claim_id}</div>
+                    </div>
+                </div>
+
+                <!-- FEATURES ANALYZED -->
+                <div style="background:rgba(255,255,255,0.5); padding:18px; border-radius:12px; border:1px solid rgba(59,130,246,0.16); margin-bottom:20px;">
+                    <h4 style="margin:0 0 14px; color:#0f172a;">📊 Features Analyzed</h4>
+                    <div style="display:flex; flex-direction:column; gap:10px;">
+                        ${features.map(f => `
+                            <div style="background:rgba(255,255,255,0.7); padding:12px; border-radius:8px; display:flex; justify-content:space-between; align-items:center; border-left:3px solid ${f.risk === 'HIGH' ? '#dc2626' : (f.risk === 'MEDIUM' ? '#f97316' : '#22c55e')};">
+                                <div>
+                                    <div style="font-weight:600; color:#0f172a;">${f.name}</div>
+                                    <div style="font-size:12px; color:#475569; margin-top:2px;">Value: ${typeof f.value === 'number' ? f.value.toFixed(2) : f.value}</div>
+                                </div>
+                                <div style="text-align:right;">
+                                    <div style="font-weight:bold; color:#0f172a;">${f.importance}%</div>
+                                    <div style="font-size:11px; background:${f.risk === 'HIGH' ? 'rgba(220,38,38,0.1)' : (f.risk === 'MEDIUM' ? 'rgba(249,115,22,0.1)' : 'rgba(34,197,94,0.1)')}; color:${f.risk === 'HIGH' ? '#dc2626' : (f.risk === 'MEDIUM' ? '#f97316' : '#22c55e')}; padding:2px 8px; border-radius:4px; margin-top:2px;">${f.risk} IMPACT</div>
+                                </div>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+
+                <!-- SUCCESS MESSAGE -->
+                <div style="background:rgba(34,197,94,0.08); padding:14px; border-radius:10px; color:#22c55e; border-left:4px solid #22c55e; text-align:center; font-weight:600;">
+                    ✅ Claim successfully submitted! You are still on the claim page.
+                </div>
+            </div>
+            
+            <style>
+                @keyframes slideIn {
+                    from {
+                        opacity: 0;
+                        transform: translateY(10px);
+                    }
+                    to {
+                        opacity: 1;
+                        transform: translateY(0);
+                    }
+                }
+            </style>
+            `;
+            
+            document.getElementById("result").innerHTML = resultHTML;
+        }
+        </script>
+
+</body>
+
+</html>

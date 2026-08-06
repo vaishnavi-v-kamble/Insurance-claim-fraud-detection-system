@@ -1,0 +1,1820 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Panel</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f0fdf4;
+            /* Fresh mint background */
+            color: #111111;
+            cursor: default;
+        }
+
+        #riskChart {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(15, 23, 42, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        #riskChart:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(15, 23, 42, 0.15);
+        }
+
+        /* SIDEBAR */
+        .sidebar {
+            width: 260px;
+            height: 100vh;
+            background: #0f172a;
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding-top: 30px;
+            border-right: 1px solid #1e293b;
+        }
+
+        .sidebar h3 {
+            text-align: left;
+            padding-left: 28px;
+            margin-bottom: 30px;
+            color: #f8fafc;
+            font-size: 16px;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+        }
+
+        .menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .menu li {
+            padding: 12px 28px;
+            cursor: pointer;
+            background: transparent;
+            color: #94a3b8;
+            width: 100%;
+            box-sizing: border-box;
+            text-align: left;
+            font-weight: 500;
+            font-size: 15px;
+            transition: color 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            border: none;
+            box-shadow: none;
+        }
+
+        .menu li:hover {
+            background: transparent;
+            color: #38bdf8;
+            transform: none;
+            box-shadow: none;
+            border-color: transparent;
+        }
+
+        .menu li.active {
+            background: transparent;
+            color: #38bdf8;
+            font-weight: 600;
+            transform: none;
+        }
+
+        /* CONTENT */
+        .content {
+            margin-left: 260px;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .section {
+            display: none;
+        }
+
+        @keyframes popup {
+            0% {
+                transform: scale(0.95);
+                opacity: 0;
+            }
+
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .active {
+            display: block;
+            animation: popup 0.3s ease-out forwards;
+        }
+
+        /* TABLE */
+        .table-card {
+            background: #ffffff;
+            border-radius: 24px;
+            box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+            padding: 24px;
+            margin-top: 20px;
+        }
+
+        .table-toolbar {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 12px;
+            align-items: center;
+            margin-bottom: 18px;
+        }
+
+        .table-controls {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            align-items: center;
+        }
+
+        .status-detail-card {
+            margin-top: 18px;
+            background: #f8fafc;
+            border: 1px solid #cbd5e1;
+            border-radius: 18px;
+            padding: 20px 22px;
+            box-shadow: 0 10px 24px rgba(15, 23, 42, 0.07);
+        }
+
+        .status-detail-card h3 {
+            margin-top: 0;
+            color: #0f172a;
+            font-size: 18px;
+        }
+
+        .status-detail-card p {
+            margin: 8px 0;
+            color: #334155;
+        }
+
+        .clickable {
+            cursor: pointer;
+        }
+
+        .clickable:hover {
+            background: #eef2ff;
+        }
+
+        .selected-row {
+            background: #dbeafe !important;
+        }
+
+        .dashboard-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            margin-bottom: 18px;
+            justify-content: center;
+        }
+
+        .dashboard-toggle {
+            border: none;
+            border-radius: 999px;
+            padding: 12px 18px;
+            font-weight: 700;
+            color: #334155;
+            background: #e2e8f0;
+            cursor: pointer;
+            transition: background 0.2s ease, transform 0.2s ease, color 0.2s ease;
+        }
+
+        .dashboard-toggle.active {
+            background: #2563eb;
+            color: #ffffff;
+            box-shadow: 0 12px 28px rgba(37, 99, 235, 0.18);
+        }
+
+        .dashboard-metrics {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+
+        .metric-card {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 18px;
+            box-shadow: 0 18px 40px rgba(15, 23, 42, 0.06);
+            color: #0f172a;
+        }
+
+        .metric-card span {
+            display: block;
+            margin-top: 10px;
+            font-size: 28px;
+            font-weight: 800;
+        }
+
+        .chart-note {
+            color: #475569;
+            font-size: 14px;
+            margin-top: 12px;
+            text-align: center;
+        }
+
+        .graph-toolbar {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 12px;
+            align-items: center;
+            margin-bottom: 18px;
+        }
+
+        .graph-controls {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            align-items: center;
+        }
+
+        .graph-summary {
+            color: #334155;
+            font-weight: 600;
+        }
+
+        .graph-detail-card {
+            margin-top: 18px;
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 18px 22px;
+            box-shadow: 0 15px 38px rgba(15, 23, 42, 0.08);
+            border: 1px solid #e2e8f0;
+        }
+
+        .graph-detail-card h3 {
+            margin-top: 0;
+            color: #0f172a;
+            font-size: 18px;
+        }
+
+        .graph-detail-card p {
+            margin: 8px 0;
+            color: #334155;
+        }
+
+        .table-toolbar input,
+        .table-toolbar select {
+            width: 100%;
+            max-width: 320px;
+            padding: 12px 14px;
+            border: 1px solid #cbd5e1;
+            border-radius: 14px;
+            outline: none;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+            background: #f8fafc;
+            color: #0f172a;
+        }
+
+        .table-toolbar input:focus {
+            border-color: #2563eb;
+            box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.12);
+        }
+
+        .table-scroll {
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            min-width: 620px;
+            background: transparent;
+        }
+
+        th,
+        td {
+            padding: 16px 18px;
+            text-align: left;
+            border-bottom: 1px solid #e2e8f0;
+            color: #334155;
+        }
+
+        thead th {
+            position: sticky;
+            top: 0;
+            background: linear-gradient(135deg, #2563eb, #4f46e5);
+            color: #ffffff;
+            font-weight: 700;
+            letter-spacing: 0.02em;
+            cursor: pointer;
+            transition: background 0.25s ease;
+        }
+
+        table.status-table thead th {
+            background: #0ea5e9;
+            box-shadow: inset 0 -4px 0 rgba(255, 255, 255, 0.15);
+        }
+
+        tbody tr {
+            background: #ffffff;
+            transition: transform 0.2s ease, background 0.2s ease;
+        }
+
+        tbody tr:hover {
+            background: #eff6ff;
+            transform: translateY(-1px);
+        }
+
+        tbody tr:nth-child(even) {
+            background: #f8fafc;
+        }
+
+        .pill {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 6px 12px;
+            border-radius: 999px;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.01em;
+            white-space: nowrap;
+        }
+
+        .pill-low {
+            background: #ecfdf5;
+            color: #166534;
+        }
+
+        .pill-medium {
+            background: #fef9c3;
+            color: #a16207;
+        }
+
+        .pill-high {
+            background: #fee2e2;
+            color: #991b1b;
+        }
+
+        .pill-count {
+            color: #475569;
+            font-size: 14px;
+        }
+
+        .sort-indicator {
+            margin-left: 6px;
+            font-size: 12px;
+            opacity: 0.9;
+        }
+
+        .table-note {
+            color: #64748b;
+            font-size: 14px;
+        }
+
+        @media (max-width: 900px) {
+            .content {
+                margin-left: 0;
+            }
+
+            .sidebar {
+                position: relative;
+                width: 100%;
+                height: auto;
+            }
+
+            .table-card {
+                padding: 18px;
+            }
+
+            thead th,
+            td {
+                padding: 14px 12px;
+            }
+        }
+
+        /* WELCOME */
+        .welcome {
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .card {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 18px;
+            box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+            animation: pop 0.35s ease-out both;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 24px 48px rgba(15, 23, 42, 0.14);
+        }
+
+        .metric-card,
+        .table-card,
+        .graph-detail-card,
+        .status-detail-card {
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+            animation: pop 0.35s ease-out both;
+        }
+
+        .metric-card:hover,
+        .table-card:hover,
+        .graph-detail-card:hover,
+        .status-detail-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 22px 48px rgba(15, 23, 42, 0.14);
+        }
+
+        .card-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 34px;
+            height: 34px;
+            margin-right: 10px;
+            border-radius: 50%;
+            background: rgba(37, 99, 235, 0.12);
+            color: #2563eb;
+            font-size: 18px;
+        }
+
+        .metric-card {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .metric-card::before {
+            content: '';
+            position: absolute;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: rgba(37, 99, 235, 0.05);
+            top: -30px;
+            right: -30px;
+        }
+
+        .metric-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #334155;
+            font-weight: 700;
+        }
+
+        .metric-card span {
+            display: block;
+            margin-top: 10px;
+            font-size: 28px;
+            font-weight: 800;
+        }
+
+        .card-emoji {
+            font-size: 20px;
+            margin-right: 10px;
+        }
+
+        .menu li span.icon {
+            margin-right: 10px;
+            font-size: 18px;
+            vertical-align: middle;
+        }
+
+        .section .section-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 18px;
+        }
+
+        .section-header img {
+            width: 32px;
+            height: 32px;
+            border-radius: 12px;
+            object-fit: cover;
+        }
+
+        .section-header h2 {
+            margin: 0;
+            font-size: 28px;
+            color: #1e293b;
+        }
+
+        .section-header .section-label {
+            padding: 6px 12px;
+            border-radius: 999px;
+            background: #bfdbfe;
+            color: #1e40af;
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        .interactive-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 12px;
+            border-radius: 999px;
+            background: #dbeafe;
+            color: #1e40af;
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        .metric-card .metric-label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .metric-card .metric-label .card-icon {
+            background: rgba(16, 185, 129, 0.12);
+            color: #059669;
+        }
+
+        .metric-card[data-type='high'] .card-icon {
+            background: rgba(239, 68, 68, 0.12);
+            color: #b91c1c;
+        }
+
+        .metric-card[data-type='medium'] .card-icon {
+            background: rgba(240, 171, 8, 0.12);
+            color: #92400e;
+        }
+
+        .metric-card[data-type='avg'] .card-icon {
+            background: rgba(37, 99, 235, 0.12);
+            color: #1d4ed8;
+        }
+
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 18px;
+            margin-top: 24px;
+        }
+
+        .image-tile {
+            border: none;
+            padding: 0;
+            background: #ffffff;
+            border-radius: 20px;
+            overflow: hidden;
+            cursor: pointer;
+            text-align: left;
+            box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .image-tile:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 45px rgba(15, 23, 42, 0.12);
+        }
+
+        .image-tile img {
+            width: 100%;
+            height: 170px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .image-label {
+            padding: 14px 16px;
+            background: #f8fafc;
+            color: #0f172a;
+            font-weight: 700;
+            letter-spacing: 0.01em;
+        }
+
+        .image-popup {
+            position: fixed;
+            inset: 0;
+            background: rgba(15, 23, 42, 0.8);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 1200;
+            padding: 24px;
+        }
+
+        .image-popup-card {
+            position: relative;
+            width: 100%;
+            max-width: 930px;
+            background: #ffffff;
+            border-radius: 28px;
+            overflow: hidden;
+            box-shadow: 0 35px 80px rgba(15, 23, 42, 0.25);
+        }
+
+        .popup-close {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            background: rgba(15, 23, 42, 0.8);
+            color: #ffffff;
+            border: none;
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            font-size: 22px;
+            cursor: pointer;
+            line-height: 1;
+            z-index: 10;
+        }
+
+        .popup-image {
+            width: 100%;
+            max-height: 68vh;
+            object-fit: cover;
+            display: block;
+            background: #f8fafc;
+        }
+
+        .popup-caption {
+            padding: 22px 26px 24px;
+            color: #334155;
+            font-size: 16px;
+            line-height: 1.6;
+            background: #ffffff;
+        }
+
+        #home .card,
+        #welcome .card {
+            background: #eff6ff;
+            border: 1px solid #bfdbfe;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+        <h3>ADMIN PANEL</h3>
+        <ul class="menu">
+            <li class="active" onclick="setActiveMenu(this); showSection('welcome')"><span class="icon">🏠</span>Home
+            </li>
+            <li onclick="setActiveMenu(this); loadUsers(); showSection('users')"><span class="icon">👥</span>Users</li>
+            <li onclick="setActiveMenu(this); showSection('dashboard'); loadDashboard();"><span
+                    class="icon">📊</span>Dashboard</li>
+            <li onclick="setActiveMenu(this); loadGraph(); showSection('graph')"><span class="icon">🕵️‍♂️</span>Fraud
+                Graph</li>
+            <li onclick="setActiveMenu(this); loadStatus(); showSection('status')"><span class="icon">📌</span>Claim
+                Status</li>
+            <li onclick="setActiveMenu(this); loadFraudReports(); showSection('fraud-reports')"><span
+                    class="icon">📋</span>Fraud Reports</li>
+            <li onclick="logout()"><span class="icon">🔒</span>Logout</li>
+        </ul>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="content">
+
+        <!-- WELCOME (DEFAULT) -->
+        <div id="welcome" class="section active">
+
+            <div class="card welcome">
+
+                <!-- LOGO -->
+                <img src="https://cdn-icons-png.flaticon.com/512/3062/3062634.png"
+                    style="width:110px; margin-bottom:15px;">
+
+                <!-- TITLE -->
+                <h1>Welcome Admin</h1>
+
+                <!-- QUOTE / BRIDVAKYA -->
+                <p style="font-size:18px; color:#00d4ff;">
+                    "Secure Claims. Smart Decisions. Fraud-Free Insurance Ecosystem."
+                </p>
+
+                <!-- DESCRIPTION CARD -->
+                <div style="
+    margin-top:20px;
+    background: linear-gradient(135deg, #eef2ff, #dbeafe);
+    padding:20px;
+    border-radius:15px;
+    box-shadow: 0 0 15px rgba(59,130,246,0.12);
+    position:relative;
+    overflow:hidden;
+">
+
+                    <!-- faint security pattern overlay -->
+                    <div style="
+        position:absolute;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+        background-image:url('https://www.transparenttextures.com/patterns/cubes.png');
+        opacity:0.08;
+    "></div>
+
+                    <!-- TEXT CONTENT -->
+                    <div style="position:relative; z-index:2;">
+
+                        <p style="line-height:1.7; color:#334155;">
+                            Insurance fraud detection plays a vital role in maintaining the financial stability and
+                            trust of modern insurance companies. Fraudulent or exaggerated claims can cause severe
+                            financial leakage and directly impact the overall pricing of insurance policies for honest
+                            customers.
+                        </p>
+
+                        <p style="line-height:1.7; color:#334155; margin-top:10px;">
+                            This system analyzes claim behavior using AI-based risk scoring techniques, including claim
+                            amount patterns, policy history, claim frequency, accident timing, and behavioral
+                            inconsistencies. It helps insurers identify suspicious claims early and supports faster,
+                            more accurate claim processing.
+                        </p>
+
+
+                        <p style="margin-top:15px; line-height:1.7; color:#334155;">
+                            By integrating AI-based fraud scoring, this platform improves transparency, reduces manual
+                            workload, and strengthens decision-making across the insurance lifecycle.
+                        </p>
+
+                        <div class="image-gallery">
+                            <button class="image-tile"
+                                onclick="showImagePopup('https://images.unsplash.com/photo-1508780709619-79562169bc64?auto=format&fit=crop&w=800&q=80','Smart fraud detection gives you fast, accurate claim insights.')">
+                                <img src="https://images.unsplash.com/photo-1508780709619-79562169bc64?auto=format&fit=crop&w=600&q=60"
+                                    alt="Analytics dashboard" />
+                                <div class="image-label">Claims Analytics</div>
+                            </button>
+                            <button class="image-tile"
+                                onclick="showImagePopup('https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80','Interactive dashboards help teams spot risk patterns at a glance.')">
+                                <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=600&q=60"
+                                    alt="Dashboard metrics" />
+                                <div class="image-label">Risk Dashboard</div>
+                            </button>
+                            <button class="image-tile"
+                                onclick="showImagePopup('https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=800&q=80','Focused investigation tools make claim validation more efficient.')">
+                                <img src="https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=600&q=60"
+                                    alt="Team collaboration" />
+                                <div class="image-label">Investigation Flow</div>
+                            </button>
+                        </div>
+
+                        <!-- IMAGE POPUP -->
+                        <div class="image-popup" id="imagePopup" onclick="closeImagePopup()">
+                            <div class="image-popup-card" onclick="event.stopPropagation()">
+                                <button class="popup-close" onclick="closeImagePopup()">×</button>
+                                <img id="popupImage" class="popup-image" src="" alt="Popup image" />
+                                <div id="popupCaption" class="popup-caption"></div>
+                            </div>
+                        </div>
+
+                        <!-- FEATURE BOX -->
+                        <div style="
+            margin-top:20px;
+            background: rgba(235, 248, 255, 0.85);
+            padding:15px;
+            border-radius:12px;
+            border:1px solid rgba(59,130,246,0.25);
+        ">
+                            <p style="margin-top:15px; color:#1d4ed8; font-weight:bold;">
+                                Risks faced without fraud detection:
+                            </p>
+
+
+                            <p style="margin:6px 0;">Financial losses due to fake or inflated claims</p>
+                            <p style="margin:6px 0;">Increased operational and verification costs</p>
+                            <p style="margin:6px 0;">Higher insurance premiums for genuine customers</p>
+                            <p style="margin:6px 0;">Loss of customer trust and brand reputation</p>
+
+                            <p style="margin-top:15px; font-size:17px; color:#2563eb; text-align:center;">
+                                "Preventing fraud is not just cost saving — it is protecting trust, fairness, and the
+                                future of insurance."
+                            </p>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- USERS -->
+        <div id="users" class="section">
+            <h2>All Users (Claims)</h2>
+            <div class="table-card">
+                <div class="table-toolbar">
+                    <label>
+                        Search claims:
+                        <input id="userSearch" type="search" placeholder="Search by name, vehicle, ID or cost"
+                            oninput="loadUsers()" />
+                    </label>
+                    <span id="userCount" class="pill-count">0 results</span>
+                </div>
+                <div class="table-scroll">
+                    <table id="usersTable"></table>
+                </div>
+                <p class="table-note">Click any column header to sort the table.</p>
+            </div>
+        </div>
+
+        <!-- DASHBOARD -->
+        <div id="dashboard" class="section">
+            <h2 style="text-align: center; margin-bottom: 24px; font-size: 28px; color: #1e293b;">Dashboard Analytics
+            </h2>
+            <div class="dashboard-actions">
+                <button class="dashboard-toggle active" data-mode="risk" onclick="showDashboardMode('risk')">Risk
+                    Breakdown</button>
+                <button class="dashboard-toggle" data-mode="cost" onclick="showDashboardMode('cost')">Cost
+                    Distribution</button>
+            </div>
+            <div class="dashboard-metrics">
+                <div class="metric-card" data-type="total">
+                    <div class="metric-title"><span class="card-icon">📄</span>Total Claims</div>
+                    <span id="dashboardTotal">0</span>
+                </div>
+                <div class="metric-card" data-type="low">
+                    <div class="metric-title"><span class="card-icon">🛡️</span>Low Risk</div>
+                    <span id="dashboardSafe">0</span>
+                </div>
+                <div class="metric-card" data-type="medium">
+                    <div class="metric-title"><span class="card-icon">⚠️</span>Medium Risk</div>
+                    <span id="dashboardMedium">0</span>
+                </div>
+                <div class="metric-card" data-type="high">
+                    <div class="metric-title"><span class="card-icon">🔥</span>High Risk</div>
+                    <span id="dashboardHigh">0</span>
+                </div>
+                <div class="metric-card" data-type="avg">
+                    <div class="metric-title"><span class="card-icon">💰</span>Avg Claim Cost</div>
+                    <span id="dashboardAvgCost">₹0</span>
+                </div>
+            </div>
+            <div style="width: 100%; max-width: 700px; height: 520px; margin: 0 auto; position: relative;">
+                <canvas id="riskChart"></canvas>
+            </div>
+            <p class="chart-note">Use the buttons above to switch between risk view and cost distribution without losing
+                the original dashboard analytics.</p>
+            <div class="dashboard-visuals"
+                style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:20px;margin-top:30px;">
+                <div class="table-card" style="padding:20px;">
+                    <h3 style="margin-top:0;color:#0f172a;font-size:18px;">Monthly Fraud Trends</h3>
+                    <div style="width:100%;height:320px;"><canvas id="monthlyTrendChart"></canvas></div>
+                </div>
+                <div class="table-card" style="padding:20px;">
+                    <h3 style="margin-top:0;color:#0f172a;font-size:18px;">Risk Heatmap</h3>
+                    <div id="riskHeatmap"
+                        style="display:grid;grid-template-columns:repeat(3,minmax(100px,1fr));gap:12px;margin-top:16px;min-height:320px;align-items:start">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- GRAPH -->
+        <div id="graph" class="section">
+            <h2>Fraud Graph (AI Risk Map)</h2>
+            <div class="graph-toolbar">
+                <div class="graph-controls">
+                    <label>
+                        Risk filter:
+                        <select id="graphRiskFilter" onchange="renderGraph()">
+                            <option value="">All risks</option>
+                            <option value="low">LOW</option>
+                            <option value="medium">MEDIUM</option>
+                            <option value="high">HIGH</option>
+                        </select>
+                    </label>
+                    <label>
+                        <input id="graphTrendToggle" type="checkbox" onchange="renderGraph()" /> Show trend line
+                    </label>
+                </div>
+                <span id="graphSummary" class="graph-summary">0 claims plotted</span>
+            </div>
+            <div style="width: 100%; max-width: 820px; height: 520px; margin: 0 auto; position: relative;">
+                <canvas id="fraudChart"></canvas>
+            </div>
+            <div id="graphDetailCard" class="graph-detail-card" style="display:none;">
+                <h3>Selected Claim Detail</h3>
+                <p><strong>Claim ID:</strong> <span id="graphClaimId"></span></p>
+                <p><strong>Name:</strong> <span id="graphClaimName"></span></p>
+                <p><strong>Vehicle:</strong> <span id="graphClaimVehicle"></span></p>
+                <p><strong>Cost:</strong> <span id="graphClaimCost"></span></p>
+                <p><strong>Risk score:</strong> <span id="graphClaimRisk"></span></p>
+                <p><strong>Risk level:</strong> <span id="graphClaimLevel"></span></p>
+                <p><strong>Fraud probability:</strong> <span id="graphClaimProbability"></span></p>
+            </div>
+        </div>
+
+        <!-- STATUS -->
+        <div id="status" class="section">
+            <h2>Claim Status Prediction</h2>
+            <div class="table-card">
+                <div class="table-toolbar">
+                    <div class="table-controls">
+                        <label>
+                            Search risk table:
+                            <input id="statusSearch" type="search" placeholder="Filter by name, score, or risk level"
+                                oninput="loadStatus()" />
+                        </label>
+                        <label>
+                            Risk filter:
+                            <select id="statusFilter" onchange="loadStatus()">
+                                <option value="">All risk levels</option>
+                                <option value="low">LOW</option>
+                                <option value="medium">MEDIUM</option>
+                                <option value="high">HIGH</option>
+                            </select>
+                        </label>
+                    </div>
+                    <span id="statusCount" class="pill-count">0 results</span>
+                </div>
+                <div class="table-scroll">
+                    <table id="statusTable" class="status-table"></table>
+                </div>
+                <div id="statusDetailCard" class="status-detail-card" style="display:none;">
+                    <h3>Claim Details</h3>
+                    <p><strong>Claim ID:</strong> <span id="detailClaimId"></span></p>
+                    <p><strong>Name:</strong> <span id="detailName"></span></p>
+                    <p><strong>Vehicle:</strong> <span id="detailVehicle"></span></p>
+                    <p><strong>Cost:</strong> <span id="detailCost"></span></p>
+                    <p><strong>Risk score:</strong> <span id="detailScore"></span></p>
+                    <p><strong>Risk level:</strong> <span id="detailLevel"></span></p>
+                    <p><strong>Current Status:</strong> <span id="detailDbStatus" style="font-weight: bold;"></span></p>
+
+                    <!-- ML Analysis Section -->
+                    <div id="detailMlAnalysis"></div>
+
+                    <div
+                        style="margin-top: 16px; display: flex; gap: 12px; border-top: 1px solid #e2e8f0; padding-top: 16px; flex-wrap: wrap;">
+                        <button onclick="updateClaimStatus('Approved')"
+                            style="padding: 10px 18px; background: #059669; color: white; border: none; border-radius: 8px; cursor: pointer; font-weight: bold; transition: 0.2s;">Approve
+                            Claim</button>
+                        <button onclick="updateClaimStatus('Rejected')"
+                            style="padding: 10px 18px; background: #dc2626; color: white; border: none; border-radius: 8px; cursor: pointer; font-weight: bold; transition: 0.2s;">Reject
+                            Claim</button>
+
+                    </div>
+                </div>
+                <p class="table-note">Sort by any column to compare risk scores quickly. Click a row to view claim
+                    details.</p>
+            </div>
+        </div>
+
+        <!-- FRAUD REPORTS -->
+        <div id="fraud-reports" class="section">
+            <h2 style="font-size: 28px; color: #1e293b; margin-bottom: 8px;">Fraud Reports & Letters</h2>
+            <p style="color: #64748b; margin-top: 0; margin-bottom: 24px;">AI-Flagged Suspicious Claims and
+                Automatically Generated Warning Letters.</p>
+
+            <div
+                style="display: grid; grid-template-columns: 340px 1fr; gap: 24px; min-height: 70vh; align-items: start;">
+
+                <!-- LEFT COLUMN: FRAUD LIST -->
+                <div class="table-card" style="margin-top: 0; padding: 20px; max-height: 75vh; overflow-y: auto;">
+                    <div style="margin-bottom: 16px;">
+                        <label
+                            style="font-weight: 700; color: #334155; display: block; margin-bottom: 6px; font-size: 14px;">Search
+                            Fraud Claims:</label>
+                        <input id="fraudSearch" type="search" placeholder="Search by name or ID..."
+                            oninput="filterFraudReports()"
+                            style="width: 100%; padding: 12px 14px; border: 1px solid #cbd5e1; border-radius: 12px; outline: none; background: #f8fafc; color: #0f172a; font-size: 14px; box-sizing: border-box;" />
+                    </div>
+
+                    <div id="fraudReportsList" style="display: flex; flex-direction: column; gap: 12px;">
+                        <!-- JS Dynamic Cards -->
+                    </div>
+                </div>
+
+                <!-- RIGHT COLUMN: REPORT LETTER DETAIL -->
+                <div id="fraudLetterContainer" class="table-card"
+                    style="margin-top: 0; padding: 30px; min-height: 500px; display: flex; flex-direction: column; justify-content: center; align-items: center; color: #64748b; position: relative;">
+                    <div style="text-align: center;">
+                        <img src="https://cdn-icons-png.flaticon.com/512/3855/3855833.png"
+                            style="width: 80px; opacity: 0.5; margin-bottom: 16px;" />
+                        <h3 style="color: #0f172a; margin-bottom: 8px;">Select a Claimant</h3>
+                        <p style="font-size: 14px; max-width: 400px; margin: 0 auto; line-height: 1.5;">Click on any
+                            high-risk or suspicious claimant from the left list to automatically generate their formal
+                            fraud investigation and warning letter.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+
+        let chart;
+        let fraudChart;
+        let graphData = [];
+
+        // ---------------- NAVIGATION ----------------
+        function showSection(id) {
+            document.querySelectorAll(".section").forEach(s => s.classList.remove("active"));
+            document.getElementById(id).classList.add("active");
+        }
+
+        function setActiveMenu(element) {
+            document.querySelectorAll('.menu li').forEach(li => li.classList.remove('active'));
+            element.classList.add('active');
+        }
+
+        function logout() {
+            if (confirm('Are you sure you want to logout?')) {
+                window.location.href = "firstpage.html";
+            }
+        }
+
+        // ---------------- USERS LIST ----------------
+        let userSort = { key: 'claim_id', asc: true };
+
+        function compareValues(a, b, key) {
+            const valueA = a[key] ?? '';
+            const valueB = b[key] ?? '';
+
+            if (!isNaN(valueA) && !isNaN(valueB)) {
+                return Number(valueA) - Number(valueB);
+            }
+
+            return String(valueA).localeCompare(String(valueB), undefined, { numeric: true, sensitivity: 'base' });
+        }
+
+        function sortUsers(key) {
+            if (userSort.key === key) {
+                userSort.asc = !userSort.asc;
+            } else {
+                userSort.key = key;
+                userSort.asc = true;
+            }
+            loadUsers();
+        }
+
+        function loadUsers() {
+            fetch("get_claims.php")
+                .then(res => res.json())
+                .then(data => {
+                    const query = document.getElementById("userSearch").value.toLowerCase();
+                    const filtered = data.filter(c => {
+                        return [c.claim_id, c.name, c.vehicle, c.cost]
+                            .some(value => String(value).toLowerCase().includes(query));
+                    });
+
+                    filtered.sort((a, b) => {
+                        const direction = userSort.asc ? 1 : -1;
+                        return compareValues(a, b, userSort.key) * direction;
+                    });
+
+                    const table = document.getElementById("usersTable");
+                    const arrow = userSort.asc ? '&#9650;' : '&#9660;';
+                    table.innerHTML = `
+                        <thead>
+                            <tr>
+                                <th onclick="sortUsers('claim_id')">Claim ID <span class="sort-indicator">${userSort.key === 'claim_id' ? arrow : ''}</span></th>
+                                <th onclick="sortUsers('name')">Name <span class="sort-indicator">${userSort.key === 'name' ? arrow : ''}</span></th>
+                                <th onclick="sortUsers('vehicle')">Vehicle <span class="sort-indicator">${userSort.key === 'vehicle' ? arrow : ''}</span></th>
+                                <th onclick="sortUsers('cost')">Cost <span class="sort-indicator">${userSort.key === 'cost' ? arrow : ''}</span></th>
+                                <th onclick="sortUsers('db_status')">Status <span class="sort-indicator">${userSort.key === 'db_status' ? arrow : ''}</span></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        ${filtered.map(c => `
+                            <tr>
+                                <td>${c.claim_id}</td>
+                                <td>${c.name}</td>
+                                <td>${c.vehicle}</td>
+                                <td>${c.cost}</td>
+                                <td><span style="font-weight: bold; color: ${c.db_status === 'Approved' ? '#059669' : c.db_status === 'Rejected' ? '#dc2626' : '#2563eb'}">${c.db_status}</span></td>
+                            </tr>
+                        `).join('')}
+                        </tbody>`;
+
+                    document.getElementById('userCount').innerText = `${filtered.length} result(s)`;
+                });
+        }
+
+        let statusSort = { key: 'claim_id', asc: true };
+
+        function sortStatus(key) {
+            if (statusSort.key === key) {
+                statusSort.asc = !statusSort.asc;
+            } else {
+                statusSort.key = key;
+                statusSort.asc = true;
+            }
+            loadStatus();
+        }
+
+        function showImagePopup(src, caption) {
+            const popup = document.getElementById('imagePopup');
+            const image = document.getElementById('popupImage');
+            const captionEl = document.getElementById('popupCaption');
+            image.src = src;
+            image.alt = caption;
+            captionEl.innerText = caption;
+            popup.style.display = 'flex';
+        }
+
+        function closeImagePopup() {
+            const popup = document.getElementById('imagePopup');
+            const image = document.getElementById('popupImage');
+            popup.style.display = 'none';
+            image.src = '';
+        }
+
+        function renderRiskPill(score, ml_status) {
+            // Priority to ML Status if available, fallback to numerical score
+            if (ml_status === 'SAFE') return `<span class="pill pill-low">SAFE</span>`;
+            if (ml_status === 'SUSPICIOUS') return `<span class="pill pill-medium">SUSPICIOUS</span>`;
+            if (ml_status === 'FRAUD') return `<span class="pill pill-high">FRAUD</span>`;
+
+            const numericScore = Number(score) || 0;
+            if (numericScore < 40) return `<span class="pill pill-low">LOW</span>`;
+            if (numericScore < 70) return `<span class="pill pill-medium">MEDIUM</span>`;
+            return `<span class="pill pill-high">HIGH</span>`;
+        }
+
+        let statusRecords = [];
+
+        function showStatusDetail(index) {
+            const claim = statusRecords[index];
+            if (!claim) return;
+
+            const score = Number(claim.risk_score) || 0;
+            const level = score < 40 ? 'LOW' : score < 70 ? 'MEDIUM' : 'HIGH';
+            const fraudProb = Number(claim.fraud_probability) || 0;
+            const mlFeatures = claim.ml_features ? (typeof claim.ml_features === 'string' ? JSON.parse(claim.ml_features) : claim.ml_features) : [];
+            const confidence = Number(claim.confidence) || 0;
+
+            document.getElementById('detailClaimId').innerText = claim.claim_id || '-';
+            document.getElementById('detailName').innerText = claim.name || '-';
+            document.getElementById('detailVehicle').innerText = claim.vehicle || 'N/A';
+            document.getElementById('detailCost').innerText = claim.cost || 'N/A';
+            document.getElementById('detailScore').innerText = score;
+            document.getElementById('detailLevel').innerText = level;
+            document.getElementById('detailDbStatus').innerText = claim.db_status || 'Pending';
+            document.getElementById('detailDbStatus').style.color = claim.db_status === 'Approved' ? '#059669' : (claim.db_status === 'Rejected' ? '#dc2626' : '#2563eb');
+
+            // Display ML fraud prediction details
+            let mlDetailsHTML = '';
+            if (fraudProb > 0) {
+                mlDetailsHTML = `
+                    <div style="margin-top: 16px; padding: 14px; background: ${fraudProb >= 50 ? 'rgba(220,38,38,0.08)' : fraudProb >= 25 ? 'rgba(249,115,22,0.08)' : 'rgba(34,197,94,0.08)'}; border-radius: 8px; border-left: 4px solid ${fraudProb >= 50 ? '#dc2626' : fraudProb >= 25 ? '#f97316' : '#22c55e'};">
+                        <p style="margin: 0 0 8px; font-weight: 600;"><strong>🤖 Fraud Analysis:</strong></p>
+                        <p style="margin: 4px 0;"><strong>Fraud Probability:</strong> ${fraudProb}% (Confidence: ${confidence}%)</p>
+                        ${mlFeatures.length > 0 ? '<div style="margin-top: 8px; font-size: 12px;"><strong>Key Features:</strong><br>' + mlFeatures.slice(0, 3).map(f => `• ${f.name}: ${f.importance}% impact (${f.risk} risk)`).join('<br>') + '</div>' : ''}
+                    </div>
+                `;
+            }
+
+            document.getElementById('detailMlAnalysis').innerHTML = mlDetailsHTML;
+            document.getElementById('statusDetailCard').style.display = 'block';
+
+            document.querySelectorAll('#statusTable tbody tr').forEach((row, idx) => {
+                row.classList.toggle('selected-row', idx === index);
+            });
+        }
+
+        function loadStatus() {
+            fetch("get_claims.php")
+                .then(res => res.json())
+                .then(data => {
+                    const query = document.getElementById("statusSearch").value.toLowerCase();
+                    const selectedFilter = document.getElementById("statusFilter").value;
+
+                    const filtered = data.filter(c => {
+                        const score = Number(c.risk_score) || 0;
+                        const level = score < 40 ? 'low' : score < 70 ? 'medium' : 'high';
+                        const matchesQuery = [c.claim_id, c.name, c.cost, String(score), level]
+                            .some(value => String(value).toLowerCase().includes(query));
+
+                        const matchesFilter = !selectedFilter || level === selectedFilter;
+                        return matchesQuery && matchesFilter;
+                    });
+
+                    filtered.sort((a, b) => {
+                        const direction = statusSort.asc ? 1 : -1;
+                        return compareValues(a, b, statusSort.key) * direction;
+                    });
+
+                    statusRecords = filtered;
+
+                    const table = document.getElementById("statusTable");
+                    const arrow = statusSort.asc ? '&#9650;' : '&#9660;';
+                    table.innerHTML = `
+                        <thead>
+                            <tr>
+                                <th onclick="sortStatus('claim_id')">ID <span class="sort-indicator">${statusSort.key === 'claim_id' ? arrow : ''}</span></th>
+                                <th onclick="sortStatus('name')">Name <span class="sort-indicator">${statusSort.key === 'name' ? arrow : ''}</span></th>
+                                <th onclick="sortStatus('cost')">Cost <span class="sort-indicator">${statusSort.key === 'cost' ? arrow : ''}</span></th>
+                                <th onclick="sortStatus('status')">AI Risk <span class="sort-indicator">${statusSort.key === 'status' ? arrow : ''}</span></th>
+                                <th onclick="sortStatus('db_status')">Decision <span class="sort-indicator">${statusSort.key === 'db_status' ? arrow : ''}</span></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        ${filtered.map((c, index) => {
+                        const score = Number(c.risk_score) || 0;
+                        return `
+                            <tr class="clickable" onclick="showStatusDetail(${index})">
+                                <td>${c.claim_id}</td>
+                                <td>${c.name}</td>
+                                <td>${c.cost}</td>
+                                <td>${renderRiskPill(score, c.status)}</td>
+                                <td><span style="font-weight: bold; color: ${c.db_status === 'Approved' ? '#059669' : c.db_status === 'Rejected' ? '#dc2626' : '#2563eb'}">${c.db_status}</span></td>
+                            </tr>
+                        `;
+                    }).join('')}
+                        </tbody>`;
+
+                    document.getElementById('statusCount').innerText = `${filtered.length} result(s)`;
+
+                    if (filtered.length === 0) {
+                        document.getElementById('statusDetailCard').style.display = 'none';
+                    }
+                });
+        }
+
+        function updateClaimStatus(newStatus) {
+            const claimId = document.getElementById('detailClaimId').innerText;
+            if (!claimId || claimId === '-') return;
+
+            if (!confirm(`Are you sure you want to mark claim ${claimId} as ${newStatus}?`)) return;
+
+            fetch("update_status.php", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ claim_id: claimId, status: newStatus })
+            })
+                .then(res => res.json())
+                .then(data => {
+                    if (data.status === "success") {
+                        alert(`Claim successfully marked as ${newStatus}`);
+                        loadStatus(); // Refresh table
+                        document.getElementById('detailDbStatus').innerText = newStatus;
+                        document.getElementById('detailDbStatus').style.color = newStatus === 'Approved' ? '#059669' : '#dc2626';
+                    } else {
+                        alert("Error updating status: " + data.msg);
+                    }
+                })
+                .catch(err => {
+                    alert("Error: " + err);
+                });
+        }
+
+        // ---------------- DASHBOARD ----------------
+        let riskChart;
+        let monthlyTrendChart;
+        let dashboardMode = 'risk';
+        let dashboardData = [];
+
+        function showDashboardMode(mode) {
+            dashboardMode = mode;
+            document.querySelectorAll('.dashboard-toggle').forEach(btn => {
+                btn.classList.toggle('active', btn.dataset.mode === mode);
+            });
+            renderDashboard();
+        }
+
+        function getRiskLevel(claim) {
+            // Prefer explicit display_risk if provided (LOW, MEDIUM, HIGH)
+            const explicit = String(claim.display_risk || claim.risk_level || '').toUpperCase();
+            if (explicit === 'LOW' || explicit === 'MEDIUM' || explicit === 'HIGH') {
+                return explicit;
+            }
+            const score = Number(claim.risk_score) || 0;
+            if (score >= 70) return 'HIGH';
+            if (score >= 40) return 'MEDIUM';
+            return 'LOW';
+        }
+
+        function renderDashboard() {
+            const safe = dashboardData.filter(c => getRiskLevel(c) === 'LOW').length;
+            const med = dashboardData.filter(c => getRiskLevel(c) === 'MEDIUM').length;
+            const high = dashboardData.filter(c => getRiskLevel(c) === 'HIGH').length;
+
+            const canvas = document.getElementById("riskChart");
+            if (!canvas) return;
+            const ctx = canvas.getContext("2d");
+
+            if (riskChart) riskChart.destroy();
+
+            if (dashboardMode === 'risk') {
+                riskChart = new Chart(ctx, {
+                    type: "doughnut",
+                    data: {
+                        labels: ["Safe Claims", "Medium Risk", "High Risk"],
+                        datasets: [{
+                            data: [safe, med, high],
+                            backgroundColor: ["#22c55e", "#f59e0b", "#ef4444"],
+                            hoverOffset: 15,
+                            borderWidth: 3,
+                            borderColor: "#ffffff"
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        cutout: "65%",
+                        layout: { padding: 20 },
+                        animation: { animateScale: true, animateRotate: true, duration: 1200, easing: 'easeOutQuart' },
+                        plugins: {
+                            legend: { position: 'bottom', labels: { color: "#1e293b", font: { size: 14, weight: '700' }, padding: 20 } },
+                            tooltip: { backgroundColor: 'rgba(15, 23, 42, 0.9)', titleFont: { size: 16 }, bodyFont: { size: 15 }, padding: 14, cornerRadius: 12 }
+                        }
+                    }
+                });
+            } else {
+                const buckets = [
+                    { label: '0 - 20k', count: 0 },
+                    { label: '20k - 50k', count: 0 },
+                    { label: '50k - 100k', count: 0 },
+                    { label: '100k+', count: 0 }
+                ];
+
+                dashboardData.forEach(c => {
+                    const cost = Number(c.cost) || 0;
+                    if (cost <= 20000) buckets[0].count++;
+                    else if (cost <= 50000) buckets[1].count++;
+                    else if (cost <= 100000) buckets[2].count++;
+                    else buckets[3].count++;
+                });
+
+                riskChart = new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: buckets.map(b => b.label),
+                        datasets: [{ label: 'Claims by Cost', data: buckets.map(b => b.count), backgroundColor: ['#38bdf8', '#60a5fa', '#818cf8', '#a855f7'], borderRadius: 12, maxBarThickness: 40 }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        scales: {
+                            x: { ticks: { color: '#334155', font: { size: 13, weight: '600' } }, grid: { display: false } },
+                            y: { beginAtZero: true, ticks: { color: '#334155', font: { size: 13 } }, grid: { color: '#e2e8f0' } }
+                        },
+                        plugins: {
+                            legend: { display: false },
+                            tooltip: { backgroundColor: 'rgba(15, 23, 42, 0.9)', titleFont: { size: 15 }, bodyFont: { size: 14 }, padding: 14, cornerRadius: 10 }
+                        },
+                        layout: { padding: 16 }
+                    }
+                });
+            }
+        }
+
+        function loadDashboard() {
+            fetch("get_claims.php")
+                .then(res => res.json())
+                .then(data => {
+                    dashboardData = data;
+                    const totalCost = data.reduce((acc, c) => acc + (Number(c.cost) || 0), 0);
+
+                    document.getElementById('dashboardTotal').innerText = data.length;
+                    document.getElementById('dashboardSafe').innerText = data.filter(c => getRiskLevel(c) === 'LOW').length;
+                    document.getElementById('dashboardMedium').innerText = data.filter(c => getRiskLevel(c) === 'MEDIUM').length;
+                    document.getElementById('dashboardHigh').innerText = data.filter(c => getRiskLevel(c) === 'HIGH').length;
+                    document.getElementById('dashboardAvgCost').innerText = data.length ? '₹' + Math.round(totalCost / data.length) : '₹0';
+
+                    renderTrendChart(data);
+                    renderHeatmap(data);
+                    setTimeout(() => renderDashboard(), 200);
+                });
+        }
+
+        function renderTrendChart(data) {
+            const monthly = {};
+            data.forEach(c => {
+                const raw = c.date || c.accident_date || '';
+                const parsed = new Date(raw);
+                if (isNaN(parsed)) return;
+                const key = `${parsed.getFullYear()}-${String(parsed.getMonth() + 1).padStart(2, '0')}`;
+                const label = parsed.toLocaleString('default', { month: 'short', year: '2-digit' });
+                if (!monthly[key]) monthly[key] = { label, total: 0, fraud: 0 };
+                monthly[key].total += 1;
+                const riskLevel = String(c.risk_level || '').toUpperCase();
+                const probability = Number(c.fraud_probability || c.probability || 0);
+                if (riskLevel === 'HIGH' || c.status === 'FRAUD' || probability >= 50) {
+                    monthly[key].fraud += 1;
+                }
+            });
+            const keys = Object.keys(monthly).sort();
+            const labels = keys.map(k => monthly[k].label);
+            const totalData = keys.map(k => monthly[k].total);
+            const fraudData = keys.map(k => monthly[k].fraud);
+
+            const ctx = document.getElementById('monthlyTrendChart').getContext('2d');
+            if (monthlyTrendChart) monthlyTrendChart.destroy();
+            monthlyTrendChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels,
+                    datasets: [
+                        { label: 'Total Claims', data: totalData, borderColor: '#38bdf8', backgroundColor: 'rgba(56,189,248,0.16)', tension: 0.25, fill: true, pointRadius: 4, pointBackgroundColor: '#2563eb' },
+                        { label: 'Fraud Alerts', data: fraudData, borderColor: '#ef4444', backgroundColor: 'rgba(239,68,68,0.18)', tension: 0.25, fill: true, pointRadius: 4, pointBackgroundColor: '#b91c1c' }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        x: { ticks: { color: '#334155' }, grid: { display: false } },
+                        y: { beginAtZero: true, ticks: { color: '#334155' }, grid: { color: '#e2e8f0' } }
+                    },
+                    plugins: {
+                        legend: { labels: { color: '#1e293b', font: { size: 13, weight: '600' } } },
+                        tooltip: { backgroundColor: 'rgba(15,23,42,0.92)', titleFont: { size: 14 }, bodyFont: { size: 13 }, padding: 12, cornerRadius: 10 }
+                    }
+                }
+            });
+        }
+
+        function renderHeatmap(data) {
+            const bucket = { HIGH: 0, MEDIUM: 0, LOW: 0 };
+            data.forEach(c => {
+                const level = getRiskLevel(c);
+                bucket[level] += 1;
+            });
+            const total = bucket.HIGH + bucket.MEDIUM + bucket.LOW || 1;
+            const heatmap = document.getElementById('riskHeatmap');
+            heatmap.innerHTML = ['HIGH', 'MEDIUM', 'LOW'].map(level => {
+                const count = bucket[level] || 0;
+                const intensity = Math.min(1, count / total);
+                const color = level === 'HIGH' ? `rgba(239,68,68,${0.25 + intensity * 0.5})` : level === 'MEDIUM' ? `rgba(245,158,11,${0.25 + intensity * 0.5})` : `rgba(34,197,94,${0.25 + intensity * 0.5})`;
+                return `
+                    <div style="padding:18px; border-radius:16px; background:${color}; box-shadow: inset 0 0 0 1px rgba(15,23,42,0.06);">
+                        <div style="font-size:12px; color:#0f172a; font-weight:700; letter-spacing:0.5px; margin-bottom:8px;">${level} RISK</div>
+                        <div style="font-size:34px; font-weight:800; color:#0f172a;">${count}</div>
+                        <div style="margin-top:6px; font-size:13px; color:#334155;">Claims flagged</div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        // ---------------- FRAUD GRAPH ----------------
+        function loadGraph() {
+            fetch("get_claims.php")
+                .then(res => res.json())
+                .then(data => {
+                    graphData = data.map(c => ({
+                        claim_id: c.claim_id,
+                        name: c.name,
+                        vehicle: c.vehicle,
+                        cost: Number(c.cost) || 0,
+                        risk_score: Number(c.risk_score) || 0,
+                        risk_level: String(c.risk_level || '').toUpperCase(),
+                        fraud_probability: Number(c.fraud_probability) || 0
+                    }));
+
+                    document.getElementById('graphSummary').innerText = `${graphData.length} total claims`;
+                    renderGraph();
+                });
+        }
+
+        function renderGraph() {
+            const filter = document.getElementById('graphRiskFilter').value;
+            const showTrend = document.getElementById('graphTrendToggle').checked;
+            const filtered = graphData.filter(c => {
+                const level = c.risk_level || (c.risk_score < 40 ? 'LOW' : c.risk_score < 70 ? 'MEDIUM' : 'HIGH');
+                return !filter || filter.toUpperCase() === String(level).toUpperCase();
+            });
+
+            const points = filtered.map(c => ({
+                x: c.cost,
+                y: c.risk_score,
+                label: `${c.name} (${c.claim_id}) [${c.risk_level || (c.risk_score >= 70 ? 'HIGH' : c.risk_score >= 40 ? 'MEDIUM' : 'LOW')}]`,
+                origin: c,
+                backgroundColor: c.risk_level === 'HIGH' ? '#ef4444' : c.risk_level === 'MEDIUM' ? '#f59e0b' : '#22c55e'
+            }));
+
+            document.getElementById('graphSummary').innerText = `${filtered.length} claims plotted`;
+            document.getElementById('graphDetailCard').style.display = 'none';
+
+            if (fraudChart) fraudChart.destroy();
+            const ctx = document.getElementById('fraudChart').getContext('2d');
+
+            const datasets = [{
+                label: 'Claims',
+                data: points,
+                pointRadius: 8,
+                pointHoverRadius: 12,
+                backgroundColor: points.map(p => p.backgroundColor),
+                borderColor: '#ffffff',
+                borderWidth: 2,
+                showLine: false
+            }];
+
+            if (showTrend && filtered.length > 1) {
+                const trend = computeTrendLine(filtered);
+                datasets.push({
+                    label: 'Trend line',
+                    data: [
+                        { x: trend.minX, y: trend.lineAtMin },
+                        { x: trend.maxX, y: trend.lineAtMax }
+                    ],
+                    type: 'line',
+                    fill: false,
+                    borderColor: '#2563eb',
+                    borderWidth: 2,
+                    pointRadius: 0,
+                    tension: 0.2
+                });
+            }
+
+            fraudChart = new Chart(ctx, {
+                type: 'scatter',
+                data: { datasets },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        tooltip: {
+                            callbacks: {
+                                label: function (ctx) {
+                                    const d = ctx.raw;
+                                    const level = String(d.origin.risk_level || (d.y >= 70 ? 'HIGH' : d.y >= 40 ? 'MEDIUM' : 'LOW')).toUpperCase();
+                                    return `${d.label} | Cost ₹${d.x} | Risk ${d.y}% (${level})`;
+                                }
+                            }
+                        },
+                        legend: {
+                            position: 'top',
+                            labels: { color: '#0f172a', font: { size: 13, weight: '600' } }
+                        }
+                    },
+                    scales: {
+                        x: { title: { display: true, text: 'Claim Amount', color: '#334155', font: { size: 14, weight: '600' } }, grid: { color: '#e2e8f0' } },
+                        y: { title: { display: true, text: 'Risk Score', color: '#334155', font: { size: 14, weight: '600' } }, min: 0, max: 100, grid: { color: '#e2e8f0' } }
+                    },
+                    onClick: function (evt) {
+                        const points = fraudChart.getElementsAtEventForMode(evt, 'nearest', { intersect: true }, true);
+                        if (points.length) {
+                            const element = points[0];
+                            const datasetIndex = element.datasetIndex;
+                            const index = element.index;
+                            const pointData = fraudChart.data.datasets[datasetIndex].data[index];
+                            if (pointData && pointData.origin) {
+                                showGraphDetail(pointData.origin);
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        function computeTrendLine(records) {
+            const xValues = records.map(c => c.cost);
+            const yValues = records.map(c => c.risk_score);
+            const n = records.length;
+            const sumX = xValues.reduce((a, b) => a + b, 0);
+            const sumY = yValues.reduce((a, b) => a + b, 0);
+            const sumXY = xValues.reduce((acc, x, idx) => acc + x * yValues[idx], 0);
+            const sumXX = xValues.reduce((acc, x) => acc + x * x, 0);
+            const slope = (n * sumXY - sumX * sumY) / (n * sumXX - sumX * sumX);
+            const intercept = (sumY - slope * sumX) / n;
+            const minX = Math.min(...xValues);
+            const maxX = Math.max(...xValues);
+            return {
+                minX,
+                maxX,
+                lineAtMin: intercept + slope * minX,
+                lineAtMax: intercept + slope * maxX
+            };
+        }
+
+        function showGraphDetail(claim) {
+            document.getElementById('graphClaimId').innerText = claim.claim_id || '-';
+            document.getElementById('graphClaimName').innerText = claim.name || '-';
+            document.getElementById('graphClaimVehicle').innerText = claim.vehicle || 'N/A';
+            document.getElementById('graphClaimCost').innerText = claim.cost ? `₹${claim.cost}` : 'N/A';
+            document.getElementById('graphClaimRisk').innerText = `${claim.risk_score}%`;
+            document.getElementById('graphClaimLevel').innerText = claim.risk_level || (claim.risk_score >= 70 ? 'HIGH' : claim.risk_score >= 40 ? 'MEDIUM' : 'LOW');
+            document.getElementById('graphClaimProbability').innerText = `${claim.fraud_probability || claim.risk_score}%`;
+            document.getElementById('graphDetailCard').style.display = 'block';
+        }
+
+        // ---------------- FRAUD REPORTS & LETTERS ----------------
+        let fraudRecords = [];
+        let activeFraudIndex = null;
+
+        function loadFraudReports() {
+            fetch("get_claims.php")
+                .then(res => res.json())
+                .then(data => {
+                    // Filter for FRAUD, SUSPICIOUS, or high risk score claims
+                    fraudRecords = data.filter(c => {
+                        const score = Number(c.risk_score) || 0;
+                        return c.status === "FRAUD" || c.status === "SUSPICIOUS" || score >= 40;
+                    });
+
+                    // Sort namewise (alphabetically by name)
+                    fraudRecords.sort((a, b) => String(a.name).localeCompare(String(b.name)));
+
+                    activeFraudIndex = null;
+                    filterFraudReports();
+
+                    // Reset right container to empty state
+                    document.getElementById('fraudLetterContainer').innerHTML = `
+                        <div style="text-align: center; color: #64748b;">
+                            <img src="https://cdn-icons-png.flaticon.com/512/3855/3855833.png" style="width: 80px; opacity: 0.5; margin-bottom: 16px;" />
+                            <h3 style="color: #0f172a; margin-bottom: 8px;">Select a Claimant</h3>
+                            <p style="font-size: 14px; max-width: 400px; margin: 0 auto; line-height: 1.5;">Click on any high-risk or suspicious claimant from the left list to automatically generate their formal fraud investigation and warning letter.</p>
+                        </div>`;
+                });
+        }
+
+        function filterFraudReports() {
+            const query = document.getElementById("fraudSearch").value.toLowerCase();
+            const filtered = fraudRecords.filter(c => {
+                return String(c.name).toLowerCase().includes(query) || String(c.claim_id).toLowerCase().includes(query);
+            });
+
+            const listContainer = document.getElementById("fraudReportsList");
+            if (filtered.length === 0) {
+                listContainer.innerHTML = `<div style="text-align: center; padding: 20px; color: #64748b; font-size: 14px;">No fraud claims found</div>`;
+                return;
+            }
+
+            listContainer.innerHTML = filtered.map((c, index) => {
+                const globalIndex = fraudRecords.findIndex(r => r.claim_id === c.claim_id);
+                const score = Number(c.risk_score) || 0;
+                const riskLevel = String(c.risk_level || '').toUpperCase() || (score >= 70 ? 'HIGH' : score >= 40 ? 'MEDIUM' : 'LOW');
+                const probability = Number(c.fraud_probability || c.probability || score) || 0;
+                const badgeColor = riskLevel === 'HIGH' ? 'background: #fee2e2; color: #b91c1c;' : riskLevel === 'MEDIUM' ? 'background: #fef9c3; color: #a16207;' : 'background: #ecfdf5; color: #166534;';
+                const activeStyle = globalIndex === activeFraudIndex ? 'border-color: #2563eb; background: #eff6ff;' : 'border-color: #cbd5e1; background: #ffffff;';
+
+                return `
+                    <div onclick="selectFraudReport(${globalIndex})" style="padding: 14px; border: 2px solid; border-radius: 12px; cursor: pointer; transition: all 0.2s ease; ${activeStyle}">
+                        <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 6px;">
+                            <strong style="color: #0f172a; font-size: 15px;">${c.name}</strong>
+                            <span class="pill" style="font-size: 11px; padding: 3px 8px; font-weight: 700; ${badgeColor}">${riskLevel}</span>
+                        </div>
+                        <div style="color: #64748b; font-size: 13px; display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap;">
+                            <span>ID: ${c.claim_id}</span>
+                            <span>Prob: ${probability.toFixed(1)}%</span>
+                            <span style="font-weight: 600; color: #334155;">₹${c.cost}</span>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        function selectFraudReport(index) {
+            activeFraudIndex = index;
+            filterFraudReports(); // Refresh active highlights
+
+            const claim = fraudRecords[index];
+            if (!claim) return;
+
+            const score = Number(claim.risk_score) || 0;
+            const probability = Number(claim.fraud_probability || claim.probability || score) || 0;
+            const riskLevel = String(claim.risk_level || '').toUpperCase() || (score >= 70 ? 'HIGH' : score >= 40 ? 'MEDIUM' : 'LOW');
+            const dateStr = new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+
+            // Build AI Fraud Reasonings based on features
+            let anomalies = [];
+            const costVal = Number(claim.cost) || 0;
+            if (costVal > 100000) {
+                anomalies.push(`Extremely high claimed repair/replacement cost (₹${costVal}) exceeding standard limit thresholds.`);
+            }
+            if (riskLevel === 'HIGH' || claim.status === 'FRAUD' || score >= 70) {
+                anomalies.push(`Machine learning predictive fraud analysis indicated critical behavioral inconsistencies (Probability: ${probability.toFixed(1)}%, Risk Level: ${riskLevel}).`);
+            } else {
+                anomalies.push(`Predictive analytics indicated moderate risk anomalies requiring manual verification (Probability: ${probability.toFixed(1)}%, Risk Level: ${riskLevel}).`);
+            }
+
+            const anomalyListHTML = anomalies.map(a => `<li style="margin-bottom: 8px;">${a}</li>`).join('');
+
+            document.getElementById('fraudLetterContainer').innerHTML = `
+                <div style="width: 100%; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #e2e8f0; padding-bottom: 14px; margin-bottom: 20px; flex-wrap: wrap; gap: 10px;">
+                    <span class="interactive-badge" style="font-size: 13px;">📄 Letter Generated Successfully</span>
+                    <button onclick="printFraudLetter('${claim.claim_id}')" style="padding: 10px 18px; background: #2563eb; color: white; border: none; border-radius: 10px; cursor: pointer; font-weight: bold; font-size: 13px; display: flex; align-items: center; gap: 8px; transition: 0.2s;">
+                        🖨️ Print Investigation Letter
+                    </button>
+                </div>
+                
+                <!-- PRINT CONTAINER (SCROLLABLE ON DASHBOARD, CLEAN IN NEW WINDOW) -->
+                <div id="printableFraudLetter" style="width: 100%; max-height: 58vh; overflow-y: auto; padding-right: 10px; box-sizing: border-box; background: #ffffff; text-align: left;">
+                    
+                    <!-- Letterhead -->
+                    <div style="text-align: center; border-bottom: 2px double #0f172a; padding-bottom: 16px; margin-bottom: 24px;">
+                        <h2 style="margin: 0; font-family: 'Times New Roman', serif; font-size: 22px; color: #0f172a; letter-spacing: 1px; text-transform: uppercase;">Safeguard Auto Insurance Corp.</h2>
+                        <p style="margin: 4px 0 0; font-size: 12px; color: #64748b; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">Special Investigations Unit (SIU) & Forensic Risk Auditing</p>
+                        <p style="margin: 2px 0 0; font-size: 11px; color: #94a3b8;">Corporate Headquarters, C-Block, Connaught Place, New Delhi - 110001 | contact@safeguard.com</p>
+                    </div>
+
+                    <!-- Date & Subject -->
+                    <div style="font-size: 14px; color: #334155; margin-bottom: 20px;">
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 12px;">
+                            <span><strong>Ref:</strong> SIU-AUDIT-${claim.claim_id}</span>
+                            <span><strong>Date:</strong> ${dateStr}</span>
+                        </div>
+                        <div style="margin-top: 10px; border-bottom: 1px dashed #cbd5e1; padding-bottom: 8px; line-height: 1.6;">
+                            <strong>TO:</strong> ${claim.name}<br>
+                            <strong>Phone:</strong> ${claim.phone || 'N/A'} | <strong>Email:</strong> ${claim.email || 'N/A'}<br>
+                            <strong>Address:</strong> ${claim.address || 'N/A'}
+                        </div>
+                    </div>
+
+                    <div style="margin: 15px 0 20px; font-family: 'Times New Roman', serif; font-size: 15px; font-weight: 700; color: #1e293b; text-transform: uppercase; text-align: center; letter-spacing: 0.5px;">
+                        Subject: FORMAL NOTICE OF CLAIM SUSPENSION & SPECIAL FORENSIC AUDIT
+                    </div>
+
+                    <!-- Letter Body -->
+                    <div style="font-size: 14px; line-height: 1.6; color: #334155; text-align: justify; margin-bottom: 20px;">
+                        <p style="margin-bottom: 12px;">Dear ${claim.name},</p>
+                        <p style="margin-bottom: 12px;">This is a formal notification concerning the automobile insurance claim filed by you under Claim ID <strong>${claim.claim_id}</strong> for your vehicle <strong>${claim.vehicle}</strong> (Policy Number: <strong>${claim.policy || 'N/A'}</strong>), in connection with an alleged accident incident reported on <strong>${claim.date}</strong>.</p>
+                        
+                        <p style="margin-bottom: 12px;">Please be advised that our Special Investigations Unit (SIU) in conjunction with our AI-driven predictive risk assessment model has performed a high-precision validation check on your submission. Based on specialized feature audits, our system has flagged this claim as containing significant risk anomalies and behavioral outliers (Risk Score: <strong>${score}% - ${claim.status}</strong>).</p>
+                        
+                        <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 16px; margin: 16px 0;">
+                            <h4 style="margin-top: 0; margin-bottom: 10px; font-size: 13px; color: #b91c1c; text-transform: uppercase; letter-spacing: 0.5px; border-bottom: 1px solid #fee2e2; padding-bottom: 4px;">⚠️ Forensic Audit Flags & Anomalies</h4>
+                            <ul style="margin: 0; padding-left: 20px; font-size: 13px; color: #475569; line-height: 1.5;">
+                                ${anomalyListHTML}
+                                <li style="margin-bottom: 8px;">Claim amount: ₹${claim.cost} vs coverage specifications: ${claim.coverage || 'Standard'}.</li>
+                                <li style="margin-bottom: 0;">Vehicle Model Year: ${claim.vehicle.replace(/[^0-9]/g, '') || 'N/A'} (Underwriting Age Audit).</li>
+                            </ul>
+                        </div>
+
+                        <p style="margin-bottom: 12px;">Under Section 420 (Fraudulent Representation and Falsification) of the Insurance Act, submitting an intentionally exaggerated, false, or fabricated claim is a serious contractual breach and a punishable offence. Consequently, your claim has been suspended and placed under a <strong>Mandatory Forensic Audit</strong>.</p>
+                        
+                        <p style="margin-bottom: 12px;">To proceed with our forensic review and determine claim validation, you are required to submit the following physical/digital certified documentation to our auditing desk within **fourteen (14) business days**:</p>
+                        <ol style="margin: 0 0 16px; padding-left: 22px; line-height: 1.6;">
+                            <li>A certified copy of the Police First Information Report (FIR) from the jurisdiction site of the accident.</li>
+                            <li>Original itemized mechanic repair invoices and cost estimate details from an authorized workshop.</li>
+                            <li>Clear, high-resolution damage photos from the actual accident location.</li>
+                            <li>Valid copy of claimant's driving license and vehicle registration document (RC).</li>
+                        </ol>
+                        
+                        <p style="margin-bottom: 12px;">Failure to submit these documents within the stipulated time frame, or the subsequent detection of any deliberate inflation/manipulation, will result in immediate **Claim Rejection**, permanent **Policy Revocation**, and may trigger formal criminal litigation.</p>
+                        <p style="margin-bottom: 12px;">If you have any questions or require support, please contact our Forensic Support Desk at special.investigations@insurance.com.</p>
+                    </div>
+
+                    <!-- Signatures -->
+                    <div style="margin-top: 40px; display: flex; justify-content: space-between; border-top: 1px dashed #cbd5e1; padding-top: 16px;">
+                        <div style="text-align: center; width: 180px;">
+                            <div style="height: 40px; display: flex; align-items: flex-end; justify-content: center; margin-bottom: 4px;">
+                                <span style="font-family: 'Courier New', Courier, monospace; font-size: 14px; font-weight: bold; color: #94a3b8; font-style: italic;">[Digitally Sealed]</span>
+                            </div>
+                            <div style="border-top: 1px solid #475569; padding-top: 4px; font-size: 12px; color: #334155; font-weight: 700;">Special Investigations Director</div>
+                            <div style="font-size: 10px; color: #64748b;">Forensic Auditing Division</div>
+                        </div>
+                        <div style="text-align: center; width: 180px;">
+                            <div style="height: 40px; display: flex; align-items: flex-end; justify-content: center; margin-bottom: 4px;">
+                                <span style="font-family: 'Courier New', Courier, monospace; font-size: 14px; font-weight: bold; color: #94a3b8; font-style: italic;">[AI Verification Approved]</span>
+                            </div>
+                            <div style="border-top: 1px solid #475569; padding-top: 4px; font-size: 12px; color: #334155; font-weight: 700;">Predictive Risk Desk</div>
+                            <div style="font-size: 10px; color: #64748b;">Automated Fraud Operations</div>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        function printFraudLetter(claimId) {
+            const printContent = document.getElementById('printableFraudLetter').innerHTML;
+            const win = window.open('', '_blank');
+            win.document.write(`
+                <html>
+                <head>
+                    <title>Fraud Investigation Letter - ${claimId}</title>
+                    <style>
+                        body { font-family: 'Times New Roman', Times, serif; padding: 45px; color: #111; line-height: 1.6; background: #fff; }
+                        .print-only { width: 100%; max-width: 800px; margin: 0 auto; }
+                        @media print {
+                            body { padding: 15px; }
+                        }
+                    </style>
+                </head>
+                <body>
+                    <div class="print-only">
+                        \${printContent}
+                    </div>
+                    <script>
+                        window.onload = function() { 
+                            window.print(); 
+                            setTimeout(() => window.close(), 500);
+                        }
+                    <\/script>
+                </body>
+                </html>
+            `);
+            win.document.close();
+        }
+
+    </script>
+
+</body>
+
+</html>

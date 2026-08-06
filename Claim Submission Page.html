@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>User Dashboard - Submit Claim</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+body {
+    font-family: Arial;
+    margin: 0;
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
+}
+
+.container {
+    width: 90%;
+    max-width: 600px;
+    margin: 30px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+h2 {
+    text-align: center;
+}
+
+.input-group {
+    margin: 10px 0;
+    position: relative;
+}
+
+.input-group i {
+    position: absolute;
+    top: 12px;
+    left: 10px;
+    color: gray;
+}
+
+.input-group input, textarea {
+    width: 100%;
+    padding: 10px 10px 10px 35px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: #4facfe;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.progress {
+    width: 100%;
+    background: #eee;
+    border-radius: 10px;
+    margin: 10px 0;
+}
+
+.progress-bar {
+    width: 0%;
+    height: 10px;
+    background: green;
+    border-radius: 10px;
+}
+
+.status {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    display: none;
+}
+
+.preview img {
+    width: 80px;
+    margin: 5px;
+    border-radius: 8px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <h2><i class="fa fa-car"></i> Submit Claim</h2>
+
+    <div class="input-group">
+        <i class="fa fa-id-card"></i>
+        <input type="text" id="vehicle" placeholder="Vehicle Number" oninput="autoFill()">
+    </div>
+
+    <div class="input-group">
+        <i class="fa fa-calendar"></i>
+        <input type="date" id="date">
+    </div>
+
+    <div class="input-group">
+        <i class="fa fa-location-dot"></i>
+        <input type="text" id="location" placeholder="Accident Location">
+    </div>
+
+    <div class="input-group">
+        <i class="fa fa-file"></i>
+        <textarea id="desc" placeholder="Damage Description"></textarea>
+    </div>
+
+    <div class="input-group">
+        <input type="file" id="files" multiple onchange="previewImages()">
+    </div>
+
+    <div class="preview" id="preview"></div>
+
+    <div class="progress">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <button onclick="submitClaim()">Submit Claim</button>
+
+    <div class="status" id="status"></div>
+</div>
+
+<script>
+function autoFill() {
+    let vehicle = document.getElementById("vehicle").value;
+    if(vehicle === "MH12AB1234") {
+        document.getElementById("location").value = "Pune";
+    }
+}
+
+function previewImages() {
+    let preview = document.getElementById("preview");
+    preview.innerHTML = "";
+    let files = document.getElementById("files").files;
+
+    for(let i=0; i<files.length; i++) {
+        let img = document.createElement("img");
+        img.src = URL.createObjectURL(files[i]);
+        preview.appendChild(img);
+    }
+}
+
+function submitClaim() {
+    let bar = document.getElementById("progressBar");
+    let status = document.getElementById("status");
+
+    bar.style.width = "0%";
+    let width = 0;
+
+    let interval = setInterval(() => {
+        if(width >= 100) {
+            clearInterval(interval);
+
+            let random = Math.random();
+            let result = "";
+
+            if(random < 0.5) {
+                result = "Pending";
+                status.style.background = "orange";
+            } else if(random < 0.8) {
+                result = "Approved";
+                status.style.background = "green";
+            } else {
+                result = "Fraud Detected";
+                status.style.background = "red";
+            }
+
+            status.style.display = "block";
+            status.innerHTML = "Claim Status: " + result;
+        } else {
+            width++;
+            bar.style.width = width + "%";
+        }
+    }, 30);
+}
+</script>
+
+</body>
+</html>
